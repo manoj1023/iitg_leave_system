@@ -10,7 +10,7 @@ Aim of the Project:- Create a leave application portal for PhD and Mtech Student
   2. Visual Basic
   3. MS Access/MySQL
 
-Milestone 1 - To be submitted on 30 January, 2019
+Milestone 1 - To be submitted on 31 January, 2019
 
 **Goals**
   1. Understand the leave system

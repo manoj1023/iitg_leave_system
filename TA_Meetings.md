@@ -49,7 +49,7 @@ Features that can be implemented
 
 Work Distribution For now
 
-	1. Manan - Database Creation, Login Form including Password Encryption and forgot password
+	1. Manan - Database Creation, Login Form + Password Encryption
 	2. Utkarsh + Ikya - Office Home Page + Edit student leaves + Query page for office (Entire functioing of the office)
 	3. Siddharth - Student Home Page + Leave Request + Edit Profile + Extend Leave (Entire functioing of the student)
 	4. Mayank + Aniket + Manan - DPPC, Professor, Dean, etc Home Page + Query Search + Apply Leave

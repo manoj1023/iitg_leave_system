@@ -39,6 +39,7 @@ Minutes
 	1. Finalized the layout of the project
 	2. Distributed Work
 	3. Finalized the database design
+	4. Extra feature suggested - Find out all the people currently on leave
 	
 Work Distribution For Now
 

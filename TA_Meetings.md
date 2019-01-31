@@ -5,6 +5,9 @@ Introduction to the project.
 
 Aim of the Project:- Create a leave application portal for PhD and Mtech Students
 
+Members not present in the meeting
+  1. Mayank Chandra
+
 **Technologies to be used**
   1. Visual Studio
   2. Visual Basic

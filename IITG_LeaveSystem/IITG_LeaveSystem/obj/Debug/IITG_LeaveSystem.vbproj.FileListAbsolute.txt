@@ -1,0 +1,23 @@
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.exe.config
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.exe
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.pdb
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.xml
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Form1.resources
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Resources.resources
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbproj.GenerateResource.Cache
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.exe
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.xml
+C:\Users\Manan Gupta\AppData\Local\Temporary Projects\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.pdb
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.exe.config
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.exe
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.xml
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.pdb
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.exe
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.pdb
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug\IITG_LeaveSystem.xml
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Form1.resources
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Resources.resources
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbproj.GenerateResource.Cache
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Office_HomePage.resources
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Rest_HomePage.resources
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Student_HomePage.resources

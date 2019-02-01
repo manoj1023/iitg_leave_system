@@ -17,6 +17,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PasswordTextBox.PasswordChar = "*"
         StudentRadio.Select()
+        Me.AcceptButton = LoginButton
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click

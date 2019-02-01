@@ -28,15 +28,16 @@ Partial Class Form1
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.ShowPassCheckBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.StudentRadio = New System.Windows.Forms.RadioButton()
-        Me.ProfessorRadio = New System.Windows.Forms.RadioButton()
-        Me.OfficeRadio = New System.Windows.Forms.RadioButton()
-        Me.DPPCRadio = New System.Windows.Forms.RadioButton()
-        Me.HODRadio = New System.Windows.Forms.RadioButton()
-        Me.StaffRadio = New System.Windows.Forms.RadioButton()
-        Me.DeanRadio = New System.Windows.Forms.RadioButton()
         Me.DirectorRadio = New System.Windows.Forms.RadioButton()
+        Me.DeanRadio = New System.Windows.Forms.RadioButton()
+        Me.StaffRadio = New System.Windows.Forms.RadioButton()
+        Me.HODRadio = New System.Windows.Forms.RadioButton()
+        Me.DPPCRadio = New System.Windows.Forms.RadioButton()
+        Me.OfficeRadio = New System.Windows.Forms.RadioButton()
+        Me.ProfessorRadio = New System.Windows.Forms.RadioButton()
+        Me.StudentRadio = New System.Windows.Forms.RadioButton()
         Me.LoginButton = New System.Windows.Forms.Button()
+        Me.ForgotButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -105,77 +106,17 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Type"
         '
-        'StudentRadio
+        'DirectorRadio
         '
-        Me.StudentRadio.AutoSize = True
-        Me.StudentRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StudentRadio.Location = New System.Drawing.Point(6, 21)
-        Me.StudentRadio.Name = "StudentRadio"
-        Me.StudentRadio.Size = New System.Drawing.Size(85, 21)
-        Me.StudentRadio.TabIndex = 0
-        Me.StudentRadio.TabStop = True
-        Me.StudentRadio.Text = "Student"
-        Me.StudentRadio.UseVisualStyleBackColor = True
-        '
-        'ProfessorRadio
-        '
-        Me.ProfessorRadio.AutoSize = True
-        Me.ProfessorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfessorRadio.Location = New System.Drawing.Point(127, 21)
-        Me.ProfessorRadio.Name = "ProfessorRadio"
-        Me.ProfessorRadio.Size = New System.Drawing.Size(99, 21)
-        Me.ProfessorRadio.TabIndex = 1
-        Me.ProfessorRadio.TabStop = True
-        Me.ProfessorRadio.Text = "Professor"
-        Me.ProfessorRadio.UseVisualStyleBackColor = True
-        '
-        'OfficeRadio
-        '
-        Me.OfficeRadio.AutoSize = True
-        Me.OfficeRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OfficeRadio.Location = New System.Drawing.Point(248, 21)
-        Me.OfficeRadio.Name = "OfficeRadio"
-        Me.OfficeRadio.Size = New System.Drawing.Size(72, 21)
-        Me.OfficeRadio.TabIndex = 2
-        Me.OfficeRadio.TabStop = True
-        Me.OfficeRadio.Text = "Office"
-        Me.OfficeRadio.UseVisualStyleBackColor = True
-        '
-        'DPPCRadio
-        '
-        Me.DPPCRadio.AutoSize = True
-        Me.DPPCRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DPPCRadio.Location = New System.Drawing.Point(365, 21)
-        Me.DPPCRadio.Name = "DPPCRadio"
-        Me.DPPCRadio.Size = New System.Drawing.Size(70, 21)
-        Me.DPPCRadio.TabIndex = 3
-        Me.DPPCRadio.TabStop = True
-        Me.DPPCRadio.Text = "DPPC"
-        Me.DPPCRadio.UseVisualStyleBackColor = True
-        '
-        'HODRadio
-        '
-        Me.HODRadio.AutoSize = True
-        Me.HODRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HODRadio.Location = New System.Drawing.Point(6, 48)
-        Me.HODRadio.Name = "HODRadio"
-        Me.HODRadio.Size = New System.Drawing.Size(63, 21)
-        Me.HODRadio.TabIndex = 4
-        Me.HODRadio.TabStop = True
-        Me.HODRadio.Text = "HOD"
-        Me.HODRadio.UseVisualStyleBackColor = True
-        '
-        'StaffRadio
-        '
-        Me.StaffRadio.AutoSize = True
-        Me.StaffRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StaffRadio.Location = New System.Drawing.Point(127, 48)
-        Me.StaffRadio.Name = "StaffRadio"
-        Me.StaffRadio.Size = New System.Drawing.Size(63, 21)
-        Me.StaffRadio.TabIndex = 5
-        Me.StaffRadio.TabStop = True
-        Me.StaffRadio.Text = "Staff"
-        Me.StaffRadio.UseVisualStyleBackColor = True
+        Me.DirectorRadio.AutoSize = True
+        Me.DirectorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DirectorRadio.Location = New System.Drawing.Point(365, 48)
+        Me.DirectorRadio.Name = "DirectorRadio"
+        Me.DirectorRadio.Size = New System.Drawing.Size(87, 21)
+        Me.DirectorRadio.TabIndex = 7
+        Me.DirectorRadio.TabStop = True
+        Me.DirectorRadio.Text = "Director"
+        Me.DirectorRadio.UseVisualStyleBackColor = True
         '
         'DeanRadio
         '
@@ -189,33 +130,104 @@ Partial Class Form1
         Me.DeanRadio.Text = "Dean"
         Me.DeanRadio.UseVisualStyleBackColor = True
         '
-        'DirectorRadio
+        'StaffRadio
         '
-        Me.DirectorRadio.AutoSize = True
-        Me.DirectorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DirectorRadio.Location = New System.Drawing.Point(365, 48)
-        Me.DirectorRadio.Name = "DirectorRadio"
-        Me.DirectorRadio.Size = New System.Drawing.Size(87, 21)
-        Me.DirectorRadio.TabIndex = 7
-        Me.DirectorRadio.TabStop = True
-        Me.DirectorRadio.Text = "Director"
-        Me.DirectorRadio.UseVisualStyleBackColor = True
+        Me.StaffRadio.AutoSize = True
+        Me.StaffRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StaffRadio.Location = New System.Drawing.Point(127, 48)
+        Me.StaffRadio.Name = "StaffRadio"
+        Me.StaffRadio.Size = New System.Drawing.Size(63, 21)
+        Me.StaffRadio.TabIndex = 5
+        Me.StaffRadio.TabStop = True
+        Me.StaffRadio.Text = "Staff"
+        Me.StaffRadio.UseVisualStyleBackColor = True
+        '
+        'HODRadio
+        '
+        Me.HODRadio.AutoSize = True
+        Me.HODRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HODRadio.Location = New System.Drawing.Point(6, 48)
+        Me.HODRadio.Name = "HODRadio"
+        Me.HODRadio.Size = New System.Drawing.Size(63, 21)
+        Me.HODRadio.TabIndex = 4
+        Me.HODRadio.TabStop = True
+        Me.HODRadio.Text = "HOD"
+        Me.HODRadio.UseVisualStyleBackColor = True
+        '
+        'DPPCRadio
+        '
+        Me.DPPCRadio.AutoSize = True
+        Me.DPPCRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DPPCRadio.Location = New System.Drawing.Point(365, 21)
+        Me.DPPCRadio.Name = "DPPCRadio"
+        Me.DPPCRadio.Size = New System.Drawing.Size(70, 21)
+        Me.DPPCRadio.TabIndex = 3
+        Me.DPPCRadio.TabStop = True
+        Me.DPPCRadio.Text = "DPPC"
+        Me.DPPCRadio.UseVisualStyleBackColor = True
+        '
+        'OfficeRadio
+        '
+        Me.OfficeRadio.AutoSize = True
+        Me.OfficeRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OfficeRadio.Location = New System.Drawing.Point(248, 21)
+        Me.OfficeRadio.Name = "OfficeRadio"
+        Me.OfficeRadio.Size = New System.Drawing.Size(72, 21)
+        Me.OfficeRadio.TabIndex = 2
+        Me.OfficeRadio.TabStop = True
+        Me.OfficeRadio.Text = "Office"
+        Me.OfficeRadio.UseVisualStyleBackColor = True
+        '
+        'ProfessorRadio
+        '
+        Me.ProfessorRadio.AutoSize = True
+        Me.ProfessorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfessorRadio.Location = New System.Drawing.Point(127, 21)
+        Me.ProfessorRadio.Name = "ProfessorRadio"
+        Me.ProfessorRadio.Size = New System.Drawing.Size(99, 21)
+        Me.ProfessorRadio.TabIndex = 1
+        Me.ProfessorRadio.TabStop = True
+        Me.ProfessorRadio.Text = "Professor"
+        Me.ProfessorRadio.UseVisualStyleBackColor = True
+        '
+        'StudentRadio
+        '
+        Me.StudentRadio.AutoSize = True
+        Me.StudentRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StudentRadio.Location = New System.Drawing.Point(6, 21)
+        Me.StudentRadio.Name = "StudentRadio"
+        Me.StudentRadio.Size = New System.Drawing.Size(85, 21)
+        Me.StudentRadio.TabIndex = 0
+        Me.StudentRadio.TabStop = True
+        Me.StudentRadio.Text = "Student"
+        Me.StudentRadio.UseVisualStyleBackColor = True
         '
         'LoginButton
         '
         Me.LoginButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginButton.Location = New System.Drawing.Point(333, 319)
+        Me.LoginButton.Location = New System.Drawing.Point(416, 321)
         Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(150, 37)
+        Me.LoginButton.Size = New System.Drawing.Size(238, 37)
         Me.LoginButton.TabIndex = 6
         Me.LoginButton.Text = "Login"
         Me.LoginButton.UseVisualStyleBackColor = True
+        '
+        'ForgotButton
+        '
+        Me.ForgotButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForgotButton.Location = New System.Drawing.Point(168, 321)
+        Me.ForgotButton.Name = "ForgotButton"
+        Me.ForgotButton.Size = New System.Drawing.Size(238, 37)
+        Me.ForgotButton.TabIndex = 7
+        Me.ForgotButton.Text = "Forgot Password"
+        Me.ForgotButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 394)
+        Me.ClientSize = New System.Drawing.Size(790, 434)
+        Me.Controls.Add(Me.ForgotButton)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ShowPassCheckBox)
@@ -246,5 +258,6 @@ Partial Class Form1
     Friend WithEvents ProfessorRadio As System.Windows.Forms.RadioButton
     Friend WithEvents StudentRadio As System.Windows.Forms.RadioButton
     Friend WithEvents LoginButton As System.Windows.Forms.Button
+    Friend WithEvents ForgotButton As System.Windows.Forms.Button
 
 End Class

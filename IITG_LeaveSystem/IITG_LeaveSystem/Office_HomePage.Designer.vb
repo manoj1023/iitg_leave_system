@@ -23,27 +23,197 @@ Partial Class Office_HomePage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.choice_combo = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.username_text = New System.Windows.Forms.TextBox()
+        Me.welcomeLabel = New System.Windows.Forms.Label()
+        Me.dgv1 = New System.Windows.Forms.DataGridView()
+        Me.loadUser = New System.Windows.Forms.Button()
+        Me.heading1 = New System.Windows.Forms.Label()
+        Me.dgv2 = New System.Windows.Forms.DataGridView()
+        Me.ref_Button = New System.Windows.Forms.Button()
+        Me.addUser = New System.Windows.Forms.Button()
+        Me.updateUser = New System.Windows.Forms.Button()
+        Me.deleteUser = New System.Windows.Forms.Button()
+        CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(65, 95)
+        Me.Button1.Location = New System.Drawing.Point(810, 462)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'choice_combo
+        '
+        Me.choice_combo.FormattingEnabled = True
+        Me.choice_combo.Items.AddRange(New Object() {"All Users", "Student", "Staff", "Professor", "HOD", "DPPC", "Dean", "Director", "Office"})
+        Me.choice_combo.Location = New System.Drawing.Point(268, 62)
+        Me.choice_combo.Name = "choice_combo"
+        Me.choice_combo.Size = New System.Drawing.Size(176, 24)
+        Me.choice_combo.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(24, 62)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(182, 24)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Select User Type :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(24, 89)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(111, 24)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Username:"
+        '
+        'username_text
+        '
+        Me.username_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.username_text.Location = New System.Drawing.Point(268, 89)
+        Me.username_text.Name = "username_text"
+        Me.username_text.Size = New System.Drawing.Size(176, 27)
+        Me.username_text.TabIndex = 4
+        '
+        'welcomeLabel
+        '
+        Me.welcomeLabel.AutoSize = True
+        Me.welcomeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomeLabel.Location = New System.Drawing.Point(25, 9)
+        Me.welcomeLabel.Name = "welcomeLabel"
+        Me.welcomeLabel.Size = New System.Drawing.Size(59, 20)
+        Me.welcomeLabel.TabIndex = 5
+        Me.welcomeLabel.Text = "Label3"
+        '
+        'dgv1
+        '
+        Me.dgv1.AllowUserToAddRows = False
+        Me.dgv1.AllowUserToDeleteRows = False
+        Me.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv1.Location = New System.Drawing.Point(28, 141)
+        Me.dgv1.Name = "dgv1"
+        Me.dgv1.ReadOnly = True
+        Me.dgv1.RowTemplate.Height = 24
+        Me.dgv1.Size = New System.Drawing.Size(874, 30)
+        Me.dgv1.TabIndex = 6
+        '
+        'loadUser
+        '
+        Me.loadUser.Location = New System.Drawing.Point(730, 93)
+        Me.loadUser.Name = "loadUser"
+        Me.loadUser.Size = New System.Drawing.Size(75, 23)
+        Me.loadUser.TabIndex = 7
+        Me.loadUser.Text = "Load"
+        Me.loadUser.UseVisualStyleBackColor = True
+        '
+        'heading1
+        '
+        Me.heading1.AutoSize = True
+        Me.heading1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.heading1.Location = New System.Drawing.Point(34, 192)
+        Me.heading1.Name = "heading1"
+        Me.heading1.Size = New System.Drawing.Size(251, 24)
+        Me.heading1.TabIndex = 8
+        Me.heading1.Text = "Show Pending Requests :"
+        '
+        'dgv2
+        '
+        Me.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv2.Location = New System.Drawing.Point(29, 222)
+        Me.dgv2.Name = "dgv2"
+        Me.dgv2.RowTemplate.Height = 24
+        Me.dgv2.Size = New System.Drawing.Size(847, 131)
+        Me.dgv2.TabIndex = 9
+        '
+        'ref_Button
+        '
+        Me.ref_Button.Location = New System.Drawing.Point(730, 192)
+        Me.ref_Button.Name = "ref_Button"
+        Me.ref_Button.Size = New System.Drawing.Size(75, 23)
+        Me.ref_Button.TabIndex = 10
+        Me.ref_Button.Text = "Refresh"
+        Me.ref_Button.UseVisualStyleBackColor = True
+        '
+        'addUser
+        '
+        Me.addUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addUser.Location = New System.Drawing.Point(29, 436)
+        Me.addUser.Name = "addUser"
+        Me.addUser.Size = New System.Drawing.Size(132, 49)
+        Me.addUser.TabIndex = 11
+        Me.addUser.Text = "addUser"
+        Me.addUser.UseVisualStyleBackColor = True
+        '
+        'updateUser
+        '
+        Me.updateUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateUser.Location = New System.Drawing.Point(220, 436)
+        Me.updateUser.Name = "updateUser"
+        Me.updateUser.Size = New System.Drawing.Size(132, 49)
+        Me.updateUser.TabIndex = 12
+        Me.updateUser.Text = "updateUser"
+        Me.updateUser.UseVisualStyleBackColor = True
+        '
+        'deleteUser
+        '
+        Me.deleteUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deleteUser.Location = New System.Drawing.Point(400, 436)
+        Me.deleteUser.Name = "deleteUser"
+        Me.deleteUser.Size = New System.Drawing.Size(132, 49)
+        Me.deleteUser.TabIndex = 13
+        Me.deleteUser.Text = "deleteUser"
+        Me.deleteUser.UseVisualStyleBackColor = True
+        '
         'Office_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.ClientSize = New System.Drawing.Size(914, 497)
+        Me.Controls.Add(Me.deleteUser)
+        Me.Controls.Add(Me.updateUser)
+        Me.Controls.Add(Me.addUser)
+        Me.Controls.Add(Me.ref_Button)
+        Me.Controls.Add(Me.dgv2)
+        Me.Controls.Add(Me.heading1)
+        Me.Controls.Add(Me.loadUser)
+        Me.Controls.Add(Me.dgv1)
+        Me.Controls.Add(Me.welcomeLabel)
+        Me.Controls.Add(Me.username_text)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.choice_combo)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Office_HomePage"
         Me.Text = "Office_HomePage"
+        CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents choice_combo As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents username_text As System.Windows.Forms.TextBox
+    Friend WithEvents welcomeLabel As System.Windows.Forms.Label
+    Friend WithEvents dgv1 As System.Windows.Forms.DataGridView
+    Friend WithEvents loadUser As System.Windows.Forms.Button
+    Friend WithEvents heading1 As System.Windows.Forms.Label
+    Friend WithEvents dgv2 As System.Windows.Forms.DataGridView
+    Friend WithEvents ref_Button As System.Windows.Forms.Button
+    Friend WithEvents addUser As System.Windows.Forms.Button
+    Friend WithEvents updateUser As System.Windows.Forms.Button
+    Friend WithEvents deleteUser As System.Windows.Forms.Button
 End Class

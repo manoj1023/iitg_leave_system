@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_User.Designer.vb">
+      <DependentUpon>add_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +116,23 @@
     <Compile Include="Student_HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="userDelete.Designer.vb">
+      <DependentUpon>userDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userUpdate.Designer.vb">
+      <DependentUpon>userUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="userUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="add_User.resx">
+      <DependentUpon>add_User.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student_HomePage.resx">
       <DependentUpon>Student_HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDelete.resx">
+      <DependentUpon>userDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userUpdate.resx">
+      <DependentUpon>userUpdate.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

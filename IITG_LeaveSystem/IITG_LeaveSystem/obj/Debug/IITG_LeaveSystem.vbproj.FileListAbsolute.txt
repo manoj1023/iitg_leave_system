@@ -21,3 +21,4 @@ D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_Lea
 D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Office_HomePage.resources
 D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Rest_HomePage.resources
 D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Student_HomePage.resources
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbprojResolveAssemblyReference.cache

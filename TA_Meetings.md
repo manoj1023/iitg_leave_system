@@ -54,4 +54,22 @@ Work Distribution For now
 	3. Siddharth - Student Home Page + Leave Request + Edit Profile + Extend Leave (Entire functioing of the student)
 	4. Mayank + Aniket + Manan - DPPC, Professor, Dean, etc Home Page + Query Search + Apply Leave
 	
+### 5th February, 2019
+
+**Minutes**
+
+	1. Showed Backend
+	2. Login Form working completely
+	3. Student Home Page, Leave Request and Edit Profile working
+	4. Office Page working with slight errors in add user etc
+	5. Rest Home Page layout ready with major bugs to fix
 	
+Work Distribution
+
+	1. Manan - Database Creation, Login Form + Password Encryption + Integration of all the individual forms
+	2. Utkarsh + Ikya - Office Home Page + Edit student leaves (Entire functioing of the office)
+	3. Siddharth - Student Home Page + Leave Request + Edit Profile (Entire functioing of the student)
+	4. Mayank + Aniket + Manan - DPPC, Professor, Dean, etc Home Page + Query Search + Apply Leave (Incomplete as of 5th februaury)
+	
+	
+		

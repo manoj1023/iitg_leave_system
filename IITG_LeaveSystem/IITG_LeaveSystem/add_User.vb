@@ -13,6 +13,55 @@ Public Class add_User
     End Sub
 
     Private Sub add_Click(sender As Object, e As EventArgs) Handles add.Click
+        If CStr(choice_combo.SelectedItem) = "" Then
+            MessageBox.Show("Select a Type")
+            Exit Sub
+        End If
+
+        If CStr(dept_combo.SelectedItem) = "" Then
+            MessageBox.Show("Select a Department")
+            Exit Sub
+        End If
+
+        If (CStr(choice_combo.SelectedItem) = "Student" And gender_combo.SelectedItem = "") Then
+            MessageBox.Show("Select a Gender")
+            Exit Sub
+        End If
+
+        If (CStr(choice_combo.SelectedItem) = "Student" And course_combo.SelectedItem = "") Then
+            MessageBox.Show("Select a Course")
+            Exit Sub
+        End If
+
+        If (CStr(choice_combo.SelectedItem) = "Student" And (IsNumeric(RollNumber_text.Text) = False Or RollNumber_text.Text.Length <> 9)) Then
+            MessageBox.Show("Enter a Valid RollNumber")
+            Exit Sub
+        End If
+
+        If username_text.Text = "" Then
+            MessageBox.Show("Enter a valid username")
+            Exit Sub
+        End If
+        If firstname_text.Text = "" Then
+            MessageBox.Show("Enter a valid firstname")
+            Exit Sub
+        End If
+
+        If password_text.Text = "" Then
+            MessageBox.Show("Enter a valid password")
+            Exit Sub
+        End If
+
+        If Phone_text.Text.Length < 7 Then
+            MessageBox.Show("Enter a Valid Phone Number")
+            Exit Sub
+        End If
+
+        If Email_Text.Text = "" Then
+            MessageBox.Show("Enter an email")
+            Exit Sub
+        End If
+
         Try
             con.Open()
 
@@ -26,17 +75,34 @@ Public Class add_User
                 count += 1
             End While
 
-            If (count = 0) Then
-                Dim command2 As OleDbCommand = New OleDbCommand()
-                command2.Connection = con
-                command2.CommandText = "INSERT INTO " & CStr(choice_combo.SelectedItem) & " (Username,Password) VALUES ('" & username_text.Text & "','" & CStr(encrypt(password_text.Text)) & "');"
-
-                command2.ExecuteNonQuery()
-            Else
+            If (count <> 0) Then
                 MessageBox.Show("Username already exists")
+                Exit Sub
+            End If
+            Dim pare As Integer = 0
+            If CStr(course_combo.SelectedItem) = "PhD" Then
+                If CStr(gender_combo.SelectedItem) = "Male" Then
+                    pare = 15
+                Else
+                    pare = 90
+                End If
             End If
 
-
+            If choice_combo.SelectedItem = "Student" Then
+                Dim command2 As OleDbCommand = New OleDbCommand()
+                command2.Connection = con
+                command2.CommandText = "INSERT INTO " & CStr(choice_combo.SelectedItem) & " (Username,[Password], FirstName, LastName,Phone, Email, Department, MedicalLeaves, OrdinaryLeaves, AcademicLeaves, ParentalLeaves, Gender, Course, RollNumber) VALUES ('" & username_text.Text & "','" & CStr(encrypt(password_text.Text)) & "','" & firstname_text.Text & "','" & lastname_text.Text & "','" & Phone_text.Text & "','" & Email_Text.Text & "','" & CStr(dept_combo.SelectedItem) & "',15,30,30," & pare & ",'" & CStr(gender_combo.SelectedItem) & "','" & CStr(course_combo.SelectedItem) & "','" & RollNumber_text.Text & "');"
+                username_text.Text = (command2.CommandText)
+                command2.ExecuteNonQuery()
+                MessageBox.Show("User Added!!")
+            Else
+                Dim command2 As OleDbCommand = New OleDbCommand()
+                command2.Connection = con
+                command2.CommandText = "INSERT INTO " & CStr(choice_combo.SelectedItem) & " (Username,[Password], FirstName, LastName,Phone, Email, Department, MedicalLeaves, OrdinaryLeaves) VALUES ('" & username_text.Text & "','" & CStr(encrypt(password_text.Text)) & "','" & firstname_text.Text & "','" & lastname_text.Text & "','" & Phone_text.Text & "','" & Email_Text.Text & "','" & CStr(dept_combo.SelectedItem) & "',15,30);"
+                'username_text.Text = (command2.CommandText)
+                command2.ExecuteNonQuery()
+                MessageBox.Show("User Added!!")
+            End If
             con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -57,4 +123,22 @@ Public Class add_User
         Next
         Return p1
     End Function
+
+    Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
+        If CStr(choice_combo.SelectedItem) = "Student" Then
+            Label10.Visible = True
+            Label11.Visible = True
+            Label9.Visible = True
+            RollNumber_text.Visible = True
+            gender_combo.Visible = True
+            course_combo.Visible = True
+        Else
+            Label10.Visible = False
+            Label11.Visible = False
+            Label9.Visible = False
+            RollNumber_text.Visible = False
+            gender_combo.Visible = False
+            course_combo.Visible = False
+        End If
+    End Sub
 End Class

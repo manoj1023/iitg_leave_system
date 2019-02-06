@@ -5,34 +5,12 @@ Imports System.Text
 Public Class Office_HomePage
 
     Public Property Username As String
-    Public con As OleDbConnection
+    Public Property con As OleDbConnection
 
 
     Private Sub Office_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         welcomeLabel.Text = "Logged in as " & Username
-        Dim query As String = ""
-        Try
-            Dim projDirectory, databasePath As String
-            projDirectory = Directory.GetCurrentDirectory()
-            databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
-            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
-            query = "Select * From " & "Leave" & "Where ApprovalStatus = False " '; "
-            con.Open()
-            Dim command As OleDbCommand = New OleDbCommand()
-            command.CommandText = query
-            Dim reader As OleDbDataReader = command.ExecuteReader()
-            con.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
-
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show(Username)
-    End Sub
-
 
     Private Sub addUser_Click(sender As Object, e As EventArgs) Handles addUser.Click
         add_User.con = con
@@ -56,10 +34,8 @@ Public Class Office_HomePage
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()
-            command1.CommandText = "Select * From Leave; "
-            Dim reader As OleDbDataReader = command1.ExecuteReader()
-
-
+            command1.Connection = con
+            command1.CommandText = "Select * From Leave Where ApprovalStatus = 'office';"
 
             Dim da As OleDbDataAdapter = New OleDbDataAdapter(command1)
             Dim dt As DataTable = New DataTable()
@@ -70,14 +46,20 @@ Public Class Office_HomePage
             con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+            con.Close()
         End Try
     End Sub
 
     Private Sub loadUser_Click(sender As Object, e As EventArgs) Handles loadUser.Click
+        If CStr(choice_combo.SelectedItem) = "" Then
+            MessageBox.Show("Enter a type first")
+            Exit Sub
+        End If
         Try
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()
+            command1.Connection = con
             command1.CommandText = "Select * From " & CStr(choice_combo.SelectedItem) & " Where Username = '" & username_text.Text & "'; "
             Dim reader As OleDbDataReader = command1.ExecuteReader()
 
@@ -86,6 +68,7 @@ Public Class Office_HomePage
             While (reader.Read)
                 count += 1
             End While
+            reader.Close()
 
             If (count = 1) Then
                 Dim da As OleDbDataAdapter = New OleDbDataAdapter(command1)
@@ -101,6 +84,8 @@ Public Class Office_HomePage
             con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+            con.Close()
         End Try
     End Sub
+
 End Class

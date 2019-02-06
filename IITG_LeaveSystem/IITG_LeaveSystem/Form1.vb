@@ -59,6 +59,7 @@ Public Class Form1
                 UsernameTextBox.Select()
             ElseIf OfficeRadio.Checked = True Then
                 Office_HomePage.Username = username
+                Office_HomePage.con = con
                 Office_HomePage.Show()
             Else
                 Rest_HomePage.Username = username

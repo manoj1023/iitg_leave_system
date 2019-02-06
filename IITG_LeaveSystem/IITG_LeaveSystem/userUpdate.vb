@@ -9,9 +9,19 @@ Public Class userUpdate
 
     Private Sub update_Click(sender As Object, e As EventArgs) Handles update_button.Click
         Try
+            If (CStr(choice_combo.SelectedItem) = "") Then
+                MessageBox.Show("Select User Type")
+                Exit Sub
+            End If
+            If (CStr(fieldBox.SelectedItem) = "") Then
+                MessageBox.Show("Select Field To Edit")
+                Exit Sub
+            End If
+
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()
+            command1.Connection = con
             command1.CommandText = "Select * From " & CStr(choice_combo.SelectedItem) & " Where Username = '" & username_text.Text & "'; "
             Dim reader As OleDbDataReader = command1.ExecuteReader()
 
@@ -30,7 +40,9 @@ Public Class userUpdate
 
             If (count = 1) Then
                 Dim command2 As OleDbCommand = New OleDbCommand()
+                command2.Connection = con
                 command2.CommandText = "update " & CStr(choice_combo.SelectedItem) & " set " & CStr(fieldBox.SelectedItem) & "='" & value & "' where Username='" & username_text.Text & "';"
+                'MessageBox.Show(command2.CommandText)
                 command2.ExecuteNonQuery()
             Else
                 MessageBox.Show("Username does not exist")
@@ -40,7 +52,11 @@ Public Class userUpdate
             con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
         End Try
+        MessageBox.Show("Field Updated!!")
+
     End Sub
 
     Private Function encrypt(p1 As String) As String
@@ -56,7 +72,24 @@ Public Class userUpdate
         Return p1
     End Function
 
-    Private Sub userUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
+        If CStr(choice_combo.SelectedItem) = "Student" Then
+            fieldBox.Items.Clear()
+            fieldBox.Items.Add("Username")
+            fieldBox.Items.Add("Password")
+            fieldBox.Items.Add("Phone")
+            fieldBox.Items.Add("Email")
+            fieldBox.Items.Add("EmergencyContactNo")
+            fieldBox.Items.Add("MedicalLeaves")
+            fieldBox.Items.Add("OrdinaryLeaves")
+            fieldBox.Items.Add("AcademicLeaves")
+            fieldBox.Items.Add("ParentalLeaves")
+        Else
+            fieldBox.Items.Clear()
+            fieldBox.Items.Add("Username")
+            fieldBox.Items.Add("Password")
+            fieldBox.Items.Add("Email")
+        End If
 
     End Sub
 End Class

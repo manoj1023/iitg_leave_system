@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Net.Mail
 Public Class Office_HomePage
 
     Public Property Username As String
@@ -87,5 +88,271 @@ Public Class Office_HomePage
             con.Close()
         End Try
     End Sub
+
+    Private Sub approvalButton_Click(sender As Object, e As EventArgs) Handles approvalButton.Click
+        Dim comment As String
+        Dim Leaveid As Integer
+        Dim row As Integer
+        Try
+            row = dgv2.CurrentRow.Index
+            Leaveid = dgv2.Item(0, row).Value
+        Catch ex As Exception
+            MessageBox.Show("Select a leave first")
+            Exit Sub
+        End Try
+        comment = InputBox("Any Comments?", "Comments", "Add Comments here")
+
+        Dim Applicantname As String = ""
+        Dim email As String = ""
+        Dim table As String = ""
+        Try
+            con.Open()
+            Dim command1 As OleDbCommand = New OleDbCommand()
+            command1.Connection = con
+            command1.CommandText = "Select Applicant From Leave where LeaveId = " & Leaveid & ";"
+            Dim reader As OleDbDataReader = command1.ExecuteReader()
+            While (reader.Read)
+                Applicantname = reader.GetString(0)
+            End While
+            reader.Close()
+            'MessageBox.Show(Applicantname)
+
+            Dim command3 As OleDbCommand = New OleDbCommand()
+            command3.Connection = con
+            command3.CommandText = "Select ApplicantType From Leave where LeaveId = " & Leaveid & ";"
+            Dim reader3 As OleDbDataReader = command3.ExecuteReader()
+            While (reader3.Read)
+                table = reader3.GetString(0)
+            End While
+            reader3.Close()
+
+            If table = "MTech" Or table = "PhD" Then
+                table = "Student"
+            End If
+            'MessageBox.Show(table)
+
+            Dim command2 As OleDbCommand = New OleDbCommand()
+            command2.Connection = con
+            command2.CommandText = "Select Email From " & table & " where Username = '" & Applicantname & "';"
+            'MessageBox.Show(command2.CommandText)
+            Dim reader2 As OleDbDataReader = command2.ExecuteReader()
+            While (reader2.Read)
+                email = reader2.GetString(0)
+            End While
+            reader2.Close()
+            'MessageBox.Show(email)
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        'Applicant Type, Name and email, comments are available here.
+        Dim Status As String
+        If table = "Student" Then
+            Status = getDppc(Applicantname)
+        ElseIf table = "Professor" Or table = "Staff" Then
+            Status = getHOD(Applicantname, table)
+        ElseIf table = "HOD" Then
+            Status = "dean"
+        Else
+            Status = "Approved"
+        End If
+
+        'Add the status
+        Try
+            con.Open()
+            Dim command As OleDbCommand = New OleDbCommand()
+            command.Connection = con
+            command.CommandText = "update Leave Set ApprovalStatus = '" & Status & "' where LeaveId = " & Leaveid & ";"
+            command.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        'Add the comment
+        Try
+            con.Open()
+            Dim command As OleDbCommand = New OleDbCommand()
+            command.Connection = con
+            command.CommandText = "update Leave Set CommOffice = '" & comment & "' where LeaveId = " & Leaveid & ";"
+            command.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        MessageBox.Show("Leave Approved")
+    End Sub
+
+    Private Sub DeclineButton_Click(sender As Object, e As EventArgs) Handles DeclineButton.Click
+        Dim comment As String
+        Dim Leaveid As Integer
+        Dim row As Integer
+        Try
+            row = dgv2.CurrentRow.Index
+            Leaveid = dgv2.Item(0, row).Value
+        Catch ex As Exception
+            MessageBox.Show("Select a leave first")
+            Exit Sub
+        End Try
+        comment = InputBox("Any Comments?", "Comments", "Add Comments here")
+
+        Try
+            con.Open()
+            Dim command As OleDbCommand = New OleDbCommand()
+            command.Connection = con
+            command.CommandText = "update Leave Set ApprovalStatus = 'Declined' where LeaveId = " & Leaveid & ";"
+            command.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        Try
+            con.Open()
+            Dim command As OleDbCommand = New OleDbCommand()
+            command.Connection = con
+            command.CommandText = "update Leave Set CommOffice = '" & comment & "' where LeaveId = " & Leaveid & ";"
+            command.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        Dim Applicantname As String = ""
+        Dim email As String = ""
+        Dim table As String = ""
+        Try
+            con.Open()
+            Dim command1 As OleDbCommand = New OleDbCommand()
+            command1.Connection = con
+            command1.CommandText = "Select Applicant From Leave where LeaveId = " & Leaveid & ";"
+            Dim reader As OleDbDataReader = command1.ExecuteReader()
+            While (reader.Read)
+                Applicantname = reader.GetString(0)
+            End While
+            reader.Close()
+            'MessageBox.Show(Applicantname)
+
+            Dim command3 As OleDbCommand = New OleDbCommand()
+            command3.Connection = con
+            command3.CommandText = "Select ApplicantType From Leave where LeaveId = " & Leaveid & ";"
+            Dim reader3 As OleDbDataReader = command3.ExecuteReader()
+            While (reader3.Read)
+                table = reader3.GetString(0)
+            End While
+            reader3.Close()
+
+            If table = "MTech" Or table = "PhD" Then
+                table = "Student"
+            End If
+            'MessageBox.Show(table)
+
+            Dim command2 As OleDbCommand = New OleDbCommand()
+            command2.Connection = con
+            command2.CommandText = "Select Email From " & table & " where Username = '" & Applicantname & "';"
+            'MessageBox.Show(command2.CommandText)
+            Dim reader2 As OleDbDataReader = command2.ExecuteReader()
+            While (reader2.Read)
+                email = reader2.GetString(0)
+            End While
+            reader2.Close()
+            'MessageBox.Show(email)
+            SendEmail(email, "Your Leave Request no. " & Leaveid & " has been rejected by the office. Kindly take notice.", "Leave Rejected")
+
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Exit Sub
+        End Try
+
+        MessageBox.Show("Leave Rejected")
+    End Sub
+
+    Function SendEmail(ByVal sendto As String, ByVal message As String, ByVal subject As String)
+        Try
+            Dim Smtp_Server As New SmtpClient
+            Dim e_mail As New MailMessage()
+            Smtp_Server.UseDefaultCredentials = False
+            Smtp_Server.Credentials = New Net.NetworkCredential("iitgleave@gmail.com", "abcd@1234")
+            Smtp_Server.Port = 587
+            Smtp_Server.EnableSsl = True
+            Smtp_Server.Host = "smtp.gmail.com"
+
+            e_mail = New MailMessage()
+            e_mail.From = New MailAddress("iitgleave@gmail.com")
+            e_mail.To.Add(sendto)
+            e_mail.Subject = subject
+            e_mail.IsBodyHtml = False
+            e_mail.Body = message
+            Smtp_Server.Send(e_mail)
+            'MsgBox("Mail Sent")
+            Return 1
+        Catch error_t As Exception
+            'MsgBox(error_t.Message)
+            Return 0
+        End Try
+    End Function
+
+    Private Function getDppc(Applicantname As String) As String
+        Try
+            con.Open()
+            Dim department As String = ""
+            Dim command2 As OleDbCommand = New OleDbCommand()
+            command2.Connection = con
+            command2.CommandText = "Select Department From Student where Username = '" & Applicantname & "';"
+            'MessageBox.Show(command2.CommandText)
+            Dim reader2 As OleDbDataReader = command2.ExecuteReader()
+            While (reader2.Read)
+                department = reader2.GetString(0)
+            End While
+            reader2.Close()
+            department = department.ToLower()
+            Dim dppc As String = "dppc_" & department
+            con.Close()
+            Return dppc
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Return ""
+        End Try
+    End Function
+
+    
+    Private Function getHOD(Applicantname As String, table As String) As String
+        Try
+            con.Open()
+            Dim department As String = ""
+            Dim command2 As OleDbCommand = New OleDbCommand()
+            command2.Connection = con
+            command2.CommandText = "Select Department From " & table & " where Username = '" & Applicantname & "';"
+            'MessageBox.Show(command2.CommandText)
+            Dim reader2 As OleDbDataReader = command2.ExecuteReader()
+            While (reader2.Read)
+                department = reader2.GetString(0)
+            End While
+            reader2.Close()
+            department = department.ToLower()
+            Dim hod As String = "hod_" & department
+            con.Close()
+            Return hod
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            con.Close()
+            Return ""
+        End Try
+    End Function
 
 End Class

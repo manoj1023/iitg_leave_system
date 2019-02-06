@@ -35,6 +35,8 @@ Partial Class Office_HomePage
         Me.addUser = New System.Windows.Forms.Button()
         Me.updateUser = New System.Windows.Forms.Button()
         Me.deleteUser = New System.Windows.Forms.Button()
+        Me.approvalButton = New System.Windows.Forms.Button()
+        Me.DeclineButton = New System.Windows.Forms.Button()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -159,18 +161,38 @@ Partial Class Office_HomePage
         'deleteUser
         '
         Me.deleteUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.deleteUser.Location = New System.Drawing.Point(634, 475)
+        Me.deleteUser.Location = New System.Drawing.Point(647, 475)
         Me.deleteUser.Name = "deleteUser"
         Me.deleteUser.Size = New System.Drawing.Size(228, 49)
         Me.deleteUser.TabIndex = 13
         Me.deleteUser.Text = "deleteUser"
         Me.deleteUser.UseVisualStyleBackColor = True
         '
+        'approvalButton
+        '
+        Me.approvalButton.Location = New System.Drawing.Point(546, 421)
+        Me.approvalButton.Name = "approvalButton"
+        Me.approvalButton.Size = New System.Drawing.Size(153, 32)
+        Me.approvalButton.TabIndex = 14
+        Me.approvalButton.Text = "Approve"
+        Me.approvalButton.UseVisualStyleBackColor = True
+        '
+        'DeclineButton
+        '
+        Me.DeclineButton.Location = New System.Drawing.Point(722, 421)
+        Me.DeclineButton.Name = "DeclineButton"
+        Me.DeclineButton.Size = New System.Drawing.Size(153, 32)
+        Me.DeclineButton.TabIndex = 15
+        Me.DeclineButton.Text = "Decline"
+        Me.DeclineButton.UseVisualStyleBackColor = True
+        '
         'Office_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(914, 545)
+        Me.Controls.Add(Me.DeclineButton)
+        Me.Controls.Add(Me.approvalButton)
         Me.Controls.Add(Me.deleteUser)
         Me.Controls.Add(Me.updateUser)
         Me.Controls.Add(Me.addUser)
@@ -205,4 +227,6 @@ Partial Class Office_HomePage
     Friend WithEvents addUser As System.Windows.Forms.Button
     Friend WithEvents updateUser As System.Windows.Forms.Button
     Friend WithEvents deleteUser As System.Windows.Forms.Button
+    Friend WithEvents approvalButton As System.Windows.Forms.Button
+    Friend WithEvents DeclineButton As System.Windows.Forms.Button
 End Class

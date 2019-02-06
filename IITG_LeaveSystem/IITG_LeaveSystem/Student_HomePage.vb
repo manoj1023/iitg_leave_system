@@ -29,6 +29,7 @@ Public Class Student_HomePage
     Private Sub Student_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         Dim projDirectory, destinationPath, databasePath As String
+        NAInstructionTextBox.Enabled = False
         projDirectory = Directory.GetCurrentDirectory()
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
@@ -139,7 +140,7 @@ Public Class Student_HomePage
             Dim fs As System.IO.FileStream
             fs = New System.IO.FileStream(destinationPath, IO.FileMode.Open, IO.FileAccess.Read)
             ProfilePictureBox.Image = System.Drawing.Image.FromStream(fs)
-            ProfilePictureBox.SizeMode = PictureBoxSizeMode.Zoom
+            ProfilePictureBox.SizeMode = PictureBoxSizeMode.StretchImage
             fs.Close()
         End If
     End Sub
@@ -182,6 +183,7 @@ Public Class Student_HomePage
         NAInstructionTextBox.Text = "pdf only"
         NAInstructionTextBox.ForeColor = Color.Red
         NALeaveTypeComboBox.Items.Clear()
+        NASupervisorComboBox.Items.Clear()
         'Setting leave type based upon Course
         If Course = "PhD" Then
             NALeaveTypeComboBox.Items.Add("Ordinary Leave")
@@ -193,6 +195,21 @@ Public Class Student_HomePage
             NALeaveTypeComboBox.Items.Add("Academic Leave")
             NALeaveTypeComboBox.Items.Add("Medical Leave")
         End If
+        connection.Open()
+        Dim command As New OleDbCommand
+        command.Connection = connection
+        Dim query As String
+        'Dim firstname, lastname As String
+        query = "Select * from Professor Where Department = '" & department & "';"
+        command.CommandText = query
+        Dim reader As OleDbDataReader
+        reader = command.ExecuteReader
+        Dim usernameprof As String
+        While (reader.Read())
+            usernameprof = reader.GetString(0)
+            NASupervisorComboBox.Items.Add(usernameprof)
+        End While
+        connection.Close()
 
     End Sub
 
@@ -221,6 +238,7 @@ Public Class Student_HomePage
             Dim StartDate As Date = CDate(reader.GetString(2))
             Dim EndDate As Date = CDate(reader.GetString(3))
             Dim ApprovalStatus As String = reader.GetString(10)
+            'Dim supervisor As String = reader.GetString(15)
             Dim currentdate As Date = Date.Today
             Dim data As String
             data = "LeaveID: " & LeaveID & " Type: " & Type & " StartDate: " & StartDate & " EndDate: " & EndDate & " Approval Status: " & ApprovalStatus
@@ -390,6 +408,12 @@ Public Class Student_HomePage
     Private Sub NAApplyButton_Click(sender As Object, e As EventArgs) Handles NAApplyButton.Click
         Dim startdate As Date
         Dim lastdate As Date
+        Dim supervisor As String
+        supervisor = NASupervisorComboBox.Text
+        If supervisor = "" Then
+            MessageBox.Show("No SuperVisor Selected", "Error")
+            Exit Sub
+        End If
         Dim appliedflag As Boolean = False
         startdate = NAStartDate.Text
         lastdate = NALastDate.Text
@@ -476,7 +500,7 @@ Public Class Student_HomePage
                 Else
                     If OrdinaryLeaves > days Then
                         'Successful application
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -499,7 +523,7 @@ Public Class Student_HomePage
                         Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                         'CODE
                         If ans = True Then
-                            query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                            query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                             command.CommandText = query
                             command.ExecuteNonQuery()
                             command.Dispose()
@@ -522,7 +546,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "Academic Leave" Then
                 If AcademicLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -547,7 +571,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -572,7 +596,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "Medical Leave" Then
                 If MedicalLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -594,7 +618,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -616,7 +640,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "Paternal Leave" Then
                 If ParentalLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -638,7 +662,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', 'Pending'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()

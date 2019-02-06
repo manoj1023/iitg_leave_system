@@ -103,6 +103,8 @@ Partial Class Student_HomePage
         Me.ProfileNewPasswordLabel = New System.Windows.Forms.Label()
         Me.ProfileOldPasswordLabel = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.NASupervisorComboBox = New System.Windows.Forms.ComboBox()
+        Me.NASupervisorLabel = New System.Windows.Forms.Label()
         Me.NavigationGroupBox.SuspendLayout()
         Me.NAGroupBox.SuspendLayout()
         Me.ProfilePanel.SuspendLayout()
@@ -196,6 +198,8 @@ Partial Class Student_HomePage
         '
         'NAGroupBox
         '
+        Me.NAGroupBox.Controls.Add(Me.NASupervisorLabel)
+        Me.NAGroupBox.Controls.Add(Me.NASupervisorComboBox)
         Me.NAGroupBox.Controls.Add(Me.NAParentalLeavesLabel)
         Me.NAGroupBox.Controls.Add(Me.NAAcademicLeavesLabel)
         Me.NAGroupBox.Controls.Add(Me.NAMedicalLeavesLabel)
@@ -298,7 +302,7 @@ Partial Class Student_HomePage
         'NALeaveTypeComboBox
         '
         Me.NALeaveTypeComboBox.FormattingEnabled = True
-        Me.NALeaveTypeComboBox.Location = New System.Drawing.Point(315, 175)
+        Me.NALeaveTypeComboBox.Location = New System.Drawing.Point(316, 146)
         Me.NALeaveTypeComboBox.Name = "NALeaveTypeComboBox"
         Me.NALeaveTypeComboBox.Size = New System.Drawing.Size(365, 28)
         Me.NALeaveTypeComboBox.TabIndex = 13
@@ -321,14 +325,14 @@ Partial Class Student_HomePage
         '
         'NALastNameTextBox
         '
-        Me.NALastNameTextBox.Location = New System.Drawing.Point(316, 126)
+        Me.NALastNameTextBox.Location = New System.Drawing.Point(317, 88)
         Me.NALastNameTextBox.Name = "NALastNameTextBox"
         Me.NALastNameTextBox.Size = New System.Drawing.Size(364, 27)
         Me.NALastNameTextBox.TabIndex = 7
         '
         'NAFirstnameTextBox
         '
-        Me.NAFirstnameTextBox.Location = New System.Drawing.Point(316, 65)
+        Me.NAFirstnameTextBox.Location = New System.Drawing.Point(316, 45)
         Me.NAFirstnameTextBox.Name = "NAFirstnameTextBox"
         Me.NAFirstnameTextBox.Size = New System.Drawing.Size(365, 27)
         Me.NAFirstnameTextBox.TabIndex = 6
@@ -367,7 +371,7 @@ Partial Class Student_HomePage
         '
         Me.NALeaveTypeLabel.AutoSize = True
         Me.NALeaveTypeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NALeaveTypeLabel.Location = New System.Drawing.Point(142, 175)
+        Me.NALeaveTypeLabel.Location = New System.Drawing.Point(142, 144)
         Me.NALeaveTypeLabel.Name = "NALeaveTypeLabel"
         Me.NALeaveTypeLabel.Size = New System.Drawing.Size(134, 26)
         Me.NALeaveTypeLabel.TabIndex = 2
@@ -377,7 +381,7 @@ Partial Class Student_HomePage
         '
         Me.NALastNameLabel.AutoSize = True
         Me.NALastNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NALastNameLabel.Location = New System.Drawing.Point(142, 124)
+        Me.NALastNameLabel.Location = New System.Drawing.Point(142, 92)
         Me.NALastNameLabel.Name = "NALastNameLabel"
         Me.NALastNameLabel.Size = New System.Drawing.Size(127, 26)
         Me.NALastNameLabel.TabIndex = 1
@@ -387,7 +391,7 @@ Partial Class Student_HomePage
         '
         Me.NAFirstNameLabel.AutoSize = True
         Me.NAFirstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAFirstNameLabel.Location = New System.Drawing.Point(142, 63)
+        Me.NAFirstNameLabel.Location = New System.Drawing.Point(142, 47)
         Me.NAFirstNameLabel.Name = "NAFirstNameLabel"
         Me.NAFirstNameLabel.Size = New System.Drawing.Size(129, 26)
         Me.NAFirstNameLabel.TabIndex = 0
@@ -400,7 +404,7 @@ Partial Class Student_HomePage
         Me.UsernameLabel.ForeColor = System.Drawing.Color.Black
         Me.UsernameLabel.Image = CType(resources.GetObject("UsernameLabel.Image"), System.Drawing.Image)
         Me.UsernameLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.UsernameLabel.Location = New System.Drawing.Point(847, 37)
+        Me.UsernameLabel.Location = New System.Drawing.Point(704, 37)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.Size = New System.Drawing.Size(61, 24)
         Me.UsernameLabel.TabIndex = 3
@@ -741,7 +745,7 @@ Partial Class Student_HomePage
         '
         Me.OldCommentsListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldCommentsListBox.FormattingEnabled = True
-        Me.OldCommentsListBox.HorizontalExtent = 50
+        Me.OldCommentsListBox.HorizontalExtent = 1000
         Me.OldCommentsListBox.HorizontalScrollbar = True
         Me.OldCommentsListBox.ItemHeight = 20
         Me.OldCommentsListBox.Location = New System.Drawing.Point(34, 373)
@@ -784,7 +788,7 @@ Partial Class Student_HomePage
         '
         Me.OldUpcomingLeaveListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldUpcomingLeaveListBox.FormattingEnabled = True
-        Me.OldUpcomingLeaveListBox.HorizontalExtent = 600
+        Me.OldUpcomingLeaveListBox.HorizontalExtent = 800
         Me.OldUpcomingLeaveListBox.HorizontalScrollbar = True
         Me.OldUpcomingLeaveListBox.ItemHeight = 18
         Me.OldUpcomingLeaveListBox.Location = New System.Drawing.Point(3, 12)
@@ -806,7 +810,7 @@ Partial Class Student_HomePage
         '
         Me.OldPastLeaveListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldPastLeaveListBox.FormattingEnabled = True
-        Me.OldPastLeaveListBox.HorizontalExtent = 600
+        Me.OldPastLeaveListBox.HorizontalExtent = 800
         Me.OldPastLeaveListBox.HorizontalScrollbar = True
         Me.OldPastLeaveListBox.ItemHeight = 18
         Me.OldPastLeaveListBox.Location = New System.Drawing.Point(12, 11)
@@ -924,6 +928,23 @@ Partial Class Student_HomePage
         '
         Me.Timer1.Interval = 1000
         '
+        'NASupervisorComboBox
+        '
+        Me.NASupervisorComboBox.Location = New System.Drawing.Point(316, 197)
+        Me.NASupervisorComboBox.Name = "NASupervisorComboBox"
+        Me.NASupervisorComboBox.Size = New System.Drawing.Size(365, 28)
+        Me.NASupervisorComboBox.TabIndex = 21
+        '
+        'NASupervisorLabel
+        '
+        Me.NASupervisorLabel.AutoSize = True
+        Me.NASupervisorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NASupervisorLabel.Location = New System.Drawing.Point(144, 198)
+        Me.NASupervisorLabel.Name = "NASupervisorLabel"
+        Me.NASupervisorLabel.Size = New System.Drawing.Size(116, 25)
+        Me.NASupervisorLabel.TabIndex = 22
+        Me.NASupervisorLabel.Text = "Supervisor"
+        '
         'Student_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1040,4 +1061,6 @@ Partial Class Student_HomePage
     Friend WithEvents NAAcademicLeavesLabel As System.Windows.Forms.Label
     Friend WithEvents NAMedicalLeavesLabel As System.Windows.Forms.Label
     Friend WithEvents NAOrdinaryleavesLabel As System.Windows.Forms.Label
+    Friend WithEvents NASupervisorLabel As System.Windows.Forms.Label
+    Friend WithEvents NASupervisorComboBox As System.Windows.Forms.ComboBox
 End Class

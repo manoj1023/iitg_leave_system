@@ -18,6 +18,7 @@ Public Class Form1
         PasswordTextBox.PasswordChar = "*"
         StudentRadio.Select()
         Me.AcceptButton = LoginButton
+        UsernameTextBox.Select()
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
@@ -53,6 +54,9 @@ Public Class Form1
             If StudentRadio.Checked = True Then
                 Student_HomePage.Username = username
                 Student_HomePage.Show()
+                UsernameTextBox.Text = ""
+                PasswordTextBox.Text = ""
+                UsernameTextBox.Select()
             ElseIf OfficeRadio.Checked = True Then
                 Office_HomePage.Username = username
                 Office_HomePage.Show()

@@ -90,7 +90,7 @@ Public Class Student_HomePage
         End Try
         calander_year = #6/1/2019#
         'MsgBox(calander_year)
-        If Course = "Mtech" Then
+        If Course = "MTech" Then
             NAParentalLeavesLabel.Hide()
         End If
         NAOrdinaryleavesLabel.Text = "Ordinary Leaves Remaining: " & OrdinaryLeaves

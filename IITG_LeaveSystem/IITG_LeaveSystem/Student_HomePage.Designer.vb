@@ -31,6 +31,8 @@ Partial Class Student_HomePage
         Me.OldButton = New System.Windows.Forms.Button()
         Me.NAButton = New System.Windows.Forms.Button()
         Me.NAGroupBox = New System.Windows.Forms.GroupBox()
+        Me.NASupervisorLabel = New System.Windows.Forms.Label()
+        Me.NASupervisorComboBox = New System.Windows.Forms.ComboBox()
         Me.NAParentalLeavesLabel = New System.Windows.Forms.Label()
         Me.NAAcademicLeavesLabel = New System.Windows.Forms.Label()
         Me.NAMedicalLeavesLabel = New System.Windows.Forms.Label()
@@ -82,6 +84,7 @@ Partial Class Student_HomePage
         Me.ProfileOpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.NAOpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.OldPanel = New System.Windows.Forms.Panel()
+        Me.OldExtendLeaveButton = New System.Windows.Forms.Button()
         Me.OldCommentsLabel = New System.Windows.Forms.Label()
         Me.OldDeleteButton = New System.Windows.Forms.Button()
         Me.OldCommentsListBox = New System.Windows.Forms.ListBox()
@@ -103,8 +106,15 @@ Partial Class Student_HomePage
         Me.ProfileNewPasswordLabel = New System.Windows.Forms.Label()
         Me.ProfileOldPasswordLabel = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.NASupervisorComboBox = New System.Windows.Forms.ComboBox()
-        Me.NASupervisorLabel = New System.Windows.Forms.Label()
+        Me.ExtendleavePanel = New System.Windows.Forms.Panel()
+        Me.ExtendLeaveUploadButton = New System.Windows.Forms.Button()
+        Me.ExtendLeaveApplyButton = New System.Windows.Forms.Button()
+        Me.ExtendLeaveCancelButton = New System.Windows.Forms.Button()
+        Me.ExtendLeaveNewDocumentsLabel = New System.Windows.Forms.Label()
+        Me.ExtendLeaveLastDateLabel = New System.Windows.Forms.Label()
+        Me.ExtendLastDateDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.ExtendOpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.ExtendLeaveInstructionTextBox = New System.Windows.Forms.TextBox()
         Me.NavigationGroupBox.SuspendLayout()
         Me.NAGroupBox.SuspendLayout()
         Me.ProfilePanel.SuspendLayout()
@@ -115,6 +125,7 @@ Partial Class Student_HomePage
         Me.OldPastLeavesPanel.SuspendLayout()
         Me.ProfilePasswordChangePanel.SuspendLayout()
         Me.ProfilePasswordChangeGroupBox.SuspendLayout()
+        Me.ExtendleavePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'NavigationGroupBox
@@ -225,6 +236,23 @@ Partial Class Student_HomePage
         Me.NAGroupBox.TabIndex = 2
         Me.NAGroupBox.TabStop = False
         Me.NAGroupBox.Text = "New Application"
+        '
+        'NASupervisorLabel
+        '
+        Me.NASupervisorLabel.AutoSize = True
+        Me.NASupervisorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NASupervisorLabel.Location = New System.Drawing.Point(144, 198)
+        Me.NASupervisorLabel.Name = "NASupervisorLabel"
+        Me.NASupervisorLabel.Size = New System.Drawing.Size(116, 25)
+        Me.NASupervisorLabel.TabIndex = 22
+        Me.NASupervisorLabel.Text = "Supervisor"
+        '
+        'NASupervisorComboBox
+        '
+        Me.NASupervisorComboBox.Location = New System.Drawing.Point(316, 197)
+        Me.NASupervisorComboBox.Name = "NASupervisorComboBox"
+        Me.NASupervisorComboBox.Size = New System.Drawing.Size(365, 28)
+        Me.NASupervisorComboBox.TabIndex = 21
         '
         'NAParentalLeavesLabel
         '
@@ -707,6 +735,7 @@ Partial Class Student_HomePage
         '
         'OldPanel
         '
+        Me.OldPanel.Controls.Add(Me.OldExtendLeaveButton)
         Me.OldPanel.Controls.Add(Me.OldCommentsLabel)
         Me.OldPanel.Controls.Add(Me.OldDeleteButton)
         Me.OldPanel.Controls.Add(Me.OldCommentsListBox)
@@ -716,8 +745,20 @@ Partial Class Student_HomePage
         Me.OldPanel.Controls.Add(Me.OldPastLeavesPanel)
         Me.OldPanel.Location = New System.Drawing.Point(152, 95)
         Me.OldPanel.Name = "OldPanel"
-        Me.OldPanel.Size = New System.Drawing.Size(830, 529)
+        Me.OldPanel.Size = New System.Drawing.Size(830, 528)
         Me.OldPanel.TabIndex = 8
+        '
+        'OldExtendLeaveButton
+        '
+        Me.OldExtendLeaveButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.OldExtendLeaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldExtendLeaveButton.ForeColor = System.Drawing.Color.Navy
+        Me.OldExtendLeaveButton.Location = New System.Drawing.Point(309, 481)
+        Me.OldExtendLeaveButton.Name = "OldExtendLeaveButton"
+        Me.OldExtendLeaveButton.Size = New System.Drawing.Size(226, 43)
+        Me.OldExtendLeaveButton.TabIndex = 7
+        Me.OldExtendLeaveButton.Text = "Modify Application"
+        Me.OldExtendLeaveButton.UseVisualStyleBackColor = True
         '
         'OldCommentsLabel
         '
@@ -732,6 +773,7 @@ Partial Class Student_HomePage
         '
         'OldDeleteButton
         '
+        Me.OldDeleteButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.OldDeleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldDeleteButton.ForeColor = System.Drawing.Color.Red
         Me.OldDeleteButton.Location = New System.Drawing.Point(580, 480)
@@ -928,22 +970,98 @@ Partial Class Student_HomePage
         '
         Me.Timer1.Interval = 1000
         '
-        'NASupervisorComboBox
+        'ExtendleavePanel
         '
-        Me.NASupervisorComboBox.Location = New System.Drawing.Point(316, 197)
-        Me.NASupervisorComboBox.Name = "NASupervisorComboBox"
-        Me.NASupervisorComboBox.Size = New System.Drawing.Size(365, 28)
-        Me.NASupervisorComboBox.TabIndex = 21
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveInstructionTextBox)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveUploadButton)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveApplyButton)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveCancelButton)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveNewDocumentsLabel)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveLastDateLabel)
+        Me.ExtendleavePanel.Controls.Add(Me.ExtendLastDateDateTimePicker)
+        Me.ExtendleavePanel.Location = New System.Drawing.Point(280, 120)
+        Me.ExtendleavePanel.Name = "ExtendleavePanel"
+        Me.ExtendleavePanel.Size = New System.Drawing.Size(588, 376)
+        Me.ExtendleavePanel.TabIndex = 28
         '
-        'NASupervisorLabel
+        'ExtendLeaveUploadButton
         '
-        Me.NASupervisorLabel.AutoSize = True
-        Me.NASupervisorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NASupervisorLabel.Location = New System.Drawing.Point(144, 198)
-        Me.NASupervisorLabel.Name = "NASupervisorLabel"
-        Me.NASupervisorLabel.Size = New System.Drawing.Size(116, 25)
-        Me.NASupervisorLabel.TabIndex = 22
-        Me.NASupervisorLabel.Text = "Supervisor"
+        Me.ExtendLeaveUploadButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ExtendLeaveUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ExtendLeaveUploadButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveUploadButton.Location = New System.Drawing.Point(222, 124)
+        Me.ExtendLeaveUploadButton.Name = "ExtendLeaveUploadButton"
+        Me.ExtendLeaveUploadButton.Size = New System.Drawing.Size(137, 35)
+        Me.ExtendLeaveUploadButton.TabIndex = 6
+        Me.ExtendLeaveUploadButton.Text = "Upload"
+        Me.ExtendLeaveUploadButton.UseVisualStyleBackColor = True
+        '
+        'ExtendLeaveApplyButton
+        '
+        Me.ExtendLeaveApplyButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ExtendLeaveApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ExtendLeaveApplyButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveApplyButton.Location = New System.Drawing.Point(374, 268)
+        Me.ExtendLeaveApplyButton.Name = "ExtendLeaveApplyButton"
+        Me.ExtendLeaveApplyButton.Size = New System.Drawing.Size(163, 53)
+        Me.ExtendLeaveApplyButton.TabIndex = 5
+        Me.ExtendLeaveApplyButton.Text = "Apply"
+        Me.ExtendLeaveApplyButton.UseVisualStyleBackColor = True
+        '
+        'ExtendLeaveCancelButton
+        '
+        Me.ExtendLeaveCancelButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ExtendLeaveCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ExtendLeaveCancelButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveCancelButton.Location = New System.Drawing.Point(61, 268)
+        Me.ExtendLeaveCancelButton.Name = "ExtendLeaveCancelButton"
+        Me.ExtendLeaveCancelButton.Size = New System.Drawing.Size(163, 53)
+        Me.ExtendLeaveCancelButton.TabIndex = 3
+        Me.ExtendLeaveCancelButton.Text = "Back"
+        Me.ExtendLeaveCancelButton.UseVisualStyleBackColor = True
+        '
+        'ExtendLeaveNewDocumentsLabel
+        '
+        Me.ExtendLeaveNewDocumentsLabel.AutoSize = True
+        Me.ExtendLeaveNewDocumentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveNewDocumentsLabel.Location = New System.Drawing.Point(23, 127)
+        Me.ExtendLeaveNewDocumentsLabel.Name = "ExtendLeaveNewDocumentsLabel"
+        Me.ExtendLeaveNewDocumentsLabel.Size = New System.Drawing.Size(163, 24)
+        Me.ExtendLeaveNewDocumentsLabel.TabIndex = 2
+        Me.ExtendLeaveNewDocumentsLabel.Text = "New Documents"
+        '
+        'ExtendLeaveLastDateLabel
+        '
+        Me.ExtendLeaveLastDateLabel.AutoSize = True
+        Me.ExtendLeaveLastDateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveLastDateLabel.Location = New System.Drawing.Point(23, 48)
+        Me.ExtendLeaveLastDateLabel.Name = "ExtendLeaveLastDateLabel"
+        Me.ExtendLeaveLastDateLabel.Size = New System.Drawing.Size(143, 24)
+        Me.ExtendLeaveLastDateLabel.TabIndex = 1
+        Me.ExtendLeaveLastDateLabel.Text = "New Last Date"
+        '
+        'ExtendLastDateDateTimePicker
+        '
+        Me.ExtendLastDateDateTimePicker.Location = New System.Drawing.Point(197, 48)
+        Me.ExtendLastDateDateTimePicker.Name = "ExtendLastDateDateTimePicker"
+        Me.ExtendLastDateDateTimePicker.Size = New System.Drawing.Size(360, 22)
+        Me.ExtendLastDateDateTimePicker.TabIndex = 0
+        '
+        'ExtendOpenFileDialog
+        '
+        Me.ExtendOpenFileDialog.FileName = "ExtendOpenFileDialog"
+        Me.ExtendOpenFileDialog.Filter = "Pdf (*.pdf)| *.pdf"
+        '
+        'ExtendLeaveInstructionTextBox
+        '
+        Me.ExtendLeaveInstructionTextBox.Enabled = False
+        Me.ExtendLeaveInstructionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveInstructionTextBox.ForeColor = System.Drawing.Color.Red
+        Me.ExtendLeaveInstructionTextBox.Location = New System.Drawing.Point(222, 176)
+        Me.ExtendLeaveInstructionTextBox.Name = "ExtendLeaveInstructionTextBox"
+        Me.ExtendLeaveInstructionTextBox.Size = New System.Drawing.Size(334, 27)
+        Me.ExtendLeaveInstructionTextBox.TabIndex = 7
+        Me.ExtendLeaveInstructionTextBox.Text = "pdf only"
         '
         'Student_HomePage
         '
@@ -952,14 +1070,16 @@ Partial Class Student_HomePage
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(996, 635)
+        Me.Controls.Add(Me.ExtendleavePanel)
         Me.Controls.Add(Me.OldPanel)
-        Me.Controls.Add(Me.NAGroupBox)
         Me.Controls.Add(Me.ProfilePasswordChangePanel)
+        Me.Controls.Add(Me.NAGroupBox)
         Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.HeadingLabel)
         Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.NavigationGroupBox)
         Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Student_HomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -978,6 +1098,8 @@ Partial Class Student_HomePage
         Me.ProfilePasswordChangePanel.ResumeLayout(False)
         Me.ProfilePasswordChangeGroupBox.ResumeLayout(False)
         Me.ProfilePasswordChangeGroupBox.PerformLayout()
+        Me.ExtendleavePanel.ResumeLayout(False)
+        Me.ExtendleavePanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1063,4 +1185,14 @@ Partial Class Student_HomePage
     Friend WithEvents NAOrdinaryleavesLabel As System.Windows.Forms.Label
     Friend WithEvents NASupervisorLabel As System.Windows.Forms.Label
     Friend WithEvents NASupervisorComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents OldExtendLeaveButton As System.Windows.Forms.Button
+    Friend WithEvents ExtendleavePanel As System.Windows.Forms.Panel
+    Friend WithEvents ExtendLeaveUploadButton As System.Windows.Forms.Button
+    Friend WithEvents ExtendLeaveApplyButton As System.Windows.Forms.Button
+    Friend WithEvents ExtendLeaveCancelButton As System.Windows.Forms.Button
+    Friend WithEvents ExtendLeaveNewDocumentsLabel As System.Windows.Forms.Label
+    Friend WithEvents ExtendLeaveLastDateLabel As System.Windows.Forms.Label
+    Friend WithEvents ExtendLastDateDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ExtendOpenFileDialog As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents ExtendLeaveInstructionTextBox As System.Windows.Forms.TextBox
 End Class

@@ -208,9 +208,9 @@ Public Class Rest_HomePage
         Dim remainingleaves As Integer
         Dim LeaveId As Integer
         Dim emailID As String
-        Dim row As Integer = pendingleavesdgv.CurrentRow.Index
         Try
-            LeaveID = pendingleavesdgv.Item(0, row).Value
+            Dim row As Integer = pendingleavesdgv.CurrentRow.Index
+            LeaveId = pendingleavesdgv.Item(0, row).Value
             'Exit Sub
         Catch ex As Exception
             MessageBox.Show("Select a row first!")
@@ -783,8 +783,8 @@ Public Class Rest_HomePage
     Private Sub denybutton_Click(sender As Object, e As EventArgs) Handles denybutton.Click
 
         Dim LeaveID As Integer
-        Dim row As Integer = pendingleavesdgv.CurrentRow.Index
         Try
+            Dim row As Integer = pendingleavesdgv.CurrentRow.Index
             LeaveID = pendingleavesdgv.Item(0, row).Value
             'Exit Sub
         Catch ex As Exception

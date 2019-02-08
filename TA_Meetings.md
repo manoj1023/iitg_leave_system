@@ -72,4 +72,31 @@ Work Distribution
 	4. Mayank + Aniket + Manan - DPPC, Professor, Dean, etc Home Page + Query Search + Apply Leave (Incomplete as of 5th februaury)
 	
 	
+### 8 February, 2019
+
+**Minutes**
+
+	1. Except for staff and professor other things were itegrated
+	2. Minor bugs and data validations are left
+	3. Update field allows fields to be set to Null.
+	4. Forgot password fails in case no radio button is selected
+	5. Logout needs to be addded in the office page
+	6. User Add prints the query as well
+	7. Multiple statuses correspond to the same state. eg:- denied, declined, rejected in the leave table
+	
+Things left to do
+
+	1. Fix the bugs
+	2. Make a more attractive GUI
+	3. User Documentation
+	4. Technical Documentation
+	
+Features that can be added but are left out of scope of this project due to time constraint
+
+	1. Extending Leaves
+	2. Sending SMS to users (currently only mail is sent)
+	3. Add Captcha to the login form
+	4. Leaves for groups (eg- Team of 5 students going for a hackathon)
+	5. Remove national holidays from the leaves (leave from 25-27Jan should be counted as 2 days as 26Jan is republic day)
+	
 		

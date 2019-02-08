@@ -75,7 +75,6 @@ Public Class userUpdate
     Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
         If CStr(choice_combo.SelectedItem) = "Student" Then
             fieldBox.Items.Clear()
-            fieldBox.Items.Add("Username")
             fieldBox.Items.Add("Password")
             fieldBox.Items.Add("Phone")
             fieldBox.Items.Add("Email")
@@ -86,7 +85,6 @@ Public Class userUpdate
             fieldBox.Items.Add("ParentalLeaves")
         Else
             fieldBox.Items.Clear()
-            fieldBox.Items.Add("Username")
             fieldBox.Items.Add("Password")
             fieldBox.Items.Add("Email")
         End If

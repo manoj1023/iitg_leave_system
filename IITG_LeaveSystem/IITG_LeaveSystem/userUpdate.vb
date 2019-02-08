@@ -18,6 +18,11 @@ Public Class userUpdate
                 Exit Sub
             End If
 
+            If val_text.Text = "" Then
+                MessageBox.Show("Please enter a value!")
+                Exit Sub
+            End If
+
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()

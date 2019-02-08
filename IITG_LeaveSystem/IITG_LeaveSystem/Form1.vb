@@ -95,7 +95,19 @@ Public Class Form1
 
         Dim username As String = UsernameTextBox.Text
         Dim query As String = ""
-        Dim table As String = GroupBox1.Controls.OfType(Of RadioButton)().FirstOrDefault(Function(radioButton) radioButton.Checked).Text
+        Dim table As String
+        Try
+            table = GroupBox1.Controls.OfType(Of RadioButton)().FirstOrDefault(Function(radioButton) radioButton.Checked).Text
+
+            If table = "" Then
+                MessageBox.Show("Select a type!")
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Exit Sub
+        End Try
+        
 
         query = "Select Email From " & table & " Where Username = '" & username & "'; "
         'MessageBox.Show(query)

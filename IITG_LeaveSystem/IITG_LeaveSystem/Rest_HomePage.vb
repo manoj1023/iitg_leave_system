@@ -800,7 +800,7 @@ Public Class Rest_HomePage
             con.Open()
             Dim command2 As OleDbCommand = New OleDbCommand()
             command2.Connection = con
-            command2.CommandText = "update Leave set ApprovalStatus = 'Denied'  where LeaveID = " & LeaveID & " ;"
+            command2.CommandText = "update Leave set ApprovalStatus = 'Declined'  where LeaveID = " & LeaveID & " ;"
 
             'MessageBox.Show(command2.CommandText)
             command2.ExecuteNonQuery()

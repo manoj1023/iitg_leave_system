@@ -55,3 +55,21 @@ Work Completed
 	1. Backend Complete
 	2. Login Form with basic functionality created.
 	
+### , 2019
+
+All Members were present in this meeting
+
+Minutes
+
+	1. Final work distribution
+	2. Mayank's Code did not work as expected so Aniket will complete it.
+	
+Work Distribution For Now
+
+	1. Manan - UI of forms
+	2. Utkarsh + Ikya - User Documentation
+	3. Siddharth + Mayank - Technichal Documentation 
+	4. Aniket - Redo Mayanks work
+	
+PS:- As 9th february the contribution of Mayank Chandra is 0 in the project. To make up for the same, he has been offered the role to do a thorough testing of the project and report all the bugs to be fixed.
+

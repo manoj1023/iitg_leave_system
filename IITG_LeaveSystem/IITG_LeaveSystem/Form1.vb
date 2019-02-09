@@ -61,6 +61,10 @@ Public Class Form1
                 Office_HomePage.Username = username
                 Office_HomePage.con = con
                 Office_HomePage.Show()
+            ElseIf StaffRadio.Checked = True Or DirectorRadio.Checked = True Then
+                Apply_for_leave.Username = username
+                Apply_for_leave.Type = table
+                Apply_for_leave.Show()
             Else
                 Rest_HomePage.Username = username
                 Rest_HomePage.Type = table

@@ -17,7 +17,6 @@ Public Class Rest_HomePage
 
     Private Sub Rest_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        addcommentbutton.Enabled = False
         If Type = "DPPC" Then
 
             applyleavebutton.Enabled = False
@@ -95,9 +94,33 @@ Public Class Rest_HomePage
 
         End If
 
+        If Type = "Professor" Then
+            Dim projDirectory, destinationPath, databasePath As String
+            projDirectory = Directory.GetCurrentDirectory()
+            databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
+            destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
+            Try
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con.Open()
+                Dim query As String
+                Dim command As New OleDbCommand
+                command.Connection = con
+                query = "Select FirstName From Professor Where Username = '" & Username & "'; "
+                command.CommandText = query
+                firstname = command.ExecuteScalar.ToString
+                query = "Select LastName From Professor Where Username = '" & Username & "'; "
+                command.CommandText = query
+                lastname = command.ExecuteScalar.ToString
+                query = "Select Department From Professor Where Username = '" & Username & "'; "
+                command.CommandText = query
+                department = command.ExecuteScalar.ToString
+                con.Close()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
         welcomelabel.Text = "Welcome to your homepage " & firstname & " " & lastname
         usernamelabel.Text = "Username: " & Username
-
         If Type = "Dean" Then
             departmentlabel.Hide()
         Else
@@ -157,6 +180,31 @@ Public Class Rest_HomePage
         End If
 
         If Type = "Dean" Then
+            Dim projDirectory, destinationPath, databasePath As String
+            projDirectory = Directory.GetCurrentDirectory()
+            databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
+            destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
+            Try
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+
+                con.Open()
+                Dim query As String
+                query = "Select * From Leave Where ApprovalStatus = '" & Username & "';"
+                Dim command1 As OleDbCommand = New OleDbCommand(query, con)
+
+
+                Dim da As OleDbDataAdapter = New OleDbDataAdapter(command1)
+                Dim dt As DataTable = New DataTable()
+                da.Fill(dt)
+                pendingleavesdgv.DataSource = dt
+
+                con.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+
+        If Type = "Professor" Then
             Dim projDirectory, destinationPath, databasePath As String
             projDirectory = Directory.GetCurrentDirectory()
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
@@ -258,6 +306,20 @@ Public Class Rest_HomePage
         startdate = Date.ParseExact(sdate, "dd-MM-yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
         enddate = Date.ParseExact(edate, "dd-MM-yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
         Dim days As Integer = enddate.Subtract(startdate).Days + 1
+
+        If Type = "Professor" Then
+            Try
+                con.Open()
+                Dim command2 As OleDbCommand = New OleDbCommand()
+                command2.Connection = con
+                command2.CommandText = "update Leave set ApprovalStatus = 'office'  where LeaveID = " & LeaveId & " ;"
+                command2.ExecuteNonQuery()
+                con.Close()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+            MessageBox.Show("Leave request sent to office for approval")
+        End If
 
         If Type = "DPPC" And days < 9 Then
             Try
@@ -598,7 +660,7 @@ Public Class Rest_HomePage
                     Dim query As String
                     Dim command As New OleDbCommand
                     command.Connection = con
-                    query = "Select OrdinaryLeaves From Professor Where Username = '" & leaveapplicant & "'; "
+                    query = "Select OrdinaryLeaves From " & leaveapplicanttype & " Where Username = '" & leaveapplicant & "'; "
 
                     'MessageBox.Show(query)
                     command.CommandText = query
@@ -617,13 +679,13 @@ Public Class Rest_HomePage
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
-                    command2.CommandText = "update Professor set OrdinaryLeaves = '" & remainingleaves & "'  where Username = '" & leaveapplicant & "' ;"
+                    command2.CommandText = "update " & leaveapplicanttype & " set OrdinaryLeaves = '" & remainingleaves & "'  where Username = '" & leaveapplicant & "' ;"
                     command2.ExecuteNonQuery()
                     con.Close()
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
-        End If
+            End If
             MessageBox.Show("Leave Sanctioned")
             SendEmail(emailID, "Your leave request has been approved by HOD", "Leave Approval")
         End If
@@ -674,7 +736,7 @@ Public Class Rest_HomePage
             End Try
             MessageBox.Show("Leave Sanctioned")
         End If
-
+        loadbutton.PerformClick()
     End Sub
 
 
@@ -689,6 +751,25 @@ Public Class Rest_HomePage
             MessageBox.Show("Select a leave first!")
             Exit Sub
         End Try
+
+        If Type = "Professor" Then
+            Dim projDirectory, destinationPath, databasePath As String
+            projDirectory = Directory.GetCurrentDirectory()
+            databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
+            destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
+            Try
+                con.Open()
+                Dim command2 As OleDbCommand = New OleDbCommand()
+                command2.Connection = con
+                command2.CommandText = "update Leave set CommSupervisor = '" & addcommentbox.Text & "'  where LeaveID = " & LeaveID & " ;"
+
+                'MessageBox.Show(command2.CommandText)
+                command2.ExecuteNonQuery()
+                con.Close()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
 
         If Type = "DPPC" Then
 
@@ -749,12 +830,12 @@ Public Class Rest_HomePage
                 MsgBox(ex.Message)
             End Try
         End If
-        addcommentbutton.Enabled = False
+        MessageBox.Show("Comment added to selected leave request")
+        addcommentbox.Clear()
+        loadbutton.PerformClick()
+        'addcommentbutton.Enabled = False
     End Sub
 
-    Private Sub addcommentbox_TextChanged(sender As Object, e As EventArgs) Handles addcommentbox.TextChanged
-        addcommentbutton.Enabled = True
-    End Sub
 
     Function SendEmail(ByVal sendto As String, ByVal message As String, ByVal subject As String)
         Try
@@ -809,6 +890,6 @@ Public Class Rest_HomePage
             MsgBox(ex.Message)
         End Try
         MessageBox.Show("Leave request denied")
-
+        loadbutton.PerformClick()
     End Sub
 End Class

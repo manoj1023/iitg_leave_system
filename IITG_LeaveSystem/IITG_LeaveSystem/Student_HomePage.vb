@@ -30,9 +30,9 @@ Public Class Student_HomePage
 
     Private Sub Student_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
-        ExtendleavePanel.Hide()
+        ExtendOuterPanel.Hide()
         Dim projDirectory, destinationPath, databasePath As String
-        NAInstructionTextBox.Enabled = False
+        ExtendLeaveInstructionTextBox.ForeColor = Color.Red
         projDirectory = Directory.GetCurrentDirectory()
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
@@ -121,8 +121,6 @@ Public Class Student_HomePage
         OldButton.BackColor = Color.LightGreen
         ProfileButton.BackColor = Color.LightCoral
         NAButton.BackColor = Color.LightCoral
-        NAFirstnameTextBox.Enabled = False
-        NALastNameTextBox.Enabled = False
         NALeaveTypeComboBox.Items.Clear()
         If IO.File.Exists(destinationPath) Then
             Me.BackgroundImage = Image.FromFile(destinationPath)
@@ -146,6 +144,7 @@ Public Class Student_HomePage
             ProfilePictureBox.SizeMode = PictureBoxSizeMode.StretchImage
             fs.Close()
         End If
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click 'LOGOUT
@@ -239,8 +238,11 @@ Public Class Student_HomePage
         While (reader.Read())
             Dim LeaveID As Integer = reader.GetInt32(0)
             Dim Type As String = reader.GetString(1)
-            Dim StartDate As Date = CDate(reader.GetString(2))
-            Dim EndDate As Date = CDate(reader.GetString(3))
+            Dim StartDate As Date   'Changed
+            Date.TryParseExact(reader.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, StartDate)
+            'MsgBox(StartDate)
+            Dim EndDate As Date     'Changed
+            Date.TryParseExact(reader.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, EndDate)
             Dim ApprovalStatus As String = reader.GetString(10)
             'Dim supervisor As String = reader.GetString(15)
             Dim currentdate As Date = Date.Today
@@ -355,7 +357,7 @@ Public Class Student_HomePage
                 Dim fs As System.IO.FileStream
                 fs = New System.IO.FileStream(destinationPath, IO.FileMode.Open, IO.FileAccess.Read)
                 ProfilePictureBox.Image = System.Drawing.Image.FromStream(fs)
-                ProfilePictureBox.SizeMode = PictureBoxSizeMode.Zoom
+                ProfilePictureBox.SizeMode = PictureBoxSizeMode.StretchImage
                 fs.Close()
                 MessageBox.Show("Profile Image Updated", "Message")
             Else
@@ -421,6 +423,7 @@ Public Class Student_HomePage
         Dim appliedflag As Boolean = False
         startdate = NAStartDate.Text
         lastdate = NALastDate.Text
+        'MsgBox(startdate)
         Dim currentdate As Date
         currentdate = Date.Today
         Dim flag As Boolean
@@ -450,9 +453,10 @@ Public Class Student_HomePage
             stringtemp = reader1.GetString(10)
             Dim lastdatetemp As Date
             Dim leaveidtemp As Integer = reader1.GetInt32(0)
-            lastdatetemp = CDate(reader1.GetString(3))
-            Dim startdatetemp As Date = CDate(reader1.GetString(2))
-            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp)) And stringtemp <> "Rejected" Then
+            Date.TryParseExact(reader1.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
+            Dim startdatetemp As Date
+            Date.TryParseExact(reader1.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
+            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Rejected" Then
                 MessageBox.Show("There is already an applied overlapping leave with LeaveID " & leaveidtemp, "Error")
                 flag = False
             End If
@@ -477,6 +481,9 @@ Public Class Student_HomePage
         Dim command As New OleDbCommand
         command.Connection = connection
         Dim query As String
+        Dim startdatefinal As String = startdate.ToString("dd-MM-yyyy")
+        'MsgBox(startdatefinal)
+        Dim lastdatefinal As String = lastdate.ToString("dd-MM-yyyy")
         If flag = True Then
             If leavetype = "Ordinary Leave" Then
                 Dim command2 As New OleDbCommand
@@ -488,8 +495,8 @@ Public Class Student_HomePage
                 reader2 = command2.ExecuteReader
                 Dim startdatetemp, lastdatetemp As Date
                 While (reader2.Read() And flag)
-                    startdatetemp = CDate(reader2.GetString(2))
-                    lastdatetemp = CDate(reader2.GetString(3))
+                    Date.TryParseExact(reader2.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
+                    Date.TryParseExact(reader2.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
@@ -503,15 +510,15 @@ Public Class Student_HomePage
                     flag = False
                 Else
                     If OrdinaryLeaves > days Then
-                        'Successful application
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                        'Successful Application
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
                         If flag2 = True Then
                             Dim LeaveID As Integer
                             command.Connection = connection
-                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                             command.CommandText = query
                             LeaveID = Val(command.ExecuteScalar.ToString)
                             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -527,14 +534,14 @@ Public Class Student_HomePage
                         Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                         'CODE
                         If ans = True Then
-                            query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                            query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                             command.CommandText = query
                             command.ExecuteNonQuery()
                             command.Dispose()
                             If flag2 = True Then
                                 Dim LeaveID As Integer
                                 command.Connection = connection
-                                query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                                query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                                 command.CommandText = query
                                 LeaveID = Val(command.ExecuteScalar.ToString)
                                 destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -550,14 +557,14 @@ Public Class Student_HomePage
             ElseIf leavetype = "Academic Leave" Then
                 If AcademicLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('AL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
                     If flag2 = True Then
                         Dim LeaveID As Integer
                         command.Connection = connection
-                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                         command.Connection = connection
                         command.CommandText = query
                         Dim temp As String
@@ -575,14 +582,14 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('AL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('AL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
                         If flag2 = True Then
                             Dim LeaveID As Integer
                             command.Connection = connection
-                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                             command.Connection = connection
                             command.CommandText = query
                             Dim temp As String
@@ -600,14 +607,14 @@ Public Class Student_HomePage
             ElseIf leavetype = "Medical Leave" Then
                 If MedicalLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('ML', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
                     If flag2 = True Then
                         Dim LeaveID As Integer
                         command.Connection = connection
-                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                         command.CommandText = query
                         LeaveID = Val(command.ExecuteScalar.ToString)
                         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -622,14 +629,14 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('ML', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('ML', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
                         If flag2 = True Then
                             Dim LeaveID As Integer
                             command.Connection = connection
-                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                             command.CommandText = query
                             LeaveID = Val(command.ExecuteScalar.ToString)
                             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -644,14 +651,14 @@ Public Class Student_HomePage
             ElseIf leavetype = "Paternal Leave" Then
                 If ParentalLeaves > days Then
                     'Successful Application
-                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                    query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('PL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
                     If flag2 = True Then
                         Dim LeaveID As Integer
                         command.Connection = connection
-                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                        query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                         command.CommandText = query
                         LeaveID = Val(command.ExecuteScalar.ToString)
                         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -666,14 +673,14 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('PL', '" & startdate.Date & "', '" & lastdate.Date & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
+                        query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('PL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
                         If flag2 = True Then
                             Dim LeaveID As Integer
                             command.Connection = connection
-                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdate & "'; "
+                            query = "Select LeaveID From Leave Where Applicant = '" & Username & "' And EndDate = '" & lastdatefinal & "'; "
                             command.CommandText = query
                             LeaveID = Val(command.ExecuteScalar.ToString)
                             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\" & LeaveID & ".pdf")
@@ -943,7 +950,7 @@ Public Class Student_HomePage
                     MessageBox.Show("Can't Delete Approved Leave Application", "Delete Error")
 
                 Else
-                    ExtendleavePanel.Show()
+                    ExtendOuterPanel.Show()
                     OldPanel.Hide()
                     NAButton.Enabled = False
                     OldButton.Enabled = False
@@ -980,7 +987,7 @@ Public Class Student_HomePage
         command3.Connection = connection
         Dim query3 As String = "Select StartDate from Leave Where LeaveID = " & extendleaveid & ";"
         command3.CommandText = query3
-        startdate = CDate(command3.ExecuteScalar.ToString)
+        Date.TryParseExact(command3.ExecuteScalar.ToString, New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdate)
         query3 = "Select Type from Leave Where LeaveID = " & extendleaveid & ";"
         command3.CommandText = query3
         leavetype = command3.ExecuteScalar.ToString
@@ -1011,10 +1018,12 @@ Public Class Student_HomePage
         While (reader1.Read() And flag) 'Overlapping check
             Dim stringtemp As String
             stringtemp = reader1.GetString(10)
-            Dim lastdatetemp As Date = CDate(reader1.GetString(3))
+            Dim lastdatetemp As Date
+            Date.TryParseExact(reader1.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
             Dim leaveidtemp As Integer = reader1.GetInt32(0)
-            Dim startdatetemp As Date = CDate(reader1.GetString(2))
-            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp)) And stringtemp <> "Rejected" And leaveidtemp <> extendleaveid Then
+            Dim startdatetemp As Date
+            Date.TryParseExact(reader1.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
+            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Rejected" And leaveidtemp <> extendleaveid Then
                 MessageBox.Show("There is already an applied overlapping leave with LeaveID " & leaveidtemp, "Error")
                 flag = False
             End If
@@ -1035,6 +1044,7 @@ Public Class Student_HomePage
         Dim command As New OleDbCommand
         command.Connection = connection
         Dim query As String
+        Dim lastdatefinal As String = lastdate.ToString("dd-MM-yyyy")
         If flag = True Then
             If leavetype = "OL" Then
                 Dim command2 As New OleDbCommand
@@ -1046,8 +1056,8 @@ Public Class Student_HomePage
                 reader2 = command2.ExecuteReader
                 Dim startdatetemp, lastdatetemp As Date
                 While (reader2.Read() And flag)
-                    startdatetemp = CDate(reader2.GetString(2))
-                    lastdatetemp = CDate(reader2.GetString(3))
+                    Date.TryParseExact(reader2.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
+                    Date.TryParseExact(reader2.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
@@ -1061,7 +1071,7 @@ Public Class Student_HomePage
                     flag = False
                 Else
                     If OrdinaryLeaves > days Then
-                        query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                        query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -1080,7 +1090,7 @@ Public Class Student_HomePage
                         Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                         'CODE
                         If ans = True Then
-                            query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                            query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                             command.CommandText = query
                             command.ExecuteNonQuery()
                             command.Dispose()
@@ -1091,7 +1101,7 @@ Public Class Student_HomePage
                                     File.Delete(destinationPath)
                                 End If
                                 File.Copy(ExtendDocumentFilePath, destinationPath)
-                                End if
+                            End If
                             appliedflag = True
                         End If
                     End If
@@ -1099,7 +1109,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "AL" Then
                 If AcademicLeaves > days Then
                     'Successful Application
-                    query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                    query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -1119,7 +1129,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                        query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -1129,7 +1139,7 @@ Public Class Student_HomePage
                             If IO.File.Exists(destinationPath) Then
                                 File.Delete(destinationPath)
                             End If
-                                File.Copy(ExtendDocumentFilePath, destinationPath)
+                            File.Copy(ExtendDocumentFilePath, destinationPath)
                         End If
                         appliedflag = True
                     End If
@@ -1137,7 +1147,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "ML" Then
                 If MedicalLeaves > days Then
                     'Successful Application
-                    query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                    query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -1147,7 +1157,7 @@ Public Class Student_HomePage
                         If IO.File.Exists(destinationPath) Then
                             File.Delete(destinationPath)
                         End If
-                            File.Copy(ExtendDocumentFilePath, destinationPath)
+                        File.Copy(ExtendDocumentFilePath, destinationPath)
                     End If
                     appliedflag = True
                 Else
@@ -1155,7 +1165,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                        query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -1165,7 +1175,7 @@ Public Class Student_HomePage
                             If IO.File.Exists(destinationPath) Then
                                 File.Delete(destinationPath)
                             End If
-                                File.Copy(ExtendDocumentFilePath, destinationPath)
+                            File.Copy(ExtendDocumentFilePath, destinationPath)
                         End If
                         appliedflag = True
                     End If
@@ -1173,7 +1183,7 @@ Public Class Student_HomePage
             ElseIf leavetype = "PL" Then
                 If ParentalLeaves > days Then
                     'Successful Application
-                    query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                    query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                     command.CommandText = query
                     command.ExecuteNonQuery()
                     command.Dispose()
@@ -1183,7 +1193,7 @@ Public Class Student_HomePage
                         If IO.File.Exists(destinationPath) Then
                             File.Delete(destinationPath)
                         End If
-                            File.Copy(ExtendDocumentFilePath, destinationPath)
+                        File.Copy(ExtendDocumentFilePath, destinationPath)
                     End If
                     appliedflag = True
                 Else
@@ -1191,7 +1201,7 @@ Public Class Student_HomePage
                     Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
                     If ans = True Then
-                        query = "Update Leave SET EndDate = '" & lastdate.Date & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
+                        query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
                         command.Dispose()
@@ -1201,7 +1211,7 @@ Public Class Student_HomePage
                             If IO.File.Exists(destinationPath) Then
                                 File.Delete(destinationPath)
                             End If
-                                File.Copy(ExtendDocumentFilePath, destinationPath)
+                            File.Copy(ExtendDocumentFilePath, destinationPath)
                         End If
                         appliedflag = True
                     End If
@@ -1210,21 +1220,20 @@ Public Class Student_HomePage
                 MessageBox.Show("Wrong Leave Type", "Error")
                 flag = False
             End If
-            End If
+        End If
         If appliedflag = True Then
             MessageBox.Show("Successfully RE-Applied", "Extend Leave Application")
         End If
         connection.Close()
     End Sub
 
-   
-
     Private Sub ExtendLeaveCancelButton_Click(sender As Object, e As EventArgs) Handles ExtendLeaveCancelButton.Click
         ExtendDocumentFilePath = ""
         NAButton.Enabled = True
         OldButton.Enabled = True
         ProfileButton.Enabled = True
-        ExtendleavePanel.Hide()
+        ExtendOuterPanel.Hide()
         OldButton.PerformClick()
     End Sub
+
 End Class

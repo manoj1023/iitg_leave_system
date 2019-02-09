@@ -139,6 +139,9 @@
     <EmbeddedResource Include="add_User.resx">
       <DependentUpon>add_User.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apply_for_leave.resx">
+      <DependentUpon>Apply_for_leave.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

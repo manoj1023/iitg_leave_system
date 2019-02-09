@@ -77,6 +77,7 @@ Public Class add_User
 
             If (count <> 0) Then
                 MessageBox.Show("Username already exists")
+                con.Close()
                 Exit Sub
             End If
             Dim pare As Integer = 0
@@ -92,7 +93,7 @@ Public Class add_User
                 Dim command2 As OleDbCommand = New OleDbCommand()
                 command2.Connection = con
                 command2.CommandText = "INSERT INTO " & CStr(choice_combo.SelectedItem) & " (Username,[Password], FirstName, LastName,Phone, Email, Department, MedicalLeaves, OrdinaryLeaves, AcademicLeaves, ParentalLeaves, Gender, Course, RollNumber) VALUES ('" & username_text.Text & "','" & CStr(encrypt(password_text.Text)) & "','" & firstname_text.Text & "','" & lastname_text.Text & "','" & Phone_text.Text & "','" & Email_Text.Text & "','" & CStr(dept_combo.SelectedItem) & "',15,30,30," & pare & ",'" & CStr(gender_combo.SelectedItem) & "','" & CStr(course_combo.SelectedItem) & "','" & RollNumber_text.Text & "');"
-                username_text.Text = (command2.CommandText)
+                'username_text.Text = (command2.CommandText)
                 command2.ExecuteNonQuery()
                 MessageBox.Show("User Added!!")
             Else

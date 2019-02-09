@@ -37,6 +37,7 @@ Partial Class Office_HomePage
         Me.deleteUser = New System.Windows.Forms.Button()
         Me.approvalButton = New System.Windows.Forms.Button()
         Me.DeclineButton = New System.Windows.Forms.Button()
+        Me.logoutButton = New System.Windows.Forms.Button()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -186,11 +187,21 @@ Partial Class Office_HomePage
         Me.DeclineButton.Text = "Decline"
         Me.DeclineButton.UseVisualStyleBackColor = True
         '
+        'logoutButton
+        '
+        Me.logoutButton.Location = New System.Drawing.Point(694, 42)
+        Me.logoutButton.Name = "logoutButton"
+        Me.logoutButton.Size = New System.Drawing.Size(123, 27)
+        Me.logoutButton.TabIndex = 16
+        Me.logoutButton.Text = "Logout"
+        Me.logoutButton.UseVisualStyleBackColor = True
+        '
         'Office_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(914, 545)
+        Me.Controls.Add(Me.logoutButton)
         Me.Controls.Add(Me.DeclineButton)
         Me.Controls.Add(Me.approvalButton)
         Me.Controls.Add(Me.deleteUser)
@@ -229,4 +240,5 @@ Partial Class Office_HomePage
     Friend WithEvents deleteUser As System.Windows.Forms.Button
     Friend WithEvents approvalButton As System.Windows.Forms.Button
     Friend WithEvents DeclineButton As System.Windows.Forms.Button
+    Friend WithEvents logoutButton As System.Windows.Forms.Button
 End Class

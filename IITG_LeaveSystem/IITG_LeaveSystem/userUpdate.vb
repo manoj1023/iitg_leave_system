@@ -18,6 +18,11 @@ Public Class userUpdate
                 Exit Sub
             End If
 
+            If val_text.Text = "" Then
+                MessageBox.Show("Please enter a value!")
+                Exit Sub
+            End If
+
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()
@@ -75,7 +80,6 @@ Public Class userUpdate
     Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
         If CStr(choice_combo.SelectedItem) = "Student" Then
             fieldBox.Items.Clear()
-            fieldBox.Items.Add("Username")
             fieldBox.Items.Add("Password")
             fieldBox.Items.Add("Phone")
             fieldBox.Items.Add("Email")
@@ -86,10 +90,13 @@ Public Class userUpdate
             fieldBox.Items.Add("ParentalLeaves")
         Else
             fieldBox.Items.Clear()
-            fieldBox.Items.Add("Username")
             fieldBox.Items.Add("Password")
             fieldBox.Items.Add("Email")
         End If
+
+    End Sub
+
+    Private Sub userUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

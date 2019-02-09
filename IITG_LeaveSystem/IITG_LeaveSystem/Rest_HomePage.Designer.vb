@@ -64,6 +64,8 @@ Partial Class Rest_HomePage
         '
         'pendingleavesdgv
         '
+        Me.pendingleavesdgv.AllowUserToAddRows = False
+        Me.pendingleavesdgv.AllowUserToDeleteRows = False
         Me.pendingleavesdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.pendingleavesdgv.Location = New System.Drawing.Point(6, 31)
         Me.pendingleavesdgv.MultiSelect = False

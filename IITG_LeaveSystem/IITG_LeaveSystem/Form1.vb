@@ -61,6 +61,10 @@ Public Class Form1
                 Office_HomePage.Username = username
                 Office_HomePage.con = con
                 Office_HomePage.Show()
+            ElseIf StaffRadio.Checked = True Or DirectorRadio.Checked = True Then
+                Apply_for_leave.Username = username
+                Apply_for_leave.Type = table
+                Apply_for_leave.Show()
             Else
                 Rest_HomePage.Username = username
                 Rest_HomePage.Type = table
@@ -95,7 +99,19 @@ Public Class Form1
 
         Dim username As String = UsernameTextBox.Text
         Dim query As String = ""
-        Dim table As String = GroupBox1.Controls.OfType(Of RadioButton)().FirstOrDefault(Function(radioButton) radioButton.Checked).Text
+        Dim table As String
+        Try
+            table = GroupBox1.Controls.OfType(Of RadioButton)().FirstOrDefault(Function(radioButton) radioButton.Checked).Text
+
+            If table = "" Then
+                MessageBox.Show("Select a type!")
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Exit Sub
+        End Try
+        
 
         query = "Select Email From " & table & " Where Username = '" & username & "'; "
         'MessageBox.Show(query)

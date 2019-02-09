@@ -30,13 +30,14 @@ Partial Class Apply_for_leave
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.applybutton = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.positionlabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'namelabel
         '
         Me.namelabel.AutoSize = True
         Me.namelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namelabel.Location = New System.Drawing.Point(141, 46)
+        Me.namelabel.Location = New System.Drawing.Point(140, 44)
         Me.namelabel.Name = "namelabel"
         Me.namelabel.Size = New System.Drawing.Size(71, 20)
         Me.namelabel.TabIndex = 0
@@ -54,7 +55,7 @@ Partial Class Apply_for_leave
         '
         Me.startdatelabel.AutoSize = True
         Me.startdatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.startdatelabel.Location = New System.Drawing.Point(141, 92)
+        Me.startdatelabel.Location = New System.Drawing.Point(141, 142)
         Me.startdatelabel.Name = "startdatelabel"
         Me.startdatelabel.Size = New System.Drawing.Size(90, 16)
         Me.startdatelabel.TabIndex = 2
@@ -64,7 +65,7 @@ Partial Class Apply_for_leave
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(141, 138)
+        Me.Label1.Location = New System.Drawing.Point(141, 188)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(85, 16)
         Me.Label1.TabIndex = 3
@@ -72,21 +73,21 @@ Partial Class Apply_for_leave
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(249, 92)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(249, 138)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 4
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(249, 138)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(249, 184)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 5
         '
         'applybutton
         '
-        Me.applybutton.Location = New System.Drawing.Point(249, 184)
+        Me.applybutton.Location = New System.Drawing.Point(249, 230)
         Me.applybutton.Name = "applybutton"
         Me.applybutton.Size = New System.Drawing.Size(75, 23)
         Me.applybutton.TabIndex = 6
@@ -95,18 +96,29 @@ Partial Class Apply_for_leave
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(359, 184)
+        Me.Button2.Location = New System.Drawing.Point(359, 230)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Close"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'positionlabel
+        '
+        Me.positionlabel.AutoSize = True
+        Me.positionlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.positionlabel.Location = New System.Drawing.Point(245, 78)
+        Me.positionlabel.Name = "positionlabel"
+        Me.positionlabel.Size = New System.Drawing.Size(108, 20)
+        Me.positionlabel.TabIndex = 8
+        Me.positionlabel.Text = "Position Label"
+        '
         'Apply_for_leave
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(574, 306)
+        Me.Controls.Add(Me.positionlabel)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.applybutton)
         Me.Controls.Add(Me.DateTimePicker2)
@@ -129,4 +141,5 @@ Partial Class Apply_for_leave
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents applybutton As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents positionlabel As System.Windows.Forms.Label
 End Class

@@ -355,4 +355,10 @@ Public Class Office_HomePage
         End Try
     End Function
 
+    Private Sub logoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
+        Form1.Show()
+        Form1.UsernameTextBox.Select()
+        Form1.PasswordTextBox.Clear()
+        Me.Close()
+    End Sub
 End Class

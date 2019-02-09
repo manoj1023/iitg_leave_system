@@ -55,9 +55,7 @@ Work Completed
 	1. Backend Complete
 	2. Login Form with basic functionality created.
 	
-### , 2019
-
-All Members were present in this meeting
+### 9th February, 2019
 
 Minutes
 

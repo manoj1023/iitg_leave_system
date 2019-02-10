@@ -159,6 +159,9 @@ Public Class Apply_for_leave
             flag = False
         End If
 
+        Dim startdatefinal As String = startdate.ToString("dd-MM-yyyy")
+        Dim enddatefinal As String = enddate.ToString("dd-MM-yyyy")
+
         If Type = "Professor" Or Type = "Staff" Then
             Dim projDirectory, destinationPath, databasePath As String
             projDirectory = Directory.GetCurrentDirectory()
@@ -170,7 +173,7 @@ Public Class Apply_for_leave
                 Dim command As New OleDbCommand
                 command.Connection = con
                 Dim query As String
-                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & enddate.Date & "', '" & Username & "', 'No', '" & Type & "' , 'office'); "
+                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdatefinal & "', '" & enddatefinal & "', '" & Username & "', 'No', '" & Type & "' , 'office'); "
                 'MessageBox.Show(query)
                 command.CommandText = query
                 command.ExecuteNonQuery()
@@ -193,7 +196,7 @@ Public Class Apply_for_leave
                 Dim command As New OleDbCommand
                 command.Connection = con
                 Dim query As String
-                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & enddate.Date & "', '" & Username & "', 'No', 'HOD' , 'office'); "
+                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdatefinal & "', '" & enddatefinal & "', '" & Username & "', 'No', 'HOD' , 'office'); "
                 'MessageBox.Show(query)
                 command.CommandText = query
                 command.ExecuteNonQuery()
@@ -217,7 +220,7 @@ Public Class Apply_for_leave
                 Dim command As New OleDbCommand
                 command.Connection = con
                 Dim query As String
-                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdate.Date & "', '" & enddate.Date & "', '" & Username & "', 'No', '" & Type & "' , 'Approved'); "
+                query = "INSERT INTO Leave (Type, StartDate, EndDate, Applicant, isExtension, ApplicantType, ApprovalStatus) VALUES ('OL', '" & startdatefinal & "', '" & enddatefinal & "', '" & Username & "', 'No', '" & Type & "' , 'Approved'); "
                 command.CommandText = query
                 command.ExecuteNonQuery()
                 command.Dispose()

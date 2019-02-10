@@ -464,7 +464,7 @@ Public Class Student_HomePage
             Date.TryParseExact(reader1.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
             Dim startdatetemp As Date
             Date.TryParseExact(reader1.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
-            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Rejected" Then
+            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Declined" Then
                 MessageBox.Show("There is already an applied overlapping leave with LeaveID " & leaveidtemp, "Error")
                 flag = False
             End If
@@ -511,7 +511,7 @@ Public Class Student_HomePage
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
-                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Rejected" Then
+                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Declined" Then
                         count = count + 1
                         totaldays = totaldays + dayscount
                         If count = 1 Then
@@ -1051,7 +1051,7 @@ Public Class Student_HomePage
             Dim leaveidtemp As Integer = reader1.GetInt32(0)
             Dim startdatetemp As Date
             Date.TryParseExact(reader1.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
-            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Rejected" And leaveidtemp <> extendleaveid Then
+            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Declined" And leaveidtemp <> extendleaveid Then
                 MessageBox.Show("There is already an applied overlapping leave with LeaveID " & leaveidtemp, "Error")
                 flag = False
             End If
@@ -1092,7 +1092,7 @@ Public Class Student_HomePage
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
-                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Rejected" And leaveidtemp <> extendleaveid Then
+                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Declined" And leaveidtemp <> extendleaveid Then
                         count = count + 1
                         totaldays = totaldays + dayscount
                         If count = 1 Then

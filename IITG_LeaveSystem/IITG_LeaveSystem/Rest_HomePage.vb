@@ -249,8 +249,8 @@ Public Class Rest_HomePage
     Private Sub approvebutton_Click(sender As Object, e As EventArgs) Handles approvebutton.Click
         Dim startdate As Date
         Dim enddate As Date
-        Dim sdate As String
-        Dim edate As String
+        Dim sdate As Date
+        Dim edate As Date
         Dim typeofleave As String
         Dim leaveapplicant As String
         Dim leaveapplicanttype As String
@@ -271,6 +271,7 @@ Public Class Rest_HomePage
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
         Try
+            'MsgBox("Came Here")
             con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
             con.Open()
             Dim query As String
@@ -279,10 +280,12 @@ Public Class Rest_HomePage
             query = "Select StartDate From Leave Where LeaveID = " & LeaveId & "; "
             'MessageBox.Show(query)
             command.CommandText = query
-            sdate = command.ExecuteScalar.ToString
+            Date.TryParseExact(command.ExecuteScalar.ToString, New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, sdate)
+            'MsgBox(sdate)
             query = "Select EndDate From Leave Where LeaveID = " & LeaveId & "; "
             command.CommandText = query
-            edate = command.ExecuteScalar.ToString
+            Date.TryParseExact(command.ExecuteScalar.ToString, New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, edate)
+            'MsgBox(edate)
             query = "Select Type From Leave Where LeaveID = " & LeaveId & "; "
             command.CommandText = query
             typeofleave = command.ExecuteScalar.ToString
@@ -304,8 +307,9 @@ Public Class Rest_HomePage
             MsgBox(ex.Message)
             Exit Sub
         End Try
-        startdate = Date.ParseExact(sdate, "dd-MM-yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
-        enddate = Date.ParseExact(edate, "dd-MM-yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
+        'MsgBox(sdate)
+        startdate = sdate
+        enddate = edate
         Dim days As Integer = enddate.Subtract(startdate).Days + 1
 
         If Type = "Professor" Then
@@ -739,6 +743,7 @@ Public Class Rest_HomePage
         End If
         loadbutton.PerformClick()
     End Sub
+
 
 
     Private Sub addcommentbutton_Click(sender As Object, e As EventArgs) Handles addcommentbutton.Click

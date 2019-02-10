@@ -51,7 +51,19 @@ IITG_LeaveSystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.New_Application">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.old_appl">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:IITG_LeaveSystem.My.Resources.Resources.password">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.profile_icon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

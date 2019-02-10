@@ -1369,4 +1369,5 @@ Public Class Student_HomePage
         Next
         NALastDateLabel.ForeColor = Color.FromArgb(78, 184, 206)
     End Sub
+
 End Class

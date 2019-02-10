@@ -48,3 +48,23 @@ How were you able to save OL with 20 days?
 kindly give the steps with exact dates.
 thanks   
 **Steps To Recreate:** Apply for an ordinary leave > Apply again, the starting date this time should be immediately next to the ending date last time, select the ending date with a 15 days gap and apply
+
+
+* Mediacal, Academic and Parental Leaves 
+
+**Problem:** For extra long leaves, even if the user declines to apply the application is pushed to DB    
+**Steps to recreate:** Open student homepage > Apply > Try to Apply for academic leave of 1 month > When propmted wheather want to continue or not, choose 'No' > The application will still be pushed to DB   
+**Cause:**  The boolean variable getting the response always evaluates to true  
+**Fix:**  Changing all instances of  
+```
+Dim ans As Boolean = MessageBox....
+```
+To
+```
+Dim ans As DialogResult = Message...
+```
+And changing all corresponding If-Else conditions with
+```
+If ans = DialogResult.Yes
+```
+**Status:** Fixed

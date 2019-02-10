@@ -556,9 +556,9 @@ Public Class Student_HomePage
 
                     Else
                         'Warning for fine
-                        Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                        Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                         'CODE
-                        If ans = True Then
+                        If ans = DialogResult.Yes Then
                             query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                             command.CommandText = query
                             command.ExecuteNonQuery()
@@ -604,9 +604,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('AL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
@@ -651,9 +651,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('ML', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
@@ -695,9 +695,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('PL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
                         command.CommandText = query
                         command.ExecuteNonQuery()
@@ -1132,9 +1132,9 @@ Public Class Student_HomePage
 
                     Else
                         'Warning for fine
-                        Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                        Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                         'CODE
-                        If ans = True Then
+                        If ans = DialogResult.Yes Then
                             query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                             command.CommandText = query
                             command.ExecuteNonQuery()
@@ -1171,9 +1171,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
@@ -1207,9 +1207,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()
@@ -1243,9 +1243,9 @@ Public Class Student_HomePage
                     appliedflag = True
                 Else
                     'Warning for fine
-                    Dim ans As Boolean = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
+                    Dim ans As DialogResult = MessageBox.Show("Leaves Exceed the permitted amount. May result in fine. Want to Continue?", "Warning", MessageBoxButtons.YesNo)
                     'CODE
-                    If ans = True Then
+                    If ans = DialogResult.Yes Then
                         query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query
                         command.ExecuteNonQuery()

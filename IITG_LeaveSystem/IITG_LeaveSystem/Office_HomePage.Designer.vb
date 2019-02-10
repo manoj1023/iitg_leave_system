@@ -54,27 +54,29 @@ Partial Class Office_HomePage
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(24, 62)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(182, 24)
+        Me.Label1.Size = New System.Drawing.Size(169, 24)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Select User Type :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(24, 89)
+        Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(25, 92)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 24)
+        Me.Label2.Size = New System.Drawing.Size(108, 24)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Username:"
         '
         'username_text
         '
         Me.username_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.username_text.Location = New System.Drawing.Point(268, 89)
+        Me.username_text.Location = New System.Drawing.Point(268, 92)
         Me.username_text.Name = "username_text"
         Me.username_text.Size = New System.Drawing.Size(176, 27)
         Me.username_text.TabIndex = 4
@@ -82,16 +84,20 @@ Partial Class Office_HomePage
         'welcomeLabel
         '
         Me.welcomeLabel.AutoSize = True
-        Me.welcomeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.welcomeLabel.Location = New System.Drawing.Point(25, 9)
+        Me.welcomeLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomeLabel.ForeColor = System.Drawing.Color.PowderBlue
+        Me.welcomeLabel.Location = New System.Drawing.Point(25, 20)
         Me.welcomeLabel.Name = "welcomeLabel"
-        Me.welcomeLabel.Size = New System.Drawing.Size(59, 20)
+        Me.welcomeLabel.Size = New System.Drawing.Size(70, 24)
         Me.welcomeLabel.TabIndex = 5
         Me.welcomeLabel.Text = "Label3"
         '
         'dgv1
         '
+        Me.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.dgv1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv1.GridColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.dgv1.Location = New System.Drawing.Point(28, 141)
         Me.dgv1.MultiSelect = False
         Me.dgv1.Name = "dgv1"
@@ -102,26 +108,34 @@ Partial Class Office_HomePage
         '
         'loadUser
         '
+        Me.loadUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.loadUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loadUser.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.loadUser.Location = New System.Drawing.Point(694, 89)
         Me.loadUser.Name = "loadUser"
-        Me.loadUser.Size = New System.Drawing.Size(123, 27)
+        Me.loadUser.Size = New System.Drawing.Size(123, 36)
         Me.loadUser.TabIndex = 7
         Me.loadUser.Text = "Load"
-        Me.loadUser.UseVisualStyleBackColor = True
+        Me.loadUser.UseVisualStyleBackColor = False
         '
         'heading1
         '
         Me.heading1.AutoSize = True
-        Me.heading1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.heading1.Location = New System.Drawing.Point(25, 229)
+        Me.heading1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.heading1.ForeColor = System.Drawing.Color.White
+        Me.heading1.Location = New System.Drawing.Point(25, 246)
         Me.heading1.Name = "heading1"
-        Me.heading1.Size = New System.Drawing.Size(251, 24)
+        Me.heading1.Size = New System.Drawing.Size(235, 24)
         Me.heading1.TabIndex = 8
         Me.heading1.Text = "Show Pending Requests :"
         '
         'dgv2
         '
+        Me.dgv2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.dgv2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv2.GridColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.dgv2.Location = New System.Drawing.Point(28, 273)
         Me.dgv2.MultiSelect = False
         Me.dgv2.Name = "dgv2"
@@ -132,74 +146,100 @@ Partial Class Office_HomePage
         '
         'ref_Button
         '
-        Me.ref_Button.Location = New System.Drawing.Point(694, 231)
+        Me.ref_Button.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ref_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ref_Button.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ref_Button.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ref_Button.Location = New System.Drawing.Point(694, 234)
         Me.ref_Button.Name = "ref_Button"
-        Me.ref_Button.Size = New System.Drawing.Size(123, 22)
+        Me.ref_Button.Size = New System.Drawing.Size(123, 36)
         Me.ref_Button.TabIndex = 10
         Me.ref_Button.Text = "Refresh"
-        Me.ref_Button.UseVisualStyleBackColor = True
+        Me.ref_Button.UseVisualStyleBackColor = False
         '
         'addUser
         '
-        Me.addUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.addUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.addUser.Location = New System.Drawing.Point(29, 475)
         Me.addUser.Name = "addUser"
         Me.addUser.Size = New System.Drawing.Size(276, 49)
         Me.addUser.TabIndex = 11
-        Me.addUser.Text = "addUser"
-        Me.addUser.UseVisualStyleBackColor = True
+        Me.addUser.Text = "Add User"
+        Me.addUser.UseVisualStyleBackColor = False
         '
         'updateUser
         '
-        Me.updateUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.updateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.updateUser.Location = New System.Drawing.Point(348, 475)
         Me.updateUser.Name = "updateUser"
         Me.updateUser.Size = New System.Drawing.Size(242, 49)
         Me.updateUser.TabIndex = 12
-        Me.updateUser.Text = "updateUser"
-        Me.updateUser.UseVisualStyleBackColor = True
+        Me.updateUser.Text = "Update User"
+        Me.updateUser.UseVisualStyleBackColor = False
         '
         'deleteUser
         '
-        Me.deleteUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deleteUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.deleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.deleteUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deleteUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.deleteUser.Location = New System.Drawing.Point(647, 475)
         Me.deleteUser.Name = "deleteUser"
         Me.deleteUser.Size = New System.Drawing.Size(228, 49)
         Me.deleteUser.TabIndex = 13
-        Me.deleteUser.Text = "deleteUser"
-        Me.deleteUser.UseVisualStyleBackColor = True
+        Me.deleteUser.Text = "Delete User"
+        Me.deleteUser.UseVisualStyleBackColor = False
         '
         'approvalButton
         '
+        Me.approvalButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.approvalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.approvalButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.approvalButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.approvalButton.Location = New System.Drawing.Point(546, 421)
         Me.approvalButton.Name = "approvalButton"
         Me.approvalButton.Size = New System.Drawing.Size(153, 32)
         Me.approvalButton.TabIndex = 14
         Me.approvalButton.Text = "Approve"
-        Me.approvalButton.UseVisualStyleBackColor = True
+        Me.approvalButton.UseVisualStyleBackColor = False
         '
         'DeclineButton
         '
+        Me.DeclineButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.DeclineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeclineButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeclineButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.DeclineButton.Location = New System.Drawing.Point(722, 421)
         Me.DeclineButton.Name = "DeclineButton"
         Me.DeclineButton.Size = New System.Drawing.Size(153, 32)
         Me.DeclineButton.TabIndex = 15
         Me.DeclineButton.Text = "Decline"
-        Me.DeclineButton.UseVisualStyleBackColor = True
+        Me.DeclineButton.UseVisualStyleBackColor = False
         '
         'logoutButton
         '
-        Me.logoutButton.Location = New System.Drawing.Point(694, 42)
+        Me.logoutButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.logoutButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logoutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.logoutButton.Location = New System.Drawing.Point(694, 32)
         Me.logoutButton.Name = "logoutButton"
-        Me.logoutButton.Size = New System.Drawing.Size(123, 27)
+        Me.logoutButton.Size = New System.Drawing.Size(123, 38)
         Me.logoutButton.TabIndex = 16
         Me.logoutButton.Text = "Logout"
-        Me.logoutButton.UseVisualStyleBackColor = True
+        Me.logoutButton.UseVisualStyleBackColor = False
         '
         'Office_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(914, 545)
         Me.Controls.Add(Me.logoutButton)
         Me.Controls.Add(Me.DeclineButton)
@@ -217,6 +257,7 @@ Partial Class Office_HomePage
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.choice_combo)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "Office_HomePage"
         Me.Text = "Office_HomePage"
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()

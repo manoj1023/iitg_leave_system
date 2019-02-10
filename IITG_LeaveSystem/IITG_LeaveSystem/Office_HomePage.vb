@@ -11,6 +11,8 @@ Public Class Office_HomePage
 
     Private Sub Office_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         welcomeLabel.Text = "Logged in as " & Username
+        dgv2.DefaultCellStyle.BackColor = Color.LightCyan
+        dgv1.DefaultCellStyle.BackColor = Color.LightCyan
     End Sub
 
     Private Sub addUser_Click(sender As Object, e As EventArgs) Handles addUser.Click
@@ -360,5 +362,15 @@ Public Class Office_HomePage
         Form1.UsernameTextBox.Select()
         Form1.PasswordTextBox.Clear()
         Me.Close()
+    End Sub
+
+    Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
+        Label1.ForeColor = Color.FromArgb(78, 184, 206)
+        Label2.ForeColor = Color.White
+    End Sub
+
+    Private Sub username_text_TextChanged(sender As Object, e As EventArgs) Handles username_text.TextChanged
+        Label2.ForeColor = Color.FromArgb(78, 184, 206)
+        Label1.ForeColor = Color.White
     End Sub
 End Class

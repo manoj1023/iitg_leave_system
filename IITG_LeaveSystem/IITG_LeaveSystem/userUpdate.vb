@@ -46,7 +46,7 @@ Public Class userUpdate
             If (count = 1) Then
                 Dim command2 As OleDbCommand = New OleDbCommand()
                 command2.Connection = con
-                command2.CommandText = "update " & CStr(choice_combo.SelectedItem) & " set " & CStr(fieldBox.SelectedItem) & "='" & value & "' where Username='" & username_text.Text & "';"
+                command2.CommandText = "update " & CStr(choice_combo.SelectedItem) & " set [" & CStr(fieldBox.SelectedItem) & "] = '" & value & "' where Username = '" & username_text.Text & "';"
                 'MessageBox.Show(command2.CommandText)
                 command2.ExecuteNonQuery()
             Else

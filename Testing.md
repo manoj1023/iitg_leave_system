@@ -123,3 +123,28 @@ If ans = DialogResult.Yes
 **Cause:** TO check in database for overlapping   
 **Fix:** Add a database comparision for overlap   
 **Status:** Fixed    
+
+
+
+## Office Form
+
+### Components working fine
+
+* 
+
+### Component issues
+
+* Can't update user password
+**Problem:** Message box with 'Syntax error' pops up whenever a user passowrd is updated
+**Steps to recreate:** Open office form > Open update user form > Attempt to update password
+**Cause:** Password is a reserved keyword of the access database engine, using it as column name can cause unintended results 
+**Fix:** Changed column name in query from 
+```field name``` to ``` [field name] ```
+**Status:** Fixed
+
+*Forms don't clear up
+**Problem:** The 3 forms to add/delete/update users don't clear up once used. Makes it cumbersome to use them multiple times as every files needs to be manually cleared
+**Steps to recreate:** Open office form > use one of the forms to successfully add/delete/update users > close them and they still have valuse from last time
+**Cause:** No instructions to clear fields
+**Fix:** Add the necessary code after the success messageBox is shown
+**Status:** Currently working

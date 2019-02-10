@@ -121,7 +121,7 @@ Partial Class Form1
         '
         Me.DirectorRadio.AutoSize = True
         Me.DirectorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DirectorRadio.Location = New System.Drawing.Point(365, 48)
+        Me.DirectorRadio.Location = New System.Drawing.Point(398, 48)
         Me.DirectorRadio.Name = "DirectorRadio"
         Me.DirectorRadio.Size = New System.Drawing.Size(87, 21)
         Me.DirectorRadio.TabIndex = 7
@@ -133,7 +133,7 @@ Partial Class Form1
         '
         Me.DeanRadio.AutoSize = True
         Me.DeanRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeanRadio.Location = New System.Drawing.Point(248, 48)
+        Me.DeanRadio.Location = New System.Drawing.Point(278, 48)
         Me.DeanRadio.Name = "DeanRadio"
         Me.DeanRadio.Size = New System.Drawing.Size(67, 21)
         Me.DeanRadio.TabIndex = 6
@@ -145,7 +145,7 @@ Partial Class Form1
         '
         Me.StaffRadio.AutoSize = True
         Me.StaffRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StaffRadio.Location = New System.Drawing.Point(127, 48)
+        Me.StaffRadio.Location = New System.Drawing.Point(142, 48)
         Me.StaffRadio.Name = "StaffRadio"
         Me.StaffRadio.Size = New System.Drawing.Size(63, 21)
         Me.StaffRadio.TabIndex = 5
@@ -169,7 +169,7 @@ Partial Class Form1
         '
         Me.DPPCRadio.AutoSize = True
         Me.DPPCRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DPPCRadio.Location = New System.Drawing.Point(365, 21)
+        Me.DPPCRadio.Location = New System.Drawing.Point(398, 21)
         Me.DPPCRadio.Name = "DPPCRadio"
         Me.DPPCRadio.Size = New System.Drawing.Size(70, 21)
         Me.DPPCRadio.TabIndex = 3
@@ -181,7 +181,7 @@ Partial Class Form1
         '
         Me.OfficeRadio.AutoSize = True
         Me.OfficeRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OfficeRadio.Location = New System.Drawing.Point(248, 21)
+        Me.OfficeRadio.Location = New System.Drawing.Point(278, 21)
         Me.OfficeRadio.Name = "OfficeRadio"
         Me.OfficeRadio.Size = New System.Drawing.Size(72, 21)
         Me.OfficeRadio.TabIndex = 2
@@ -193,7 +193,7 @@ Partial Class Form1
         '
         Me.ProfessorRadio.AutoSize = True
         Me.ProfessorRadio.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfessorRadio.Location = New System.Drawing.Point(127, 21)
+        Me.ProfessorRadio.Location = New System.Drawing.Point(142, 21)
         Me.ProfessorRadio.Name = "ProfessorRadio"
         Me.ProfessorRadio.Size = New System.Drawing.Size(99, 21)
         Me.ProfessorRadio.TabIndex = 1

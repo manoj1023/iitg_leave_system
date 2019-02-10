@@ -65,4 +65,20 @@ Public Class userDelete
 
         MessageBox.Show("User Deleted along with all the leave requests")
     End Sub
+
+    Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label1.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub username_text_TextChanged(sender As Object, e As EventArgs) Handles username_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label2.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
 End Class

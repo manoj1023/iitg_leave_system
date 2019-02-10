@@ -48,7 +48,7 @@ Partial Class Apply_for_leave
         'nametextbox
         '
         Me.nametextbox.Location = New System.Drawing.Point(334, 57)
-        Me.nametextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nametextbox.Margin = New System.Windows.Forms.Padding(4)
         Me.nametextbox.Name = "nametextbox"
         Me.nametextbox.ReadOnly = True
         Me.nametextbox.Size = New System.Drawing.Size(245, 22)
@@ -81,7 +81,7 @@ Partial Class Apply_for_leave
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(332, 170)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker1.TabIndex = 4
@@ -89,7 +89,7 @@ Partial Class Apply_for_leave
         'DateTimePicker2
         '
         Me.DateTimePicker2.Location = New System.Drawing.Point(332, 226)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker2.TabIndex = 5
@@ -101,7 +101,7 @@ Partial Class Apply_for_leave
         Me.applybutton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.applybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.applybutton.Location = New System.Drawing.Point(192, 294)
-        Me.applybutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.applybutton.Margin = New System.Windows.Forms.Padding(4)
         Me.applybutton.Name = "applybutton"
         Me.applybutton.Size = New System.Drawing.Size(170, 44)
         Me.applybutton.TabIndex = 6
@@ -115,7 +115,7 @@ Partial Class Apply_for_leave
         Me.Button2.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.Button2.Location = New System.Drawing.Point(396, 294)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(183, 44)
         Me.Button2.TabIndex = 7
@@ -150,9 +150,9 @@ Partial Class Apply_for_leave
         Me.Controls.Add(Me.nametextbox)
         Me.Controls.Add(Me.namelabel)
         Me.ForeColor = System.Drawing.Color.White
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Apply_for_leave"
-        Me.Text = "Apply_for_leave"
+        Me.Text = "Apply For Leave"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

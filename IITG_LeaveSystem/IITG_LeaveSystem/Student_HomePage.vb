@@ -494,6 +494,9 @@ Public Class Student_HomePage
         Dim lastdatefinal As String = lastdate.ToString("dd-MM-yyyy")
         If flag = True Then
             If leavetype = "Ordinary Leave" Then
+                Dim totaldays As Integer = days
+                Dim count As Integer = 0
+                Dim leaveid1, leaveid2 As Integer
                 Dim command2 As New OleDbCommand
                 command2.Connection = connection
                 Dim query2 As String
@@ -508,15 +511,29 @@ Public Class Student_HomePage
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
-                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And days + dayscount > 5 And approvalstatus <> "Rejected" Then
-                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: )" & leaveidtemp, "Error")
-                        flag = False
+                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Rejected" Then
+                        count = count + 1
+                        totaldays = totaldays + dayscount
+                        If count = 1 Then
+                            leaveid1 = leaveidtemp
+                        End If
+                        If count = 2 Then
+                            leaveid2 = leaveidtemp
+                        End If
                     End If
                 End While
+                If totaldays > 5 Then
+                    flag = False
+                    If count = 1 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: ) " & leaveid1, "Error")
+                    ElseIf count = 2 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with IDs: ) " & leaveid1 & " and" & leaveid2, "Error")
+                    End If
+                End If
                 If days > 5 And flag = True Then
                     MessageBox.Show("Ordinary Leaves can't span more than 5 days", "Error")
                     flag = False
-                Else
+                ElseIf flag = True Then
                     If OrdinaryLeaves > days Then
                         'Successful Application
                         query = "INSERT INTO Leave (Type, StartDate, EndDate, Document, Applicant, isExtension, ApplicantType, ApprovalStatus, SuperVisor) VALUES ('OL', '" & startdatefinal & "', '" & lastdatefinal & "', '" & DocumentFilePath & "', '" & Username & "', 'No', '" & Course & "', '" & supervisor & "', '" & supervisor & "'); "
@@ -1058,6 +1075,9 @@ Public Class Student_HomePage
         Dim lastdatefinal As String = lastdate.ToString("dd-MM-yyyy")
         If flag = True Then
             If leavetype = "OL" Then
+                Dim totaldays As Integer = days
+                Dim count As Integer = 0
+                Dim leaveid1, leaveid2 As Integer
                 Dim command2 As New OleDbCommand
                 command2.Connection = connection
                 Dim query2 As String
@@ -1072,15 +1092,29 @@ Public Class Student_HomePage
                     Dim dayscount As Integer = lastdatetemp.Subtract(startdatetemp).Days + 1
                     Dim leaveidtemp As Integer = reader2.GetInt32(0)
                     Dim approvalstatus As String = reader2.GetString(10)
-                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And days + dayscount > 5 And approvalstatus <> "Rejected" And leaveidtemp <> extendleaveid Then
-                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: )" & leaveidtemp, "Error")
-                        flag = False
+                    If (startdate.Subtract(lastdatetemp).Days = 1 Or startdatetemp.Subtract(lastdate).Days = 1) And approvalstatus <> "Rejected" And leaveidtemp <> extendleaveid Then
+                        count = count + 1
+                        totaldays = totaldays + dayscount
+                        If count = 1 Then
+                            leaveid1 = leaveidtemp
+                        End If
+                        If count = 2 Then
+                            leaveid2 = leaveidtemp
+                        End If
                     End If
                 End While
+                If totaldays > 5 Then
+                    flag = False
+                    If count = 1 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: ) " & leaveid1, "Error")
+                    ElseIf count = 2 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with IDs: ) " & leaveid1 & " and" & leaveid2, "Error")
+                    End If
+                End If
                 If days > 5 And flag = True Then
                     MessageBox.Show("Ordinary Leaves can't span more than 5 days", "Error")
                     flag = False
-                Else
+                ElseIf flag = True Then
                     If OrdinaryLeaves > days Then
                         query = "Update Leave SET EndDate = '" & lastdatefinal & "', isExtension = 'Yes', ApprovalStatus= '" & supervisor & "' where LeaveID = " & extendleaveid & ";"
                         command.CommandText = query

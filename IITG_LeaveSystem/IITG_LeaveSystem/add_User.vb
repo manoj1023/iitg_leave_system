@@ -141,5 +141,92 @@ Public Class add_User
             gender_combo.Visible = False
             course_combo.Visible = False
         End If
+
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label1.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    
+    Private Sub username_text_TextChanged(sender As Object, e As EventArgs) Handles username_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label2.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub firstname_text_TextChanged(sender As Object, e As EventArgs) Handles firstname_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label6.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub password_text_TextChanged(sender As Object, e As EventArgs) Handles password_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label3.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub lastname_text_TextChanged(sender As Object, e As EventArgs) Handles lastname_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label5.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub Phone_text_TextChanged(sender As Object, e As EventArgs) Handles Phone_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label4.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub Email_Text_TextChanged(sender As Object, e As EventArgs) Handles Email_Text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label7.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub dept_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles dept_combo.SelectedIndexChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label8.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub gender_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gender_combo.SelectedIndexChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label10.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub course_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles course_combo.SelectedIndexChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label9.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub RollNumber_text_TextChanged(sender As Object, e As EventArgs) Handles RollNumber_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label11.ForeColor = Color.FromArgb(78, 184, 206)
     End Sub
 End Class

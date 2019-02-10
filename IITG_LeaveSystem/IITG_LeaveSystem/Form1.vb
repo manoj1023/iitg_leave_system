@@ -8,8 +8,10 @@ Public Class Form1
 
     Private Sub ShowPassCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPassCheckBox.CheckedChanged
         If (ShowPassCheckBox.Checked = False) Then
+            ShowPassCheckBox.ForeColor = Color.White
             PasswordTextBox.PasswordChar = "*"
         Else
+            ShowPassCheckBox.ForeColor = Color.FromArgb(78, 184, 206)
             PasswordTextBox.PasswordChar = ""
         End If
     End Sub
@@ -19,6 +21,13 @@ Public Class Form1
         StudentRadio.Select()
         Me.AcceptButton = LoginButton
         UsernameTextBox.Select()
+
+
+        Dim radio = GroupBox1.Controls.OfType(Of RadioButton)()
+        For Each radiobut In radio
+            AddHandler radiobut.CheckedChanged, AddressOf changeHighlight
+        Next
+        StudentRadio.ForeColor = Color.FromArgb(78, 184, 206)
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
@@ -204,5 +213,26 @@ Public Class Form1
 
         Return suggestedPassword
     End Function
+
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles UsernameTextBox.TextChanged
+        UsernameLabel.ForeColor = Color.FromArgb(78, 184, 206)
+        PasswordLabel.ForeColor = Color.White
+    End Sub
+
+    Private Sub PasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles PasswordTextBox.TextChanged
+        PasswordLabel.ForeColor = Color.FromArgb(78, 184, 206)
+        UsernameLabel.ForeColor = Color.White
+    End Sub
+
+    Private Sub changeHighlight(sender As Object, e As EventArgs)
+        'MessageBox.Show("Change")
+        Dim radio = GroupBox1.Controls.OfType(Of RadioButton)()
+        For Each radiobut In radio
+            radiobut.ForeColor = Color.White
+        Next
+        If sender.Checked = True Then
+            sender.ForeColor = Color.FromArgb(78, 184, 206)
+        End If
+    End Sub
 
 End Class

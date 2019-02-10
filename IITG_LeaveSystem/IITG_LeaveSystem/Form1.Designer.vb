@@ -38,41 +38,45 @@ Partial Class Form1
         Me.StudentRadio = New System.Windows.Forms.RadioButton()
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.ForgotButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameLabel
         '
         Me.UsernameLabel.AutoSize = True
-        Me.UsernameLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameLabel.Location = New System.Drawing.Point(162, 88)
+        Me.UsernameLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.UsernameLabel.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.ForeColor = System.Drawing.Color.White
+        Me.UsernameLabel.Location = New System.Drawing.Point(169, 153)
         Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(147, 31)
+        Me.UsernameLabel.Size = New System.Drawing.Size(143, 32)
         Me.UsernameLabel.TabIndex = 0
         Me.UsernameLabel.Text = "Username"
         '
         'PasswordLabel
         '
         Me.PasswordLabel.AutoSize = True
-        Me.PasswordLabel.BackColor = System.Drawing.SystemColors.Control
-        Me.PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordLabel.Location = New System.Drawing.Point(162, 133)
+        Me.PasswordLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.PasswordLabel.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLabel.ForeColor = System.Drawing.Color.White
+        Me.PasswordLabel.Location = New System.Drawing.Point(169, 198)
         Me.PasswordLabel.Name = "PasswordLabel"
-        Me.PasswordLabel.Size = New System.Drawing.Size(142, 31)
+        Me.PasswordLabel.Size = New System.Drawing.Size(133, 32)
         Me.PasswordLabel.TabIndex = 1
         Me.PasswordLabel.Text = "Password"
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(370, 97)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(371, 162)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(284, 22)
         Me.UsernameTextBox.TabIndex = 2
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(370, 142)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(371, 207)
         Me.PasswordTextBox.MaxLength = 255
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(284, 22)
@@ -81,10 +85,11 @@ Partial Class Form1
         'ShowPassCheckBox
         '
         Me.ShowPassCheckBox.AutoSize = True
-        Me.ShowPassCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ShowPassCheckBox.Location = New System.Drawing.Point(512, 170)
+        Me.ShowPassCheckBox.Font = New System.Drawing.Font("Georgia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ShowPassCheckBox.ForeColor = System.Drawing.Color.White
+        Me.ShowPassCheckBox.Location = New System.Drawing.Point(528, 241)
         Me.ShowPassCheckBox.Name = "ShowPassCheckBox"
-        Me.ShowPassCheckBox.Size = New System.Drawing.Size(142, 21)
+        Me.ShowPassCheckBox.Size = New System.Drawing.Size(127, 21)
         Me.ShowPassCheckBox.TabIndex = 4
         Me.ShowPassCheckBox.Text = "Show Password"
         Me.ShowPassCheckBox.UseVisualStyleBackColor = True
@@ -99,7 +104,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.OfficeRadio)
         Me.GroupBox1.Controls.Add(Me.ProfessorRadio)
         Me.GroupBox1.Controls.Add(Me.StudentRadio)
-        Me.GroupBox1.Location = New System.Drawing.Point(168, 212)
+        Me.GroupBox1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(169, 268)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(486, 84)
         Me.GroupBox1.TabIndex = 5
@@ -204,29 +211,47 @@ Partial Class Form1
         '
         'LoginButton
         '
-        Me.LoginButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginButton.Location = New System.Drawing.Point(416, 321)
+        Me.LoginButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoginButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.LoginButton.Location = New System.Drawing.Point(417, 377)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(238, 37)
         Me.LoginButton.TabIndex = 6
         Me.LoginButton.Text = "Login"
-        Me.LoginButton.UseVisualStyleBackColor = True
+        Me.LoginButton.UseVisualStyleBackColor = False
         '
         'ForgotButton
         '
-        Me.ForgotButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForgotButton.Location = New System.Drawing.Point(168, 321)
+        Me.ForgotButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ForgotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ForgotButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForgotButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ForgotButton.Location = New System.Drawing.Point(169, 377)
         Me.ForgotButton.Name = "ForgotButton"
         Me.ForgotButton.Size = New System.Drawing.Size(238, 37)
         Me.ForgotButton.TabIndex = 7
         Me.ForgotButton.Text = "Forgot Password"
-        Me.ForgotButton.UseVisualStyleBackColor = True
+        Me.ForgotButton.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.IITG_LeaveSystem.My.Resources.Resources.LeaveSystemIcon
+        Me.PictureBox1.Location = New System.Drawing.Point(351, 35)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(138, 109)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 434)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(790, 487)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ForgotButton)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.GroupBox1)
@@ -239,6 +264,7 @@ Partial Class Form1
         Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,5 +285,6 @@ Partial Class Form1
     Friend WithEvents StudentRadio As System.Windows.Forms.RadioButton
     Friend WithEvents LoginButton As System.Windows.Forms.Button
     Friend WithEvents ForgotButton As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

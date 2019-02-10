@@ -51,7 +51,7 @@ Partial Class add_User
         '
         Me.choice_combo.FormattingEnabled = True
         Me.choice_combo.Items.AddRange(New Object() {"Student", "Staff", "Professor"})
-        Me.choice_combo.Location = New System.Drawing.Point(315, 12)
+        Me.choice_combo.Location = New System.Drawing.Point(387, 32)
         Me.choice_combo.Name = "choice_combo"
         Me.choice_combo.Size = New System.Drawing.Size(176, 24)
         Me.choice_combo.TabIndex = 2
@@ -59,37 +59,40 @@ Partial Class add_User
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(30, 12)
+        Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(195, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(182, 24)
+        Me.Label1.Size = New System.Drawing.Size(169, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Select User Type :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(30, 59)
+        Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(35, 111)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 24)
+        Me.Label2.Size = New System.Drawing.Size(108, 24)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Username:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(30, 98)
+        Me.Label3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(35, 166)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 24)
+        Me.Label3.Size = New System.Drawing.Size(101, 24)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Password:"
         '
         'username_text
         '
         Me.username_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.username_text.Location = New System.Drawing.Point(188, 65)
+        Me.username_text.Location = New System.Drawing.Point(188, 111)
         Me.username_text.Name = "username_text"
         Me.username_text.Size = New System.Drawing.Size(176, 27)
         Me.username_text.TabIndex = 6
@@ -97,46 +100,53 @@ Partial Class add_User
         'password_text
         '
         Me.password_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.password_text.Location = New System.Drawing.Point(188, 98)
+        Me.password_text.Location = New System.Drawing.Point(188, 163)
         Me.password_text.Name = "password_text"
         Me.password_text.Size = New System.Drawing.Size(176, 27)
         Me.password_text.TabIndex = 7
         '
         'add
         '
-        Me.add.Location = New System.Drawing.Point(200, 292)
+        Me.add.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.add.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.add.Location = New System.Drawing.Point(268, 382)
         Me.add.Name = "add"
-        Me.add.Size = New System.Drawing.Size(184, 41)
+        Me.add.Size = New System.Drawing.Size(219, 48)
         Me.add.TabIndex = 8
         Me.add.Text = "Add"
         Me.add.UseMnemonic = False
-        Me.add.UseVisualStyleBackColor = True
+        Me.add.UseVisualStyleBackColor = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(35, 151)
+        Me.Label4.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(35, 217)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 24)
+        Me.Label4.Size = New System.Drawing.Size(67, 24)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Phone"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(383, 101)
+        Me.Label5.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(383, 163)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(108, 24)
+        Me.Label5.Size = New System.Drawing.Size(107, 24)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "LastName:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(383, 60)
+        Me.Label6.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(383, 114)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(111, 24)
         Me.Label6.TabIndex = 11
@@ -145,48 +155,53 @@ Partial Class add_User
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(383, 151)
+        Me.Label7.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(383, 214)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 24)
+        Me.Label7.Size = New System.Drawing.Size(63, 24)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Email"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(35, 195)
+        Me.Label8.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(35, 267)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(117, 24)
+        Me.Label8.Size = New System.Drawing.Size(118, 24)
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "Department"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(35, 240)
+        Me.Label9.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(35, 312)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(77, 24)
+        Me.Label9.Size = New System.Drawing.Size(73, 24)
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Course"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(383, 191)
+        Me.Label10.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(383, 267)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(80, 24)
+        Me.Label10.Size = New System.Drawing.Size(76, 24)
         Me.Label10.TabIndex = 15
         Me.Label10.Text = "Gender"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(383, 240)
+        Me.Label11.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(383, 312)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(121, 24)
         Me.Label11.TabIndex = 16
@@ -195,7 +210,7 @@ Partial Class add_User
         'firstname_text
         '
         Me.firstname_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstname_text.Location = New System.Drawing.Point(500, 65)
+        Me.firstname_text.Location = New System.Drawing.Point(510, 108)
         Me.firstname_text.Name = "firstname_text"
         Me.firstname_text.Size = New System.Drawing.Size(176, 27)
         Me.firstname_text.TabIndex = 17
@@ -203,7 +218,7 @@ Partial Class add_User
         'lastname_text
         '
         Me.lastname_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastname_text.Location = New System.Drawing.Point(497, 101)
+        Me.lastname_text.Location = New System.Drawing.Point(510, 163)
         Me.lastname_text.Name = "lastname_text"
         Me.lastname_text.Size = New System.Drawing.Size(176, 27)
         Me.lastname_text.TabIndex = 18
@@ -211,7 +226,7 @@ Partial Class add_User
         'Phone_text
         '
         Me.Phone_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Phone_text.Location = New System.Drawing.Point(188, 151)
+        Me.Phone_text.Location = New System.Drawing.Point(188, 214)
         Me.Phone_text.Name = "Phone_text"
         Me.Phone_text.Size = New System.Drawing.Size(176, 27)
         Me.Phone_text.TabIndex = 19
@@ -219,7 +234,7 @@ Partial Class add_User
         'Email_Text
         '
         Me.Email_Text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Email_Text.Location = New System.Drawing.Point(497, 151)
+        Me.Email_Text.Location = New System.Drawing.Point(510, 211)
         Me.Email_Text.Name = "Email_Text"
         Me.Email_Text.Size = New System.Drawing.Size(176, 27)
         Me.Email_Text.TabIndex = 20
@@ -227,43 +242,44 @@ Partial Class add_User
         'RollNumber_text
         '
         Me.RollNumber_text.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RollNumber_text.Location = New System.Drawing.Point(510, 240)
+        Me.RollNumber_text.Location = New System.Drawing.Point(510, 312)
         Me.RollNumber_text.Name = "RollNumber_text"
-        Me.RollNumber_text.Size = New System.Drawing.Size(163, 27)
+        Me.RollNumber_text.Size = New System.Drawing.Size(176, 27)
         Me.RollNumber_text.TabIndex = 21
         '
         'dept_combo
         '
         Me.dept_combo.FormattingEnabled = True
         Me.dept_combo.Items.AddRange(New Object() {"CSE", "BSBE", "EEE", "ECE", "Mech", "Civil", "Design", "MnC", "EP", "CST", "Chemical", "HSS"})
-        Me.dept_combo.Location = New System.Drawing.Point(188, 197)
+        Me.dept_combo.Location = New System.Drawing.Point(188, 267)
         Me.dept_combo.Name = "dept_combo"
-        Me.dept_combo.Size = New System.Drawing.Size(121, 24)
+        Me.dept_combo.Size = New System.Drawing.Size(176, 24)
         Me.dept_combo.TabIndex = 22
         '
         'gender_combo
         '
         Me.gender_combo.FormattingEnabled = True
         Me.gender_combo.Items.AddRange(New Object() {"Male", "Female"})
-        Me.gender_combo.Location = New System.Drawing.Point(497, 193)
+        Me.gender_combo.Location = New System.Drawing.Point(510, 267)
         Me.gender_combo.Name = "gender_combo"
-        Me.gender_combo.Size = New System.Drawing.Size(121, 24)
+        Me.gender_combo.Size = New System.Drawing.Size(176, 24)
         Me.gender_combo.TabIndex = 23
         '
         'course_combo
         '
         Me.course_combo.FormattingEnabled = True
         Me.course_combo.Items.AddRange(New Object() {"MTech", "PhD"})
-        Me.course_combo.Location = New System.Drawing.Point(188, 240)
+        Me.course_combo.Location = New System.Drawing.Point(188, 312)
         Me.course_combo.Name = "course_combo"
-        Me.course_combo.Size = New System.Drawing.Size(121, 24)
+        Me.course_combo.Size = New System.Drawing.Size(176, 24)
         Me.course_combo.TabIndex = 24
         '
         'add_User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(723, 359)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(723, 474)
         Me.Controls.Add(Me.course_combo)
         Me.Controls.Add(Me.gender_combo)
         Me.Controls.Add(Me.dept_combo)
@@ -288,7 +304,7 @@ Partial Class add_User
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.choice_combo)
         Me.Name = "add_User"
-        Me.Text = "add_User"
+        Me.Text = "Add User"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

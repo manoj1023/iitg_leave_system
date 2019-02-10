@@ -68,3 +68,5 @@ C:\Users\Admin\Videos\IITG-LeaveSystem-master\IITG-LeaveSystem-master\IITG_Leave
 C:\Users\Admin\Videos\IITG-LeaveSystem-master\IITG-LeaveSystem-master\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.userUpdate.resources
 C:\Users\Admin\Videos\IITG-LeaveSystem-master\IITG-LeaveSystem-master\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbproj.GenerateResource.Cache
 C:\Users\Admin\Videos\IITG-LeaveSystem-master\IITG-LeaveSystem-master\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbprojResolveAssemblyReference.cache
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.vbprojResolveAssemblyReference.cache
+D:\Desktop\IITG-LeaveSystem\IITG_LeaveSystem\IITG_LeaveSystem\obj\Debug\IITG_LeaveSystem.Apply_for_leave.resources

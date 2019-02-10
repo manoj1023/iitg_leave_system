@@ -153,11 +153,47 @@ Public Class Apply_for_leave
         If startdate < currentdate Then
             MessageBox.Show("Start Date should be greater than yesterday's date", "Error")
             flag = False
+            Exit Sub
         End If
         If enddate < startdate And flag = True Then
             MessageBox.Show("Last Date can't be less than Start Date", "Error")
             flag = False
+            Exit Sub
         End If
+
+        'Started: fixing duplicate leaves (applies to everyone except student and office)
+        Dim TprojDirectory, TdestinationPath, TdatabasePath As String
+        TprojDirectory = Directory.GetCurrentDirectory()
+        TdatabasePath = TprojDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
+        TdestinationPath = TprojDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
+        Dim lastdate As Date = enddate
+        Dim connection As New OleDbConnection
+        connection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + TdatabasePath)
+        connection.Open()
+        Dim command1 As New OleDbCommand
+        command1.Connection = connection
+        Dim query1 As String
+        query1 = "Select * From Leave Where Applicant = '" & Username & "'; "
+        command1.CommandText = query1
+        Dim reader1 As OleDbDataReader
+        reader1 = command1.ExecuteReader
+        While (reader1.Read() And flag)
+            Dim stringtemp As String
+            stringtemp = reader1.GetString(10)
+            Dim lastdatetemp As Date
+            Dim leaveidtemp As Integer = reader1.GetInt32(0)
+            Date.TryParseExact(reader1.GetString(3), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, lastdatetemp)
+            Dim startdatetemp As Date
+            Date.TryParseExact(reader1.GetString(2), New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, startdatetemp)
+            If ((startdate <= lastdatetemp And startdate >= startdatetemp) Or (lastdate >= startdatetemp And lastdate <= lastdatetemp) Or (startdate <= startdatetemp And lastdate >= lastdatetemp)) And stringtemp <> "Declined" Then
+                MessageBox.Show("There is already an applied overlapping leave with LeaveID " & leaveidtemp, "Error")
+                flag = False
+                Exit Sub
+            End If
+        End While
+        connection.Close()
+
+        'Finished: fixing duplicate leaves (applies to everyone except student and office)
 
         Dim startdatefinal As String = startdate.ToString("dd-MM-yyyy")
         Dim enddatefinal As String = enddate.ToString("dd-MM-yyyy")

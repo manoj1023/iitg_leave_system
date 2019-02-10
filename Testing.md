@@ -33,4 +33,4 @@ Working as expected for unregistered users, with registered users a message citi
 **Steps to recreate:** Open a student profile > Edit profile > Change Password once > Try to change password once again using the new password set up in previous step  
 **Cause:** The old password is fetched when the student homepage form is loaded, it wasn't updated after changing password 
 **Fix:** The hash value stored in the variable *password* has been set to update when the password updates  
-**Status:** Fixed in commit **b79c71ea7961341c64e9f5d75742af71d952cf08**
+**Status:** Fixed in commit **f3038cb967a3cf305237b091b98d5086b1aefad0**

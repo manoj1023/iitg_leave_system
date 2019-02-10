@@ -106,7 +106,7 @@ Partial Class userUpdate
         Me.update_button.Location = New System.Drawing.Point(220, 261)
         Me.update_button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.update_button.Name = "update_button"
-        Me.update_button.Size = New System.Drawing.Size(241, 48)
+        Me.update_button.Size = New System.Drawing.Size(241, 52)
         Me.update_button.TabIndex = 10
         Me.update_button.Text = "Update"
         Me.update_button.UseMnemonic = False

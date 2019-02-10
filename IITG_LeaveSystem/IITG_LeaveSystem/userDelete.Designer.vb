@@ -61,7 +61,7 @@ Partial Class userDelete
         Me.Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Delete.Location = New System.Drawing.Point(196, 163)
         Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(225, 44)
+        Me.Delete.Size = New System.Drawing.Size(225, 52)
         Me.Delete.TabIndex = 9
         Me.Delete.Text = "Delete"
         Me.Delete.UseMnemonic = False

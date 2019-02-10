@@ -266,7 +266,7 @@ Partial Class add_User
         Me.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.add.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.add.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.add.Image = Global.IITG_LeaveSystem.My.Resources.Resources.add_user_icon
+        Me.add.Image = Global.IITG_LeaveSystem.My.Resources.Resources.user_add
         Me.add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.add.Location = New System.Drawing.Point(268, 382)
         Me.add.Name = "add"

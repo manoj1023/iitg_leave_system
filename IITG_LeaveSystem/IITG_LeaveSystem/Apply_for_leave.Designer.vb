@@ -36,88 +36,110 @@ Partial Class Apply_for_leave
         'namelabel
         '
         Me.namelabel.AutoSize = True
-        Me.namelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namelabel.Location = New System.Drawing.Point(140, 44)
+        Me.namelabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.namelabel.ForeColor = System.Drawing.Color.White
+        Me.namelabel.Location = New System.Drawing.Point(188, 57)
+        Me.namelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.namelabel.Name = "namelabel"
-        Me.namelabel.Size = New System.Drawing.Size(71, 20)
+        Me.namelabel.Size = New System.Drawing.Size(81, 24)
         Me.namelabel.TabIndex = 0
         Me.namelabel.Text = "Name :-"
         '
         'nametextbox
         '
-        Me.nametextbox.Location = New System.Drawing.Point(249, 46)
+        Me.nametextbox.Location = New System.Drawing.Point(334, 57)
+        Me.nametextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nametextbox.Name = "nametextbox"
         Me.nametextbox.ReadOnly = True
-        Me.nametextbox.Size = New System.Drawing.Size(185, 20)
+        Me.nametextbox.Size = New System.Drawing.Size(245, 22)
         Me.nametextbox.TabIndex = 1
         '
         'startdatelabel
         '
         Me.startdatelabel.AutoSize = True
-        Me.startdatelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.startdatelabel.Location = New System.Drawing.Point(141, 142)
+        Me.startdatelabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.startdatelabel.ForeColor = System.Drawing.Color.White
+        Me.startdatelabel.Location = New System.Drawing.Point(188, 170)
+        Me.startdatelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.startdatelabel.Name = "startdatelabel"
-        Me.startdatelabel.Size = New System.Drawing.Size(90, 16)
+        Me.startdatelabel.Size = New System.Drawing.Size(118, 24)
         Me.startdatelabel.TabIndex = 2
         Me.startdatelabel.Text = "Start Date :-"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(141, 188)
+        Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(188, 226)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 16)
+        Me.Label1.Size = New System.Drawing.Size(111, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "End Date :-"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(249, 138)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(332, 170)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker1.TabIndex = 4
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(249, 184)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(332, 226)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker2.TabIndex = 5
         '
         'applybutton
         '
-        Me.applybutton.Location = New System.Drawing.Point(249, 230)
+        Me.applybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.applybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.applybutton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.applybutton.Location = New System.Drawing.Point(192, 294)
+        Me.applybutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.applybutton.Name = "applybutton"
-        Me.applybutton.Size = New System.Drawing.Size(75, 23)
+        Me.applybutton.Size = New System.Drawing.Size(170, 44)
         Me.applybutton.TabIndex = 6
         Me.applybutton.Text = "Apply"
-        Me.applybutton.UseVisualStyleBackColor = True
+        Me.applybutton.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(359, 230)
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(396, 294)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(183, 44)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Close"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'positionlabel
         '
         Me.positionlabel.AutoSize = True
-        Me.positionlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.positionlabel.Location = New System.Drawing.Point(245, 78)
+        Me.positionlabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.positionlabel.ForeColor = System.Drawing.Color.White
+        Me.positionlabel.Location = New System.Drawing.Point(388, 118)
+        Me.positionlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.positionlabel.Name = "positionlabel"
-        Me.positionlabel.Size = New System.Drawing.Size(108, 20)
+        Me.positionlabel.Size = New System.Drawing.Size(138, 24)
         Me.positionlabel.TabIndex = 8
         Me.positionlabel.Text = "Position Label"
         '
         'Apply_for_leave
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(574, 306)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(765, 394)
         Me.Controls.Add(Me.positionlabel)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.applybutton)
@@ -127,6 +149,8 @@ Partial Class Apply_for_leave
         Me.Controls.Add(Me.startdatelabel)
         Me.Controls.Add(Me.nametextbox)
         Me.Controls.Add(Me.namelabel)
+        Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Apply_for_leave"
         Me.Text = "Apply_for_leave"
         Me.ResumeLayout(False)

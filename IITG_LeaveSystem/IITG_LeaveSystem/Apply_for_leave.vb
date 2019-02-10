@@ -272,4 +272,28 @@ Public Class Apply_for_leave
             Rest_HomePage.loadbutton.PerformClick()
         End If
     End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        startdatelabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label1.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub nametextbox_TextChanged(sender As Object, e As EventArgs) Handles nametextbox.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        namelabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
 End Class

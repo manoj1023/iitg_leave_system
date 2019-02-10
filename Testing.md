@@ -139,12 +139,26 @@ If ans = DialogResult.Yes
 **Steps to recreate:** Open office form > Open update user form > Attempt to update password  
 **Cause:** Password is a reserved keyword of the access database engine, using it as column name can cause unintended results  
 **Fix:** Changed column name in query from   
-```field name``` to ``` [field name] ```
+```field name``` to ``` [field name] ```   
 **Status:** Fixed
 
 * Forms don't clear up  
 **Problem:** The 3 forms to add/delete/update users don't clear up once used. Makes it cumbersome to use them multiple times as every field needs to be manually cleared  
 **Steps to recreate:** Open office form > use one of the forms to successfully add/delete/update users > close them and they still have valuse from last time  
 **Cause:** No instructions to clear fields  
-**Fix:** Add the necessary code after the success messageBox is shown  
+**Fix:** Add the necessary code after the success messageBox is shown    
 **Status:** Fixed
+
+* Connection not closed after deleting user
+**Problem:** Attempting any connection to database after making a failed attempt in deleting user gives connection not closed error   
+**Steps to recreate:** Open office home > Delete user form > Attempt to delete a user that doesn't exist > close form and try somehting that needs DB connection (Eg. load a username info)  
+**Cause:** If a delete user attempt gets a non-existent user as input, it directly breaks out of Sub without closing conections   
+**Fix:** Close connections before exiting the Sub  
+**Status:** Fixed
+
+* Updating user, no checks
+**Problem:** Unlike the add user form, there are no checks to see what is being entered where, letters can go to phone and fields can go empty   
+**Steps to recreate:** Office home > Update user > Attempt an invalid update > confirm by loading user data on office home form  
+**Cause:** No checks on input
+**Fix:** Add checks for all inputs
+**Status:** Currently working on

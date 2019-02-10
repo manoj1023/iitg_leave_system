@@ -68,3 +68,11 @@ And changing all corresponding If-Else conditions with
 If ans = DialogResult.Yes
 ```
 **Status:** Fixed
+
+
+* Visual Feedback when applying ordinary leave
+
+**Problem:** When longer than permitted Ordinary Leaves are applied, although there's no application submitted, the user gets to visual response   
+**Steps to recreate:** Student Homepage > Apply > Ordinary leave > Dates more than 5 days apart and not adjacent to other leaves   
+**Cause:** Missing message box   
+**Status:** Being worked on by siddharth   

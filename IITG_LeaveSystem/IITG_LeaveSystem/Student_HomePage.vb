@@ -524,6 +524,9 @@ Public Class Student_HomePage
                 End While
                 If totaldays > 5 Then
                     flag = False
+                    If count = 0 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days", "Error")
+                    End If
                     If count = 1 Then
                         MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: ) " & leaveid1, "Error")
                     ElseIf count = 2 Then
@@ -531,6 +534,7 @@ Public Class Student_HomePage
                     End If
                 End If
                 If days > 5 And flag = True Then
+
                     MessageBox.Show("Ordinary Leaves can't span more than 5 days", "Error")
                     flag = False
                 ElseIf flag = True Then
@@ -1105,6 +1109,9 @@ Public Class Student_HomePage
                 End While
                 If totaldays > 5 Then
                     flag = False
+                    If count = 0 Then
+                        MessageBox.Show("Ordinary Leaves can't span more than 5 days", "Error")
+                    End If
                     If count = 1 Then
                         MessageBox.Show("Ordinary Leaves can't span more than 5 days (Concatenating with Upcoming Leave with ID: ) " & leaveid1, "Error")
                     ElseIf count = 2 Then

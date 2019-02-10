@@ -28,7 +28,6 @@ Partial Class add_User
         Me.Label3 = New System.Windows.Forms.Label()
         Me.username_text = New System.Windows.Forms.TextBox()
         Me.password_text = New System.Windows.Forms.TextBox()
-        Me.add = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -45,6 +44,7 @@ Partial Class add_User
         Me.dept_combo = New System.Windows.Forms.ComboBox()
         Me.gender_combo = New System.Windows.Forms.ComboBox()
         Me.course_combo = New System.Windows.Forms.ComboBox()
+        Me.add = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'choice_combo
@@ -104,20 +104,6 @@ Partial Class add_User
         Me.password_text.Name = "password_text"
         Me.password_text.Size = New System.Drawing.Size(176, 27)
         Me.password_text.TabIndex = 7
-        '
-        'add
-        '
-        Me.add.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.add.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.add.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.add.Location = New System.Drawing.Point(268, 382)
-        Me.add.Name = "add"
-        Me.add.Size = New System.Drawing.Size(219, 48)
-        Me.add.TabIndex = 8
-        Me.add.Text = "Add"
-        Me.add.UseMnemonic = False
-        Me.add.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -273,6 +259,22 @@ Partial Class add_User
         Me.course_combo.Name = "course_combo"
         Me.course_combo.Size = New System.Drawing.Size(176, 24)
         Me.course_combo.TabIndex = 24
+        '
+        'add
+        '
+        Me.add.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.add.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.add.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.add.Image = Global.IITG_LeaveSystem.My.Resources.Resources.add_user_icon
+        Me.add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.add.Location = New System.Drawing.Point(268, 382)
+        Me.add.Name = "add"
+        Me.add.Size = New System.Drawing.Size(219, 48)
+        Me.add.TabIndex = 8
+        Me.add.Text = "Add"
+        Me.add.UseMnemonic = False
+        Me.add.UseVisualStyleBackColor = False
         '
         'add_User
         '

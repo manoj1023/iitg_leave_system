@@ -28,9 +28,9 @@ Partial Class Apply_for_leave
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.applybutton = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.positionlabel = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.applybutton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'namelabel
@@ -94,34 +94,6 @@ Partial Class Apply_for_leave
         Me.DateTimePicker2.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker2.TabIndex = 5
         '
-        'applybutton
-        '
-        Me.applybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.applybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.applybutton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.applybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.applybutton.Location = New System.Drawing.Point(192, 294)
-        Me.applybutton.Margin = New System.Windows.Forms.Padding(4)
-        Me.applybutton.Name = "applybutton"
-        Me.applybutton.Size = New System.Drawing.Size(170, 44)
-        Me.applybutton.TabIndex = 6
-        Me.applybutton.Text = "Apply"
-        Me.applybutton.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(396, 294)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(183, 44)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Close"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'positionlabel
         '
         Me.positionlabel.AutoSize = True
@@ -133,6 +105,40 @@ Partial Class Apply_for_leave
         Me.positionlabel.Size = New System.Drawing.Size(138, 24)
         Me.positionlabel.TabIndex = 8
         Me.positionlabel.Text = "Position Label"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Button2.Image = Global.IITG_LeaveSystem.My.Resources.Resources.close
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(396, 294)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(181, 44)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Close"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'applybutton
+        '
+        Me.applybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.applybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.applybutton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.applybutton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.button_round_tick_ok_icon
+        Me.applybutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.applybutton.Location = New System.Drawing.Point(192, 294)
+        Me.applybutton.Margin = New System.Windows.Forms.Padding(4)
+        Me.applybutton.Name = "applybutton"
+        Me.applybutton.Size = New System.Drawing.Size(176, 44)
+        Me.applybutton.TabIndex = 6
+        Me.applybutton.Text = "Apply"
+        Me.applybutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.applybutton.UseVisualStyleBackColor = False
         '
         'Apply_for_leave
         '

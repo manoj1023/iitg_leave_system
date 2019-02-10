@@ -31,13 +31,13 @@ Partial Class Office_HomePage
         Me.loadUser = New System.Windows.Forms.Button()
         Me.heading1 = New System.Windows.Forms.Label()
         Me.dgv2 = New System.Windows.Forms.DataGridView()
-        Me.ref_Button = New System.Windows.Forms.Button()
-        Me.addUser = New System.Windows.Forms.Button()
-        Me.updateUser = New System.Windows.Forms.Button()
-        Me.deleteUser = New System.Windows.Forms.Button()
-        Me.approvalButton = New System.Windows.Forms.Button()
-        Me.DeclineButton = New System.Windows.Forms.Button()
         Me.logoutButton = New System.Windows.Forms.Button()
+        Me.DeclineButton = New System.Windows.Forms.Button()
+        Me.approvalButton = New System.Windows.Forms.Button()
+        Me.deleteUser = New System.Windows.Forms.Button()
+        Me.updateUser = New System.Windows.Forms.Button()
+        Me.addUser = New System.Windows.Forms.Button()
+        Me.ref_Button = New System.Windows.Forms.Button()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -124,7 +124,7 @@ Partial Class Office_HomePage
         Me.heading1.AutoSize = True
         Me.heading1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.heading1.ForeColor = System.Drawing.Color.White
-        Me.heading1.Location = New System.Drawing.Point(25, 246)
+        Me.heading1.Location = New System.Drawing.Point(25, 271)
         Me.heading1.Name = "heading1"
         Me.heading1.Size = New System.Drawing.Size(235, 24)
         Me.heading1.TabIndex = 8
@@ -136,91 +136,13 @@ Partial Class Office_HomePage
         Me.dgv2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv2.GridColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.dgv2.Location = New System.Drawing.Point(28, 273)
+        Me.dgv2.Location = New System.Drawing.Point(28, 298)
         Me.dgv2.MultiSelect = False
         Me.dgv2.Name = "dgv2"
         Me.dgv2.ReadOnly = True
         Me.dgv2.RowTemplate.Height = 24
         Me.dgv2.Size = New System.Drawing.Size(847, 131)
         Me.dgv2.TabIndex = 9
-        '
-        'ref_Button
-        '
-        Me.ref_Button.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.ref_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ref_Button.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ref_Button.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ref_Button.Location = New System.Drawing.Point(694, 234)
-        Me.ref_Button.Name = "ref_Button"
-        Me.ref_Button.Size = New System.Drawing.Size(123, 36)
-        Me.ref_Button.TabIndex = 10
-        Me.ref_Button.Text = "Refresh"
-        Me.ref_Button.UseVisualStyleBackColor = False
-        '
-        'addUser
-        '
-        Me.addUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.addUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.addUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.addUser.Location = New System.Drawing.Point(29, 475)
-        Me.addUser.Name = "addUser"
-        Me.addUser.Size = New System.Drawing.Size(276, 49)
-        Me.addUser.TabIndex = 11
-        Me.addUser.Text = "Add User"
-        Me.addUser.UseVisualStyleBackColor = False
-        '
-        'updateUser
-        '
-        Me.updateUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.updateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.updateUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updateUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.updateUser.Location = New System.Drawing.Point(348, 475)
-        Me.updateUser.Name = "updateUser"
-        Me.updateUser.Size = New System.Drawing.Size(242, 49)
-        Me.updateUser.TabIndex = 12
-        Me.updateUser.Text = "Update User"
-        Me.updateUser.UseVisualStyleBackColor = False
-        '
-        'deleteUser
-        '
-        Me.deleteUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.deleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.deleteUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.deleteUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.deleteUser.Location = New System.Drawing.Point(647, 475)
-        Me.deleteUser.Name = "deleteUser"
-        Me.deleteUser.Size = New System.Drawing.Size(228, 49)
-        Me.deleteUser.TabIndex = 13
-        Me.deleteUser.Text = "Delete User"
-        Me.deleteUser.UseVisualStyleBackColor = False
-        '
-        'approvalButton
-        '
-        Me.approvalButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.approvalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.approvalButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.approvalButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.approvalButton.Location = New System.Drawing.Point(546, 421)
-        Me.approvalButton.Name = "approvalButton"
-        Me.approvalButton.Size = New System.Drawing.Size(153, 32)
-        Me.approvalButton.TabIndex = 14
-        Me.approvalButton.Text = "Approve"
-        Me.approvalButton.UseVisualStyleBackColor = False
-        '
-        'DeclineButton
-        '
-        Me.DeclineButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.DeclineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DeclineButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeclineButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.DeclineButton.Location = New System.Drawing.Point(722, 421)
-        Me.DeclineButton.Name = "DeclineButton"
-        Me.DeclineButton.Size = New System.Drawing.Size(153, 32)
-        Me.DeclineButton.TabIndex = 15
-        Me.DeclineButton.Text = "Decline"
-        Me.DeclineButton.UseVisualStyleBackColor = False
         '
         'logoutButton
         '
@@ -235,12 +157,102 @@ Partial Class Office_HomePage
         Me.logoutButton.Text = "Logout"
         Me.logoutButton.UseVisualStyleBackColor = False
         '
+        'DeclineButton
+        '
+        Me.DeclineButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.DeclineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeclineButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeclineButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.DeclineButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.close
+        Me.DeclineButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DeclineButton.Location = New System.Drawing.Point(715, 435)
+        Me.DeclineButton.Name = "DeclineButton"
+        Me.DeclineButton.Size = New System.Drawing.Size(146, 43)
+        Me.DeclineButton.TabIndex = 15
+        Me.DeclineButton.Text = "Decline"
+        Me.DeclineButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.DeclineButton.UseVisualStyleBackColor = False
+        '
+        'approvalButton
+        '
+        Me.approvalButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.approvalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.approvalButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.approvalButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.approvalButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.button_round_tick_ok_icon
+        Me.approvalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.approvalButton.Location = New System.Drawing.Point(548, 435)
+        Me.approvalButton.Name = "approvalButton"
+        Me.approvalButton.Size = New System.Drawing.Size(161, 43)
+        Me.approvalButton.TabIndex = 14
+        Me.approvalButton.Text = "Approve"
+        Me.approvalButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.approvalButton.UseVisualStyleBackColor = False
+        '
+        'deleteUser
+        '
+        Me.deleteUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.deleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.deleteUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deleteUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.deleteUser.Image = Global.IITG_LeaveSystem.My.Resources.Resources.delete_user
+        Me.deleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.deleteUser.Location = New System.Drawing.Point(611, 500)
+        Me.deleteUser.Name = "deleteUser"
+        Me.deleteUser.Size = New System.Drawing.Size(250, 49)
+        Me.deleteUser.TabIndex = 13
+        Me.deleteUser.Text = "Delete User"
+        Me.deleteUser.UseVisualStyleBackColor = False
+        '
+        'updateUser
+        '
+        Me.updateUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.updateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.updateUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.updateUser.Image = Global.IITG_LeaveSystem.My.Resources.Resources.edit_user
+        Me.updateUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.updateUser.Location = New System.Drawing.Point(323, 500)
+        Me.updateUser.Name = "updateUser"
+        Me.updateUser.Size = New System.Drawing.Size(267, 49)
+        Me.updateUser.TabIndex = 12
+        Me.updateUser.Text = "Update User"
+        Me.updateUser.UseVisualStyleBackColor = False
+        '
+        'addUser
+        '
+        Me.addUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.addUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addUser.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.addUser.Image = Global.IITG_LeaveSystem.My.Resources.Resources.user_add
+        Me.addUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.addUser.Location = New System.Drawing.Point(49, 500)
+        Me.addUser.Name = "addUser"
+        Me.addUser.Size = New System.Drawing.Size(256, 49)
+        Me.addUser.TabIndex = 11
+        Me.addUser.Text = "Add User"
+        Me.addUser.UseVisualStyleBackColor = False
+        '
+        'ref_Button
+        '
+        Me.ref_Button.BackColor = System.Drawing.Color.Transparent
+        Me.ref_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ref_Button.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ref_Button.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ref_Button.Image = Global.IITG_LeaveSystem.My.Resources.Resources.Refresh
+        Me.ref_Button.Location = New System.Drawing.Point(734, 229)
+        Me.ref_Button.Name = "ref_Button"
+        Me.ref_Button.Size = New System.Drawing.Size(83, 63)
+        Me.ref_Button.TabIndex = 10
+        Me.ref_Button.UseVisualStyleBackColor = False
+        '
         'Office_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(914, 545)
+        Me.ClientSize = New System.Drawing.Size(914, 588)
         Me.Controls.Add(Me.logoutButton)
         Me.Controls.Add(Me.DeclineButton)
         Me.Controls.Add(Me.approvalButton)

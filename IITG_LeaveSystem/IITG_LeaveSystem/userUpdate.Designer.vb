@@ -101,10 +101,12 @@ Partial Class userUpdate
         Me.update_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.update_button.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.update_button.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.update_button.Location = New System.Drawing.Point(226, 265)
+        Me.update_button.Image = Global.IITG_LeaveSystem.My.Resources.Resources.edit_user
+        Me.update_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.update_button.Location = New System.Drawing.Point(220, 261)
         Me.update_button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.update_button.Name = "update_button"
-        Me.update_button.Size = New System.Drawing.Size(194, 41)
+        Me.update_button.Size = New System.Drawing.Size(241, 48)
         Me.update_button.TabIndex = 10
         Me.update_button.Text = "Update"
         Me.update_button.UseMnemonic = False

@@ -15,6 +15,26 @@ IITG_LeaveSystem
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.add_user_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.button_round_tick_ok_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.close">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.delete_user">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.edit_user">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:IITG_LeaveSystem.My.Resources.Resources.Forgot_Pass">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -27,7 +47,19 @@ IITG_LeaveSystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.logout">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:IITG_LeaveSystem.My.Resources.Resources.password">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.Refresh">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.user_add">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -187,6 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LeaveSystemExeIcon.ico" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\delete-user.png" />
+    <None Include="Resources\edit-user.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\button-round-tick-ok-icon.png" />
     <None Include="Resources\add-user-icon.png" />
     <None Include="Resources\user_add.png" />
     <None Include="Resources\login.png" />

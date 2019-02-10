@@ -57,9 +57,11 @@ Partial Class userDelete
         Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Delete.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Delete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Delete.Location = New System.Drawing.Point(202, 168)
+        Me.Delete.Image = Global.IITG_LeaveSystem.My.Resources.Resources.delete_user
+        Me.Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Delete.Location = New System.Drawing.Point(196, 163)
         Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(186, 41)
+        Me.Delete.Size = New System.Drawing.Size(225, 44)
         Me.Delete.TabIndex = 9
         Me.Delete.Text = "Delete"
         Me.Delete.UseMnemonic = False

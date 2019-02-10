@@ -28,6 +28,43 @@ Public Class Form1
             AddHandler radiobut.CheckedChanged, AddressOf changeHighlight
         Next
         StudentRadio.ForeColor = Color.FromArgb(78, 184, 206)
+
+        Try
+            Dim projDirectory, databasePath As String
+            projDirectory = Directory.GetCurrentDirectory()
+            databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
+            Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+            Dim query As String
+            query = "Select * From Leave;"
+            'MessageBox.Show(query)
+
+            con.Open()
+            Dim cmd As New OleDbCommand(query, con)
+            Dim reader As OleDbDataReader
+            reader = cmd.ExecuteReader()
+            Dim Leavid As Integer
+            Dim Status As String
+            Dim StartDate As Date
+            Dim Temp As String
+            Dim Toda As Date = Today
+            While (reader.Read)
+                Leavid = reader.GetInt32(0)
+                Temp = reader.GetString(2)
+                Status = reader.GetString(10)
+                Date.TryParseExact(Temp, New String() {"dd-MM-yyyy"}, Nothing, Globalization.DateTimeStyles.AdjustToUniversal, StartDate)
+
+                If StartDate <= Toda And Status <> "Deleted" Then
+                    query = "update Leave set ApprovalStatus = 'Declined' where LeaveID = " & Leavid & " ;"
+                    Dim Command As New OleDbCommand(query, con)
+                    Command.ExecuteNonQuery()
+                    'MessageBox.Show(Leavid & "  " & Status & " " & StartDate)
+                End If
+            End While
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click

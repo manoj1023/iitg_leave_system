@@ -46,4 +46,5 @@ Also when this situation occurs, the testing for 'OL' being less than 5 is breac
 **Comments (Siddharth)** OL can't span for more than 5 days in one go, but total can be greater than 5. 
 How were you able to save OL with 20 days?
 kindly give the steps with exact dates.
-thanks
+thanks   
+**Steps To Recreate:** Apply for an ordinary leave > Apply again, the starting date this time should be immediately next to the ending date last time, select the ending date with a 15 days gap and apply

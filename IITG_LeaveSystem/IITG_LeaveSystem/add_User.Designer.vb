@@ -303,6 +303,8 @@ Partial Class add_User
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.choice_combo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "add_User"
         Me.Text = "Add User"
         Me.ResumeLayout(False)

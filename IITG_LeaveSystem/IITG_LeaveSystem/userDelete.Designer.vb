@@ -93,6 +93,8 @@ Partial Class userDelete
         Me.Controls.Add(Me.Delete)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "userDelete"
         Me.Text = "Delete User"
         Me.ResumeLayout(False)

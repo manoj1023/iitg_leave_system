@@ -52,7 +52,7 @@ Public Class add_User
             Exit Sub
         End If
 
-        If Phone_text.Text.Length < 7 Then
+        If Phone_text.Text.Length < 7 Or IsNumeric(Phone_text.Text) = False Then
             MessageBox.Show("Enter a Valid Phone Number")
             Exit Sub
         End If

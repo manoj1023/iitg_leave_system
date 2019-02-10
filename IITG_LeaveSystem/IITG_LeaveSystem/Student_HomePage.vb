@@ -401,6 +401,11 @@ Public Class Student_HomePage
 
     Private Sub NAUploadButton_Click(sender As Object, e As EventArgs) Handles NAUploadButton.Click
         'Variable Declaration
+        Dim label = NAInnerPanel.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        NADocumentsLabel.ForeColor = Color.FromArgb(78, 184, 206)
         Dim filepath As String
         filepath = ""
         'Taking the Source file 
@@ -1242,4 +1247,85 @@ Public Class Student_HomePage
         OldButton.PerformClick()
     End Sub
 
+    
+    Private Sub ProfileContactNumberTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileContactNumberTextBox.TextChanged
+        Dim label = ProfileGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileContactNumberLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub ProfileAddressTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileAddressTextBox.TextChanged
+        Dim label = ProfileGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileAddressLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub ProfileEmergencyContactNumberTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileEmergencyContactNumberTextBox.TextChanged
+        Dim label = ProfileGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileEmergencyContactNumberLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub ProfileOldPasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileOldPasswordTextBox.TextChanged
+        Dim label = ProfilePasswordChangeGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileOldPasswordLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub ProfileNewPasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileNewPasswordTextBox.TextChanged
+        Dim label = ProfilePasswordChangeGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileNewPasswordLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub ProfileConfirmNewPasswordTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProfileConfirmNewPasswordTextBox.TextChanged
+        Dim label = ProfilePasswordChangeGroupBox.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        ProfileConfirmNewPasswordLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+
+    Private Sub NALeaveTypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NALeaveTypeComboBox.SelectedIndexChanged
+        Dim label = NAInnerPanel.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        NALeaveTypeLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub NASupervisorComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NASupervisorComboBox.SelectedIndexChanged
+        Dim label = NAInnerPanel.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        NASupervisorLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub NAStartDate_ValueChanged(sender As Object, e As EventArgs) Handles NAStartDate.ValueChanged
+        Dim label = NAInnerPanel.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        NAStartDateLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub NALastDate_ValueChanged(sender As Object, e As EventArgs) Handles NALastDate.ValueChanged
+        Dim label = NAInnerPanel.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        NALastDateLabel.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
 End Class

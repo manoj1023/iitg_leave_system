@@ -150,7 +150,9 @@ Partial Class Apply_for_leave
         Me.Controls.Add(Me.nametextbox)
         Me.Controls.Add(Me.namelabel)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "Apply_for_leave"
         Me.Text = "Apply For Leave"
         Me.ResumeLayout(False)

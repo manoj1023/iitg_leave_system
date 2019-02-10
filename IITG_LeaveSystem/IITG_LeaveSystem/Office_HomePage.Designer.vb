@@ -258,6 +258,8 @@ Partial Class Office_HomePage
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.choice_combo)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "Office_HomePage"
         Me.Text = "Office_HomePage"
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()

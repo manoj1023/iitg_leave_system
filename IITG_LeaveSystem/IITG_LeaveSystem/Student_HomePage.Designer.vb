@@ -138,13 +138,13 @@ Partial Class Student_HomePage
         '
         'NavigationGroupBox
         '
-        Me.NavigationGroupBox.BackColor = System.Drawing.Color.RoyalBlue
+        Me.NavigationGroupBox.BackColor = System.Drawing.Color.LightCyan
         Me.NavigationGroupBox.Controls.Add(Me.Button1)
         Me.NavigationGroupBox.Controls.Add(Me.LogOutButton)
         Me.NavigationGroupBox.Controls.Add(Me.ProfileButton)
         Me.NavigationGroupBox.Controls.Add(Me.OldButton)
         Me.NavigationGroupBox.Controls.Add(Me.NAButton)
-        Me.NavigationGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NavigationGroupBox.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NavigationGroupBox.ForeColor = System.Drawing.Color.Black
         Me.NavigationGroupBox.Location = New System.Drawing.Point(10, 16)
         Me.NavigationGroupBox.Margin = New System.Windows.Forms.Padding(0)
@@ -156,9 +156,11 @@ Partial Class Student_HomePage
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(0, 47)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(0, 52)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 57)
         Me.Button1.TabIndex = 4
@@ -166,10 +168,11 @@ Partial Class Student_HomePage
         '
         'LogOutButton
         '
-        Me.LogOutButton.BackColor = System.Drawing.Color.LightCoral
+        Me.LogOutButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.LogOutButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogOutButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.LogOutButton.Location = New System.Drawing.Point(0, 704)
         Me.LogOutButton.Name = "LogOutButton"
         Me.LogOutButton.Size = New System.Drawing.Size(177, 57)
@@ -179,10 +182,11 @@ Partial Class Student_HomePage
         '
         'ProfileButton
         '
-        Me.ProfileButton.BackColor = System.Drawing.Color.LightCoral
+        Me.ProfileButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.ProfileButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ProfileButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileButton.Location = New System.Drawing.Point(0, 346)
         Me.ProfileButton.Name = "ProfileButton"
         Me.ProfileButton.Size = New System.Drawing.Size(177, 65)
@@ -192,10 +196,11 @@ Partial Class Student_HomePage
         '
         'OldButton
         '
-        Me.OldButton.BackColor = System.Drawing.Color.LightCoral
+        Me.OldButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.OldButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.OldButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.OldButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OldButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.OldButton.Location = New System.Drawing.Point(0, 238)
         Me.OldButton.Name = "OldButton"
         Me.OldButton.Size = New System.Drawing.Size(177, 76)
@@ -205,10 +210,11 @@ Partial Class Student_HomePage
         '
         'NAButton
         '
-        Me.NAButton.BackColor = System.Drawing.Color.LightCoral
+        Me.NAButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.NAButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.NAButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.NAButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NAButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NAButton.Location = New System.Drawing.Point(0, 131)
         Me.NAButton.Name = "NAButton"
         Me.NAButton.Size = New System.Drawing.Size(177, 77)
@@ -218,9 +224,10 @@ Partial Class Student_HomePage
         '
         'NAGroupBox
         '
-        Me.NAGroupBox.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.NAGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NAGroupBox.Controls.Add(Me.NAInnerPanel)
-        Me.NAGroupBox.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAGroupBox.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAGroupBox.ForeColor = System.Drawing.Color.White
         Me.NAGroupBox.Location = New System.Drawing.Point(225, 120)
         Me.NAGroupBox.Name = "NAGroupBox"
         Me.NAGroupBox.Size = New System.Drawing.Size(882, 633)
@@ -230,7 +237,7 @@ Partial Class Student_HomePage
         '
         'NAInnerPanel
         '
-        Me.NAInnerPanel.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.NAInnerPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NAInnerPanel.Controls.Add(Me.NASupervisorLabel)
         Me.NAInnerPanel.Controls.Add(Me.NASupervisorComboBox)
         Me.NAInnerPanel.Controls.Add(Me.NAParentalLeavesLabel)
@@ -259,10 +266,11 @@ Partial Class Student_HomePage
         'NASupervisorLabel
         '
         Me.NASupervisorLabel.AutoSize = True
-        Me.NASupervisorLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NASupervisorLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NASupervisorLabel.ForeColor = System.Drawing.Color.White
         Me.NASupervisorLabel.Location = New System.Drawing.Point(88, 183)
         Me.NASupervisorLabel.Name = "NASupervisorLabel"
-        Me.NASupervisorLabel.Size = New System.Drawing.Size(146, 28)
+        Me.NASupervisorLabel.Size = New System.Drawing.Size(128, 29)
         Me.NASupervisorLabel.TabIndex = 22
         Me.NASupervisorLabel.Text = "Supervisor"
         '
@@ -271,56 +279,56 @@ Partial Class Student_HomePage
         Me.NASupervisorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.NASupervisorComboBox.Location = New System.Drawing.Point(300, 176)
         Me.NASupervisorComboBox.Name = "NASupervisorComboBox"
-        Me.NASupervisorComboBox.Size = New System.Drawing.Size(483, 36)
+        Me.NASupervisorComboBox.Size = New System.Drawing.Size(483, 35)
         Me.NASupervisorComboBox.TabIndex = 21
         '
         'NAParentalLeavesLabel
         '
         Me.NAParentalLeavesLabel.AutoSize = True
-        Me.NAParentalLeavesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAParentalLeavesLabel.ForeColor = System.Drawing.Color.Green
+        Me.NAParentalLeavesLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAParentalLeavesLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.NAParentalLeavesLabel.Location = New System.Drawing.Point(6, 555)
         Me.NAParentalLeavesLabel.Name = "NAParentalLeavesLabel"
-        Me.NAParentalLeavesLabel.Size = New System.Drawing.Size(181, 25)
+        Me.NAParentalLeavesLabel.Size = New System.Drawing.Size(184, 24)
         Me.NAParentalLeavesLabel.TabIndex = 20
         Me.NAParentalLeavesLabel.Text = "Parental Leaves: "
         '
         'NAAcademicLeavesLabel
         '
         Me.NAAcademicLeavesLabel.AutoSize = True
-        Me.NAAcademicLeavesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAAcademicLeavesLabel.ForeColor = System.Drawing.Color.Green
+        Me.NAAcademicLeavesLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAAcademicLeavesLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.NAAcademicLeavesLabel.Location = New System.Drawing.Point(6, 485)
         Me.NAAcademicLeavesLabel.Name = "NAAcademicLeavesLabel"
-        Me.NAAcademicLeavesLabel.Size = New System.Drawing.Size(196, 25)
+        Me.NAAcademicLeavesLabel.Size = New System.Drawing.Size(196, 24)
         Me.NAAcademicLeavesLabel.TabIndex = 19
         Me.NAAcademicLeavesLabel.Text = "Academic Leaves: "
         '
         'NAMedicalLeavesLabel
         '
         Me.NAMedicalLeavesLabel.AutoSize = True
-        Me.NAMedicalLeavesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAMedicalLeavesLabel.ForeColor = System.Drawing.Color.Green
+        Me.NAMedicalLeavesLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAMedicalLeavesLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.NAMedicalLeavesLabel.Location = New System.Drawing.Point(6, 518)
         Me.NAMedicalLeavesLabel.Name = "NAMedicalLeavesLabel"
-        Me.NAMedicalLeavesLabel.Size = New System.Drawing.Size(176, 25)
+        Me.NAMedicalLeavesLabel.Size = New System.Drawing.Size(177, 24)
         Me.NAMedicalLeavesLabel.TabIndex = 18
         Me.NAMedicalLeavesLabel.Text = "Medical Leaves: "
         '
         'NAOrdinaryleavesLabel
         '
         Me.NAOrdinaryleavesLabel.AutoSize = True
-        Me.NAOrdinaryleavesLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAOrdinaryleavesLabel.ForeColor = System.Drawing.Color.Green
+        Me.NAOrdinaryleavesLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAOrdinaryleavesLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.NAOrdinaryleavesLabel.Location = New System.Drawing.Point(6, 449)
         Me.NAOrdinaryleavesLabel.Name = "NAOrdinaryleavesLabel"
-        Me.NAOrdinaryleavesLabel.Size = New System.Drawing.Size(184, 25)
+        Me.NAOrdinaryleavesLabel.Size = New System.Drawing.Size(189, 24)
         Me.NAOrdinaryleavesLabel.TabIndex = 17
         Me.NAOrdinaryleavesLabel.Text = "Ordinary Leaves: "
         '
         'NAInstructionTextBox
         '
-        Me.NAInstructionTextBox.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.NAInstructionTextBox.BackColor = System.Drawing.Color.AliceBlue
         Me.NAInstructionTextBox.Location = New System.Drawing.Point(366, 453)
         Me.NAInstructionTextBox.Name = "NAInstructionTextBox"
         Me.NAInstructionTextBox.ReadOnly = True
@@ -330,25 +338,27 @@ Partial Class Student_HomePage
         '
         'NAUploadButton
         '
-        Me.NAUploadButton.BackgroundImage = CType(resources.GetObject("NAUploadButton.BackgroundImage"), System.Drawing.Image)
-        Me.NAUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.NAUploadButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.NAUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NAUploadButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NAUploadButton.Location = New System.Drawing.Point(366, 376)
         Me.NAUploadButton.Name = "NAUploadButton"
         Me.NAUploadButton.Size = New System.Drawing.Size(154, 52)
         Me.NAUploadButton.TabIndex = 15
         Me.NAUploadButton.Text = "Upload"
-        Me.NAUploadButton.UseVisualStyleBackColor = True
+        Me.NAUploadButton.UseVisualStyleBackColor = False
         '
         'NAApplyButton
         '
-        Me.NAApplyButton.BackgroundImage = CType(resources.GetObject("NAApplyButton.BackgroundImage"), System.Drawing.Image)
-        Me.NAApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.NAApplyButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.NAApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NAApplyButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NAApplyButton.Location = New System.Drawing.Point(674, 527)
         Me.NAApplyButton.Name = "NAApplyButton"
         Me.NAApplyButton.Size = New System.Drawing.Size(144, 50)
         Me.NAApplyButton.TabIndex = 14
         Me.NAApplyButton.Text = "Apply"
-        Me.NAApplyButton.UseVisualStyleBackColor = True
+        Me.NAApplyButton.UseVisualStyleBackColor = False
         '
         'NALeaveTypeComboBox
         '
@@ -356,7 +366,7 @@ Partial Class Student_HomePage
         Me.NALeaveTypeComboBox.FormattingEnabled = True
         Me.NALeaveTypeComboBox.Location = New System.Drawing.Point(299, 113)
         Me.NALeaveTypeComboBox.Name = "NALeaveTypeComboBox"
-        Me.NALeaveTypeComboBox.Size = New System.Drawing.Size(484, 36)
+        Me.NALeaveTypeComboBox.Size = New System.Drawing.Size(484, 35)
         Me.NALeaveTypeComboBox.TabIndex = 13
         '
         'NALastDate
@@ -396,86 +406,90 @@ Partial Class Student_HomePage
         'NADocumentsLabel
         '
         Me.NADocumentsLabel.AutoSize = True
-        Me.NADocumentsLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NADocumentsLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NADocumentsLabel.ForeColor = System.Drawing.Color.White
         Me.NADocumentsLabel.Location = New System.Drawing.Point(88, 384)
         Me.NADocumentsLabel.Name = "NADocumentsLabel"
-        Me.NADocumentsLabel.Size = New System.Drawing.Size(235, 28)
+        Me.NADocumentsLabel.Size = New System.Drawing.Size(208, 29)
         Me.NADocumentsLabel.TabIndex = 5
         Me.NADocumentsLabel.Text = "Document Upload"
         '
         'NALastDateLabel
         '
         Me.NALastDateLabel.AutoSize = True
-        Me.NALastDateLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALastDateLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALastDateLabel.ForeColor = System.Drawing.Color.White
         Me.NALastDateLabel.Location = New System.Drawing.Point(88, 301)
         Me.NALastDateLabel.Name = "NALastDateLabel"
-        Me.NALastDateLabel.Size = New System.Drawing.Size(130, 28)
+        Me.NALastDateLabel.Size = New System.Drawing.Size(113, 29)
         Me.NALastDateLabel.TabIndex = 4
         Me.NALastDateLabel.Text = "Last Date"
         '
         'NAStartDateLabel
         '
         Me.NAStartDateLabel.AutoSize = True
-        Me.NAStartDateLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAStartDateLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAStartDateLabel.ForeColor = System.Drawing.Color.White
         Me.NAStartDateLabel.Location = New System.Drawing.Point(88, 244)
         Me.NAStartDateLabel.Name = "NAStartDateLabel"
-        Me.NAStartDateLabel.Size = New System.Drawing.Size(141, 28)
+        Me.NAStartDateLabel.Size = New System.Drawing.Size(120, 29)
         Me.NAStartDateLabel.TabIndex = 3
         Me.NAStartDateLabel.Text = "Start Date"
         '
         'NALeaveTypeLabel
         '
         Me.NALeaveTypeLabel.AutoSize = True
-        Me.NALeaveTypeLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALeaveTypeLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALeaveTypeLabel.ForeColor = System.Drawing.Color.White
         Me.NALeaveTypeLabel.Location = New System.Drawing.Point(88, 116)
         Me.NALeaveTypeLabel.Name = "NALeaveTypeLabel"
-        Me.NALeaveTypeLabel.Size = New System.Drawing.Size(153, 28)
+        Me.NALeaveTypeLabel.Size = New System.Drawing.Size(134, 29)
         Me.NALeaveTypeLabel.TabIndex = 2
         Me.NALeaveTypeLabel.Text = "Leave Type"
         '
         'NALastNameLabel
         '
         Me.NALastNameLabel.AutoSize = True
-        Me.NALastNameLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALastNameLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NALastNameLabel.ForeColor = System.Drawing.Color.White
         Me.NALastNameLabel.Location = New System.Drawing.Point(88, 61)
         Me.NALastNameLabel.Name = "NALastNameLabel"
-        Me.NALastNameLabel.Size = New System.Drawing.Size(142, 28)
+        Me.NALastNameLabel.Size = New System.Drawing.Size(126, 29)
         Me.NALastNameLabel.TabIndex = 1
         Me.NALastNameLabel.Text = "Last Name"
         '
         'NAFirstNameLabel
         '
         Me.NAFirstNameLabel.AutoSize = True
-        Me.NAFirstNameLabel.Font = New System.Drawing.Font("Bookman Old Style", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAFirstNameLabel.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAFirstNameLabel.ForeColor = System.Drawing.Color.White
         Me.NAFirstNameLabel.Location = New System.Drawing.Point(88, 13)
         Me.NAFirstNameLabel.Name = "NAFirstNameLabel"
-        Me.NAFirstNameLabel.Size = New System.Drawing.Size(149, 28)
+        Me.NAFirstNameLabel.Size = New System.Drawing.Size(131, 29)
         Me.NAFirstNameLabel.TabIndex = 0
         Me.NAFirstNameLabel.Text = "First Name"
         '
         'UsernameLabel
         '
         Me.UsernameLabel.AutoSize = True
-        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameLabel.ForeColor = System.Drawing.Color.Black
-        Me.UsernameLabel.Image = CType(resources.GetObject("UsernameLabel.Image"), System.Drawing.Image)
+        Me.UsernameLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.UsernameLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.UsernameLabel.Location = New System.Drawing.Point(860, 29)
+        Me.UsernameLabel.Location = New System.Drawing.Point(883, 32)
         Me.UsernameLabel.Name = "UsernameLabel"
-        Me.UsernameLabel.Size = New System.Drawing.Size(61, 24)
+        Me.UsernameLabel.Size = New System.Drawing.Size(59, 24)
         Me.UsernameLabel.TabIndex = 3
         Me.UsernameLabel.Text = "Label"
         '
         'HeadingLabel
         '
         Me.HeadingLabel.AutoSize = True
-        Me.HeadingLabel.Font = New System.Drawing.Font("Bookman Old Style", 31.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HeadingLabel.ForeColor = System.Drawing.Color.Navy
-        Me.HeadingLabel.Image = CType(resources.GetObject("HeadingLabel.Image"), System.Drawing.Image)
+        Me.HeadingLabel.Font = New System.Drawing.Font("Georgia", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HeadingLabel.ForeColor = System.Drawing.Color.White
         Me.HeadingLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.HeadingLabel.Location = New System.Drawing.Point(190, 9)
+        Me.HeadingLabel.Location = New System.Drawing.Point(208, 14)
         Me.HeadingLabel.Name = "HeadingLabel"
-        Me.HeadingLabel.Size = New System.Drawing.Size(606, 63)
+        Me.HeadingLabel.Size = New System.Drawing.Size(451, 46)
         Me.HeadingLabel.TabIndex = 4
         Me.HeadingLabel.Text = "Student Leave Portal"
         '
@@ -491,7 +505,7 @@ Partial Class Student_HomePage
         '
         'OldPanel
         '
-        Me.OldPanel.BackColor = System.Drawing.Color.MediumBlue
+        Me.OldPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.OldPanel.Controls.Add(Me.OldInnerPanel)
         Me.OldPanel.Location = New System.Drawing.Point(192, 133)
         Me.OldPanel.Name = "OldPanel"
@@ -500,7 +514,7 @@ Partial Class Student_HomePage
         '
         'OldInnerPanel
         '
-        Me.OldInnerPanel.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.OldInnerPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.OldInnerPanel.Controls.Add(Me.OldExtendLeaveButton)
         Me.OldInnerPanel.Controls.Add(Me.OldCommentsLabel)
         Me.OldInnerPanel.Controls.Add(Me.OldDeleteButton)
@@ -517,12 +531,12 @@ Partial Class Student_HomePage
         '
         'OldExtendLeaveButton
         '
-        Me.OldExtendLeaveButton.BackColor = System.Drawing.Color.LimeGreen
-        Me.OldExtendLeaveButton.BackgroundImage = CType(resources.GetObject("OldExtendLeaveButton.BackgroundImage"), System.Drawing.Image)
+        Me.OldExtendLeaveButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.OldExtendLeaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.OldExtendLeaveButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.OldExtendLeaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldExtendLeaveButton.ForeColor = System.Drawing.Color.Navy
+        Me.OldExtendLeaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OldExtendLeaveButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldExtendLeaveButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.OldExtendLeaveButton.Location = New System.Drawing.Point(431, 503)
         Me.OldExtendLeaveButton.Name = "OldExtendLeaveButton"
         Me.OldExtendLeaveButton.Size = New System.Drawing.Size(248, 63)
@@ -533,22 +547,22 @@ Partial Class Student_HomePage
         'OldCommentsLabel
         '
         Me.OldCommentsLabel.AutoSize = True
-        Me.OldCommentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldCommentsLabel.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.OldCommentsLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldCommentsLabel.ForeColor = System.Drawing.Color.White
         Me.OldCommentsLabel.Location = New System.Drawing.Point(23, 363)
         Me.OldCommentsLabel.Name = "OldCommentsLabel"
-        Me.OldCommentsLabel.Size = New System.Drawing.Size(137, 29)
+        Me.OldCommentsLabel.Size = New System.Drawing.Size(108, 24)
         Me.OldCommentsLabel.TabIndex = 6
         Me.OldCommentsLabel.Text = "Comments"
         '
         'OldDeleteButton
         '
-        Me.OldDeleteButton.BackColor = System.Drawing.Color.LightCoral
-        Me.OldDeleteButton.BackgroundImage = CType(resources.GetObject("OldDeleteButton.BackgroundImage"), System.Drawing.Image)
+        Me.OldDeleteButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.OldDeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.OldDeleteButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.OldDeleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldDeleteButton.ForeColor = System.Drawing.Color.White
+        Me.OldDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OldDeleteButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldDeleteButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.OldDeleteButton.Location = New System.Drawing.Point(695, 503)
         Me.OldDeleteButton.Name = "OldDeleteButton"
         Me.OldDeleteButton.Size = New System.Drawing.Size(232, 63)
@@ -558,7 +572,8 @@ Partial Class Student_HomePage
         '
         'OldCommentsListBox
         '
-        Me.OldCommentsListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldCommentsListBox.BackColor = System.Drawing.Color.LightCyan
+        Me.OldCommentsListBox.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldCommentsListBox.FormattingEnabled = True
         Me.OldCommentsListBox.HorizontalExtent = 1000
         Me.OldCommentsListBox.HorizontalScrollbar = True
@@ -571,22 +586,22 @@ Partial Class Student_HomePage
         'OldUpcomingleaveLabel
         '
         Me.OldUpcomingleaveLabel.AutoSize = True
-        Me.OldUpcomingleaveLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldUpcomingleaveLabel.ForeColor = System.Drawing.Color.DarkGreen
+        Me.OldUpcomingleaveLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldUpcomingleaveLabel.ForeColor = System.Drawing.Color.White
         Me.OldUpcomingleaveLabel.Location = New System.Drawing.Point(469, 20)
         Me.OldUpcomingleaveLabel.Name = "OldUpcomingleaveLabel"
-        Me.OldUpcomingleaveLabel.Size = New System.Drawing.Size(459, 29)
+        Me.OldUpcomingleaveLabel.Size = New System.Drawing.Size(354, 24)
         Me.OldUpcomingleaveLabel.TabIndex = 3
         Me.OldUpcomingleaveLabel.Text = "Upcoming/Ongoing leave Applications"
         '
         'OldPastLeaveLabel
         '
         Me.OldPastLeaveLabel.AutoSize = True
-        Me.OldPastLeaveLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldPastLeaveLabel.ForeColor = System.Drawing.Color.DarkRed
+        Me.OldPastLeaveLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldPastLeaveLabel.ForeColor = System.Drawing.Color.White
         Me.OldPastLeaveLabel.Location = New System.Drawing.Point(11, 20)
         Me.OldPastLeaveLabel.Name = "OldPastLeaveLabel"
-        Me.OldPastLeaveLabel.Size = New System.Drawing.Size(284, 29)
+        Me.OldPastLeaveLabel.Size = New System.Drawing.Size(215, 24)
         Me.OldPastLeaveLabel.TabIndex = 2
         Me.OldPastLeaveLabel.Text = "Past leave Applications"
         '
@@ -601,15 +616,16 @@ Partial Class Student_HomePage
         '
         'OldUpcomingLeaveListBox
         '
-        Me.OldUpcomingLeaveListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldUpcomingLeaveListBox.BackColor = System.Drawing.Color.LightCyan
+        Me.OldUpcomingLeaveListBox.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldUpcomingLeaveListBox.FormattingEnabled = True
         Me.OldUpcomingLeaveListBox.HorizontalExtent = 800
         Me.OldUpcomingLeaveListBox.HorizontalScrollbar = True
-        Me.OldUpcomingLeaveListBox.ItemHeight = 18
+        Me.OldUpcomingLeaveListBox.ItemHeight = 20
         Me.OldUpcomingLeaveListBox.Location = New System.Drawing.Point(3, 9)
         Me.OldUpcomingLeaveListBox.Name = "OldUpcomingLeaveListBox"
         Me.OldUpcomingLeaveListBox.ScrollAlwaysVisible = True
-        Me.OldUpcomingLeaveListBox.Size = New System.Drawing.Size(454, 292)
+        Me.OldUpcomingLeaveListBox.Size = New System.Drawing.Size(454, 284)
         Me.OldUpcomingLeaveListBox.TabIndex = 1
         '
         'OldPastLeavesPanel
@@ -623,15 +639,16 @@ Partial Class Student_HomePage
         '
         'OldPastLeaveListBox
         '
-        Me.OldPastLeaveListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldPastLeaveListBox.BackColor = System.Drawing.Color.LightCyan
+        Me.OldPastLeaveListBox.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OldPastLeaveListBox.FormattingEnabled = True
         Me.OldPastLeaveListBox.HorizontalExtent = 800
         Me.OldPastLeaveListBox.HorizontalScrollbar = True
-        Me.OldPastLeaveListBox.ItemHeight = 18
+        Me.OldPastLeaveListBox.ItemHeight = 20
         Me.OldPastLeaveListBox.Location = New System.Drawing.Point(12, 11)
         Me.OldPastLeaveListBox.Name = "OldPastLeaveListBox"
         Me.OldPastLeaveListBox.ScrollAlwaysVisible = True
-        Me.OldPastLeaveListBox.Size = New System.Drawing.Size(442, 292)
+        Me.OldPastLeaveListBox.Size = New System.Drawing.Size(442, 284)
         Me.OldPastLeaveListBox.TabIndex = 0
         '
         'Timer1
@@ -655,7 +672,7 @@ Partial Class Student_HomePage
         '
         'ProfilePasswordChangePanel
         '
-        Me.ProfilePasswordChangePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ProfilePasswordChangePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfilePasswordChangePanel.Controls.Add(Me.ProfilePasswordChangeGroupBox)
         Me.ProfilePasswordChangePanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProfilePasswordChangePanel.Location = New System.Drawing.Point(335, 180)
@@ -665,7 +682,7 @@ Partial Class Student_HomePage
         '
         'ProfilePasswordChangeGroupBox
         '
-        Me.ProfilePasswordChangeGroupBox.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.ProfilePasswordChangeGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfilePasswordCheckBox)
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfilePasswordOkButton)
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfilePasswordCancelButton)
@@ -675,7 +692,8 @@ Partial Class Student_HomePage
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfileConfirmNewPasswordLabel)
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfileNewPasswordLabel)
         Me.ProfilePasswordChangeGroupBox.Controls.Add(Me.ProfileOldPasswordLabel)
-        Me.ProfilePasswordChangeGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfilePasswordChangeGroupBox.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfilePasswordChangeGroupBox.ForeColor = System.Drawing.Color.White
         Me.ProfilePasswordChangeGroupBox.Location = New System.Drawing.Point(10, 12)
         Me.ProfilePasswordChangeGroupBox.Name = "ProfilePasswordChangeGroupBox"
         Me.ProfilePasswordChangeGroupBox.Size = New System.Drawing.Size(643, 424)
@@ -686,10 +704,11 @@ Partial Class Student_HomePage
         'ProfilePasswordCheckBox
         '
         Me.ProfilePasswordCheckBox.AutoSize = True
-        Me.ProfilePasswordCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfilePasswordCheckBox.Location = New System.Drawing.Point(323, 235)
+        Me.ProfilePasswordCheckBox.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfilePasswordCheckBox.ForeColor = System.Drawing.Color.White
+        Me.ProfilePasswordCheckBox.Location = New System.Drawing.Point(323, 227)
         Me.ProfilePasswordCheckBox.Name = "ProfilePasswordCheckBox"
-        Me.ProfilePasswordCheckBox.Size = New System.Drawing.Size(164, 24)
+        Me.ProfilePasswordCheckBox.Size = New System.Drawing.Size(149, 24)
         Me.ProfilePasswordCheckBox.TabIndex = 8
         Me.ProfilePasswordCheckBox.Text = "Show Password"
         Me.ProfilePasswordCheckBox.UseMnemonic = False
@@ -697,79 +716,86 @@ Partial Class Student_HomePage
         '
         'ProfilePasswordOkButton
         '
-        Me.ProfilePasswordOkButton.BackgroundImage = CType(resources.GetObject("ProfilePasswordOkButton.BackgroundImage"), System.Drawing.Image)
-        Me.ProfilePasswordOkButton.Location = New System.Drawing.Point(447, 359)
+        Me.ProfilePasswordOkButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ProfilePasswordOkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfilePasswordOkButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ProfilePasswordOkButton.Location = New System.Drawing.Point(327, 353)
         Me.ProfilePasswordOkButton.Name = "ProfilePasswordOkButton"
-        Me.ProfilePasswordOkButton.Size = New System.Drawing.Size(148, 43)
+        Me.ProfilePasswordOkButton.Size = New System.Drawing.Size(148, 49)
         Me.ProfilePasswordOkButton.TabIndex = 7
         Me.ProfilePasswordOkButton.Text = "Ok"
-        Me.ProfilePasswordOkButton.UseVisualStyleBackColor = True
+        Me.ProfilePasswordOkButton.UseVisualStyleBackColor = False
         '
         'ProfilePasswordCancelButton
         '
-        Me.ProfilePasswordCancelButton.BackgroundImage = CType(resources.GetObject("ProfilePasswordCancelButton.BackgroundImage"), System.Drawing.Image)
+        Me.ProfilePasswordCancelButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.ProfilePasswordCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ProfilePasswordCancelButton.Location = New System.Drawing.Point(35, 359)
+        Me.ProfilePasswordCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfilePasswordCancelButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ProfilePasswordCancelButton.Location = New System.Drawing.Point(170, 353)
         Me.ProfilePasswordCancelButton.Name = "ProfilePasswordCancelButton"
         Me.ProfilePasswordCancelButton.Size = New System.Drawing.Size(144, 49)
         Me.ProfilePasswordCancelButton.TabIndex = 6
         Me.ProfilePasswordCancelButton.Text = "Cancel"
-        Me.ProfilePasswordCancelButton.UseVisualStyleBackColor = True
+        Me.ProfilePasswordCancelButton.UseVisualStyleBackColor = False
         '
         'ProfileNewPasswordTextBox
         '
         Me.ProfileNewPasswordTextBox.Location = New System.Drawing.Point(323, 111)
         Me.ProfileNewPasswordTextBox.Name = "ProfileNewPasswordTextBox"
-        Me.ProfileNewPasswordTextBox.Size = New System.Drawing.Size(282, 32)
+        Me.ProfileNewPasswordTextBox.Size = New System.Drawing.Size(282, 34)
         Me.ProfileNewPasswordTextBox.TabIndex = 5
         '
         'ProfileConfirmNewPasswordTextBox
         '
         Me.ProfileConfirmNewPasswordTextBox.Location = New System.Drawing.Point(323, 176)
         Me.ProfileConfirmNewPasswordTextBox.Name = "ProfileConfirmNewPasswordTextBox"
-        Me.ProfileConfirmNewPasswordTextBox.Size = New System.Drawing.Size(282, 32)
+        Me.ProfileConfirmNewPasswordTextBox.Size = New System.Drawing.Size(282, 34)
         Me.ProfileConfirmNewPasswordTextBox.TabIndex = 4
         '
         'ProfileOldPasswordTextBox
         '
         Me.ProfileOldPasswordTextBox.Location = New System.Drawing.Point(323, 54)
         Me.ProfileOldPasswordTextBox.Name = "ProfileOldPasswordTextBox"
-        Me.ProfileOldPasswordTextBox.Size = New System.Drawing.Size(282, 32)
+        Me.ProfileOldPasswordTextBox.Size = New System.Drawing.Size(282, 34)
         Me.ProfileOldPasswordTextBox.TabIndex = 3
         '
         'ProfileConfirmNewPasswordLabel
         '
         Me.ProfileConfirmNewPasswordLabel.AutoSize = True
-        Me.ProfileConfirmNewPasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfileConfirmNewPasswordLabel.Location = New System.Drawing.Point(30, 174)
+        Me.ProfileConfirmNewPasswordLabel.Font = New System.Drawing.Font("Georgia", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileConfirmNewPasswordLabel.ForeColor = System.Drawing.Color.White
+        Me.ProfileConfirmNewPasswordLabel.Location = New System.Drawing.Point(30, 181)
         Me.ProfileConfirmNewPasswordLabel.Name = "ProfileConfirmNewPasswordLabel"
-        Me.ProfileConfirmNewPasswordLabel.Size = New System.Drawing.Size(261, 26)
+        Me.ProfileConfirmNewPasswordLabel.Size = New System.Drawing.Size(209, 23)
         Me.ProfileConfirmNewPasswordLabel.TabIndex = 2
         Me.ProfileConfirmNewPasswordLabel.Text = "Confirm New Password"
         '
         'ProfileNewPasswordLabel
         '
         Me.ProfileNewPasswordLabel.AutoSize = True
-        Me.ProfileNewPasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfileNewPasswordLabel.Location = New System.Drawing.Point(30, 114)
+        Me.ProfileNewPasswordLabel.Font = New System.Drawing.Font("Georgia", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileNewPasswordLabel.ForeColor = System.Drawing.Color.White
+        Me.ProfileNewPasswordLabel.Location = New System.Drawing.Point(33, 117)
         Me.ProfileNewPasswordLabel.Name = "ProfileNewPasswordLabel"
-        Me.ProfileNewPasswordLabel.Size = New System.Drawing.Size(170, 26)
+        Me.ProfileNewPasswordLabel.Size = New System.Drawing.Size(134, 23)
         Me.ProfileNewPasswordLabel.TabIndex = 1
         Me.ProfileNewPasswordLabel.Text = "New Password"
         '
         'ProfileOldPasswordLabel
         '
         Me.ProfileOldPasswordLabel.AutoSize = True
-        Me.ProfileOldPasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileOldPasswordLabel.Font = New System.Drawing.Font("Georgia", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileOldPasswordLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileOldPasswordLabel.Location = New System.Drawing.Point(30, 57)
         Me.ProfileOldPasswordLabel.Name = "ProfileOldPasswordLabel"
-        Me.ProfileOldPasswordLabel.Size = New System.Drawing.Size(160, 26)
+        Me.ProfileOldPasswordLabel.Size = New System.Drawing.Size(126, 23)
         Me.ProfileOldPasswordLabel.TabIndex = 0
         Me.ProfileOldPasswordLabel.Text = "Old Password"
         '
         'ExtendOuterPanel
         '
-        Me.ExtendOuterPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExtendOuterPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ExtendOuterPanel.Controls.Add(Me.ExtendleavePanel)
         Me.ExtendOuterPanel.Location = New System.Drawing.Point(320, 168)
         Me.ExtendOuterPanel.Name = "ExtendOuterPanel"
@@ -778,7 +804,7 @@ Partial Class Student_HomePage
         '
         'ExtendleavePanel
         '
-        Me.ExtendleavePanel.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.ExtendleavePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveInstructionTextBox)
         Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveUploadButton)
         Me.ExtendleavePanel.Controls.Add(Me.ExtendLeaveApplyButton)
@@ -793,74 +819,81 @@ Partial Class Student_HomePage
         '
         'ExtendLeaveInstructionTextBox
         '
-        Me.ExtendLeaveInstructionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExtendLeaveInstructionTextBox.ForeColor = System.Drawing.Color.Red
-        Me.ExtendLeaveInstructionTextBox.Location = New System.Drawing.Point(278, 220)
+        Me.ExtendLeaveInstructionTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ExtendLeaveInstructionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ExtendLeaveInstructionTextBox.Font = New System.Drawing.Font("Georgia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveInstructionTextBox.ForeColor = System.Drawing.Color.White
+        Me.ExtendLeaveInstructionTextBox.Location = New System.Drawing.Point(278, 201)
         Me.ExtendLeaveInstructionTextBox.Name = "ExtendLeaveInstructionTextBox"
         Me.ExtendLeaveInstructionTextBox.ReadOnly = True
-        Me.ExtendLeaveInstructionTextBox.Size = New System.Drawing.Size(334, 27)
+        Me.ExtendLeaveInstructionTextBox.Size = New System.Drawing.Size(125, 15)
         Me.ExtendLeaveInstructionTextBox.TabIndex = 7
         Me.ExtendLeaveInstructionTextBox.Text = "pdf only"
         '
         'ExtendLeaveUploadButton
         '
-        Me.ExtendLeaveUploadButton.BackgroundImage = CType(resources.GetObject("ExtendLeaveUploadButton.BackgroundImage"), System.Drawing.Image)
+        Me.ExtendLeaveUploadButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.ExtendLeaveUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ExtendLeaveUploadButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ExtendLeaveUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ExtendLeaveUploadButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExtendLeaveUploadButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveUploadButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ExtendLeaveUploadButton.Location = New System.Drawing.Point(278, 145)
         Me.ExtendLeaveUploadButton.Name = "ExtendLeaveUploadButton"
         Me.ExtendLeaveUploadButton.Size = New System.Drawing.Size(150, 46)
         Me.ExtendLeaveUploadButton.TabIndex = 6
         Me.ExtendLeaveUploadButton.Text = "Upload"
-        Me.ExtendLeaveUploadButton.UseVisualStyleBackColor = True
+        Me.ExtendLeaveUploadButton.UseVisualStyleBackColor = False
         '
         'ExtendLeaveApplyButton
         '
-        Me.ExtendLeaveApplyButton.BackgroundImage = CType(resources.GetObject("ExtendLeaveApplyButton.BackgroundImage"), System.Drawing.Image)
+        Me.ExtendLeaveApplyButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.ExtendLeaveApplyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ExtendLeaveApplyButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ExtendLeaveApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ExtendLeaveApplyButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExtendLeaveApplyButton.Location = New System.Drawing.Point(477, 339)
+        Me.ExtendLeaveApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExtendLeaveApplyButton.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveApplyButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ExtendLeaveApplyButton.Location = New System.Drawing.Point(359, 336)
         Me.ExtendLeaveApplyButton.Name = "ExtendLeaveApplyButton"
-        Me.ExtendLeaveApplyButton.Size = New System.Drawing.Size(163, 53)
+        Me.ExtendLeaveApplyButton.Size = New System.Drawing.Size(191, 53)
         Me.ExtendLeaveApplyButton.TabIndex = 5
         Me.ExtendLeaveApplyButton.Text = "Apply"
-        Me.ExtendLeaveApplyButton.UseVisualStyleBackColor = True
+        Me.ExtendLeaveApplyButton.UseVisualStyleBackColor = False
         '
         'ExtendLeaveCancelButton
         '
-        Me.ExtendLeaveCancelButton.BackgroundImage = CType(resources.GetObject("ExtendLeaveCancelButton.BackgroundImage"), System.Drawing.Image)
+        Me.ExtendLeaveCancelButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.ExtendLeaveCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ExtendLeaveCancelButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ExtendLeaveCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ExtendLeaveCancelButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExtendLeaveCancelButton.Location = New System.Drawing.Point(28, 337)
+        Me.ExtendLeaveCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExtendLeaveCancelButton.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveCancelButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ExtendLeaveCancelButton.Location = New System.Drawing.Point(132, 336)
         Me.ExtendLeaveCancelButton.Name = "ExtendLeaveCancelButton"
-        Me.ExtendLeaveCancelButton.Size = New System.Drawing.Size(163, 53)
+        Me.ExtendLeaveCancelButton.Size = New System.Drawing.Size(204, 53)
         Me.ExtendLeaveCancelButton.TabIndex = 3
         Me.ExtendLeaveCancelButton.Text = "Back"
-        Me.ExtendLeaveCancelButton.UseVisualStyleBackColor = True
+        Me.ExtendLeaveCancelButton.UseVisualStyleBackColor = False
         '
         'ExtendLeaveNewDocumentsLabel
         '
         Me.ExtendLeaveNewDocumentsLabel.AutoSize = True
-        Me.ExtendLeaveNewDocumentsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveNewDocumentsLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveNewDocumentsLabel.ForeColor = System.Drawing.Color.White
         Me.ExtendLeaveNewDocumentsLabel.Location = New System.Drawing.Point(23, 159)
         Me.ExtendLeaveNewDocumentsLabel.Name = "ExtendLeaveNewDocumentsLabel"
-        Me.ExtendLeaveNewDocumentsLabel.Size = New System.Drawing.Size(186, 26)
+        Me.ExtendLeaveNewDocumentsLabel.Size = New System.Drawing.Size(158, 24)
         Me.ExtendLeaveNewDocumentsLabel.TabIndex = 2
         Me.ExtendLeaveNewDocumentsLabel.Text = "New Documents"
         '
         'ExtendLeaveLastDateLabel
         '
         Me.ExtendLeaveLastDateLabel.AutoSize = True
-        Me.ExtendLeaveLastDateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveLastDateLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExtendLeaveLastDateLabel.ForeColor = System.Drawing.Color.White
         Me.ExtendLeaveLastDateLabel.Location = New System.Drawing.Point(23, 70)
         Me.ExtendLeaveLastDateLabel.Name = "ExtendLeaveLastDateLabel"
-        Me.ExtendLeaveLastDateLabel.Size = New System.Drawing.Size(168, 26)
+        Me.ExtendLeaveLastDateLabel.Size = New System.Drawing.Size(140, 24)
         Me.ExtendLeaveLastDateLabel.TabIndex = 1
         Me.ExtendLeaveLastDateLabel.Text = "New Last Date"
         '
@@ -875,7 +908,7 @@ Partial Class Student_HomePage
         '
         'ProfileGroupBox
         '
-        Me.ProfileGroupBox.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.ProfileGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileGroupBox.Controls.Add(Me.ProfileChangePasswordButton)
         Me.ProfileGroupBox.Controls.Add(Me.ProfileMiscellaneousLabel)
         Me.ProfileGroupBox.Controls.Add(Me.ProfileEditButton)
@@ -902,7 +935,8 @@ Partial Class Student_HomePage
         Me.ProfileGroupBox.Controls.Add(Me.ProfileLastNameLabel)
         Me.ProfileGroupBox.Controls.Add(Me.ProfileRollNumberLabel)
         Me.ProfileGroupBox.Controls.Add(Me.ProfileUserNameLabel)
-        Me.ProfileGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileGroupBox.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileGroupBox.ForeColor = System.Drawing.Color.White
         Me.ProfileGroupBox.Location = New System.Drawing.Point(16, 12)
         Me.ProfileGroupBox.Name = "ProfileGroupBox"
         Me.ProfileGroupBox.Size = New System.Drawing.Size(812, 549)
@@ -912,7 +946,9 @@ Partial Class Student_HomePage
         '
         'ProfileChangePasswordButton
         '
-        Me.ProfileChangePasswordButton.BackColor = System.Drawing.Color.Red
+        Me.ProfileChangePasswordButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ProfileChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileChangePasswordButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileChangePasswordButton.Location = New System.Drawing.Point(29, 475)
         Me.ProfileChangePasswordButton.Name = "ProfileChangePasswordButton"
         Me.ProfileChangePasswordButton.Size = New System.Drawing.Size(279, 51)
@@ -924,7 +960,7 @@ Partial Class Student_HomePage
         '
         Me.ProfileMiscellaneousLabel.AutoSize = True
         Me.ProfileMiscellaneousLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfileMiscellaneousLabel.ForeColor = System.Drawing.Color.Red
+        Me.ProfileMiscellaneousLabel.ForeColor = System.Drawing.Color.AliceBlue
         Me.ProfileMiscellaneousLabel.Location = New System.Drawing.Point(627, 278)
         Me.ProfileMiscellaneousLabel.Name = "ProfileMiscellaneousLabel"
         Me.ProfileMiscellaneousLabel.Size = New System.Drawing.Size(138, 20)
@@ -933,7 +969,9 @@ Partial Class Student_HomePage
         '
         'ProfileEditButton
         '
-        Me.ProfileEditButton.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ProfileEditButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ProfileEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileEditButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileEditButton.Location = New System.Drawing.Point(428, 475)
         Me.ProfileEditButton.Name = "ProfileEditButton"
         Me.ProfileEditButton.Size = New System.Drawing.Size(118, 51)
@@ -943,8 +981,10 @@ Partial Class Student_HomePage
         '
         'ProfileSaveProfileButton
         '
-        Me.ProfileSaveProfileButton.BackColor = System.Drawing.Color.Lime
+        Me.ProfileSaveProfileButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.ProfileSaveProfileButton.Enabled = False
+        Me.ProfileSaveProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileSaveProfileButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileSaveProfileButton.Location = New System.Drawing.Point(621, 474)
         Me.ProfileSaveProfileButton.Name = "ProfileSaveProfileButton"
         Me.ProfileSaveProfileButton.Size = New System.Drawing.Size(172, 52)
@@ -954,7 +994,9 @@ Partial Class Student_HomePage
         '
         'ProfileImageChangeButton
         '
-        Me.ProfileImageChangeButton.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ProfileImageChangeButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ProfileImageChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileImageChangeButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfileImageChangeButton.Location = New System.Drawing.Point(630, 222)
         Me.ProfileImageChangeButton.Name = "ProfileImageChangeButton"
         Me.ProfileImageChangeButton.Size = New System.Drawing.Size(134, 46)
@@ -1055,97 +1097,118 @@ Partial Class Student_HomePage
         'ProfileContactNumberLabel
         '
         Me.ProfileContactNumberLabel.AutoSize = True
+        Me.ProfileContactNumberLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileContactNumberLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileContactNumberLabel.Location = New System.Drawing.Point(24, 351)
         Me.ProfileContactNumberLabel.Name = "ProfileContactNumberLabel"
-        Me.ProfileContactNumberLabel.Size = New System.Drawing.Size(168, 25)
+        Me.ProfileContactNumberLabel.Size = New System.Drawing.Size(158, 24)
         Me.ProfileContactNumberLabel.TabIndex = 9
         Me.ProfileContactNumberLabel.Text = "Contact Number"
         '
         'ProfileAddressLabel
         '
         Me.ProfileAddressLabel.AutoSize = True
+        Me.ProfileAddressLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileAddressLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileAddressLabel.Location = New System.Drawing.Point(24, 390)
         Me.ProfileAddressLabel.Name = "ProfileAddressLabel"
-        Me.ProfileAddressLabel.Size = New System.Drawing.Size(92, 25)
+        Me.ProfileAddressLabel.Size = New System.Drawing.Size(81, 24)
         Me.ProfileAddressLabel.TabIndex = 8
         Me.ProfileAddressLabel.Text = "Address"
         '
         'ProfileEmergencyContactNumberLabel
         '
         Me.ProfileEmergencyContactNumberLabel.AutoSize = True
+        Me.ProfileEmergencyContactNumberLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileEmergencyContactNumberLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileEmergencyContactNumberLabel.Location = New System.Drawing.Point(24, 428)
         Me.ProfileEmergencyContactNumberLabel.Name = "ProfileEmergencyContactNumberLabel"
-        Me.ProfileEmergencyContactNumberLabel.Size = New System.Drawing.Size(279, 25)
+        Me.ProfileEmergencyContactNumberLabel.Size = New System.Drawing.Size(260, 24)
         Me.ProfileEmergencyContactNumberLabel.TabIndex = 7
         Me.ProfileEmergencyContactNumberLabel.Text = "Emergency Contact number"
         '
         'ProfileEmailLabel
         '
         Me.ProfileEmailLabel.AutoSize = True
+        Me.ProfileEmailLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileEmailLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileEmailLabel.Location = New System.Drawing.Point(24, 304)
         Me.ProfileEmailLabel.Name = "ProfileEmailLabel"
-        Me.ProfileEmailLabel.Size = New System.Drawing.Size(65, 25)
+        Me.ProfileEmailLabel.Size = New System.Drawing.Size(63, 24)
         Me.ProfileEmailLabel.TabIndex = 6
         Me.ProfileEmailLabel.Text = "Email"
         '
         'ProfileGenderLabel
         '
         Me.ProfileGenderLabel.AutoSize = True
+        Me.ProfileGenderLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileGenderLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileGenderLabel.Location = New System.Drawing.Point(24, 258)
         Me.ProfileGenderLabel.Name = "ProfileGenderLabel"
-        Me.ProfileGenderLabel.Size = New System.Drawing.Size(83, 25)
+        Me.ProfileGenderLabel.Size = New System.Drawing.Size(76, 24)
         Me.ProfileGenderLabel.TabIndex = 5
         Me.ProfileGenderLabel.Text = "Gender"
         '
         'ProfileDepartmentLabel
         '
         Me.ProfileDepartmentLabel.AutoSize = True
+        Me.ProfileDepartmentLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileDepartmentLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileDepartmentLabel.Location = New System.Drawing.Point(24, 214)
         Me.ProfileDepartmentLabel.Name = "ProfileDepartmentLabel"
-        Me.ProfileDepartmentLabel.Size = New System.Drawing.Size(123, 25)
+        Me.ProfileDepartmentLabel.Size = New System.Drawing.Size(118, 24)
         Me.ProfileDepartmentLabel.TabIndex = 4
         Me.ProfileDepartmentLabel.Text = "Department"
         '
         'ProfileFirstNameLabel
         '
         Me.ProfileFirstNameLabel.AutoSize = True
+        Me.ProfileFirstNameLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileFirstNameLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileFirstNameLabel.Location = New System.Drawing.Point(24, 76)
         Me.ProfileFirstNameLabel.Name = "ProfileFirstNameLabel"
-        Me.ProfileFirstNameLabel.Size = New System.Drawing.Size(116, 25)
+        Me.ProfileFirstNameLabel.Size = New System.Drawing.Size(110, 24)
         Me.ProfileFirstNameLabel.TabIndex = 3
         Me.ProfileFirstNameLabel.Text = "First Name"
         '
         'ProfileLastNameLabel
         '
         Me.ProfileLastNameLabel.AutoSize = True
+        Me.ProfileLastNameLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileLastNameLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileLastNameLabel.Location = New System.Drawing.Point(24, 116)
         Me.ProfileLastNameLabel.Name = "ProfileLastNameLabel"
-        Me.ProfileLastNameLabel.Size = New System.Drawing.Size(115, 25)
+        Me.ProfileLastNameLabel.Size = New System.Drawing.Size(106, 24)
         Me.ProfileLastNameLabel.TabIndex = 2
         Me.ProfileLastNameLabel.Text = "Last Name"
         '
         'ProfileRollNumberLabel
         '
         Me.ProfileRollNumberLabel.AutoSize = True
+        Me.ProfileRollNumberLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileRollNumberLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileRollNumberLabel.Location = New System.Drawing.Point(24, 162)
         Me.ProfileRollNumberLabel.Name = "ProfileRollNumberLabel"
-        Me.ProfileRollNumberLabel.Size = New System.Drawing.Size(129, 25)
+        Me.ProfileRollNumberLabel.Size = New System.Drawing.Size(126, 24)
         Me.ProfileRollNumberLabel.TabIndex = 1
         Me.ProfileRollNumberLabel.Text = "Roll Number"
         '
         'ProfileUserNameLabel
         '
         Me.ProfileUserNameLabel.AutoSize = True
+        Me.ProfileUserNameLabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileUserNameLabel.ForeColor = System.Drawing.Color.White
         Me.ProfileUserNameLabel.Location = New System.Drawing.Point(24, 35)
         Me.ProfileUserNameLabel.Name = "ProfileUserNameLabel"
-        Me.ProfileUserNameLabel.Size = New System.Drawing.Size(119, 25)
+        Me.ProfileUserNameLabel.Size = New System.Drawing.Size(110, 24)
         Me.ProfileUserNameLabel.TabIndex = 0
         Me.ProfileUserNameLabel.Text = "User Name"
         '
         'ProfilePanel
         '
-        Me.ProfilePanel.BackColor = System.Drawing.Color.DarkBlue
+        Me.ProfilePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ProfilePanel.Controls.Add(Me.ProfileGroupBox)
+        Me.ProfilePanel.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ProfilePanel.Location = New System.Drawing.Point(245, 130)
         Me.ProfilePanel.Name = "ProfilePanel"
         Me.ProfilePanel.Size = New System.Drawing.Size(842, 575)
@@ -1155,17 +1218,16 @@ Partial Class Student_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1167, 795)
-        Me.Controls.Add(Me.NAGroupBox)
+        Me.Controls.Add(Me.NavigationouterPanel)
+        Me.Controls.Add(Me.HeadingLabel)
+        Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.OldPanel)
         Me.Controls.Add(Me.ProfilePanel)
         Me.Controls.Add(Me.ExtendOuterPanel)
         Me.Controls.Add(Me.ProfilePasswordChangePanel)
-        Me.Controls.Add(Me.NavigationouterPanel)
-        Me.Controls.Add(Me.HeadingLabel)
-        Me.Controls.Add(Me.UsernameLabel)
+        Me.Controls.Add(Me.NAGroupBox)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False

@@ -29,10 +29,23 @@ Public Class Student_HomePage
     Dim ExtendDocumentFilePath As String
 
     Private Sub Student_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Dim lab = Me.Controls.OfType(Of Label)()
+        'For Each la In lab
+        'la.ForeColor = Color.White
+        'Next
+
+        'Dim but = Me.Controls.OfType(Of Button)()
+        'For Each la In but
+        'la.ForeColor = Color.FromArgb(34, 36, 49)
+        'la.BackColor = Color.FromArgb(78, 184, 206)
+        'la.FlatStyle = FlatStyle.Flat
+        'Next
+
         Timer1.Start()
         ExtendOuterPanel.Hide()
         Dim projDirectory, destinationPath, databasePath As String
-        ExtendLeaveInstructionTextBox.ForeColor = Color.Red
+        'ExtendLeaveInstructionTextBox.ForeColor = Color.Red
         projDirectory = Directory.GetCurrentDirectory()
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
@@ -118,13 +131,9 @@ Public Class Student_HomePage
         ProfilePanel.Hide()
         ProfilePasswordChangePanel.Hide()
         OldButton.PerformClick()
-        OldButton.BackColor = Color.LightGreen
-        ProfileButton.BackColor = Color.LightCoral
-        NAButton.BackColor = Color.LightCoral
         NALeaveTypeComboBox.Items.Clear()
-        If IO.File.Exists(destinationPath) Then
-            Me.BackgroundImage = Image.FromFile(destinationPath)
-        End If
+
+
         'Setting New Application Variables
         NAFirstnameTextBox.Text = firstname
         NALastNameTextBox.Text = lastname
@@ -155,9 +164,7 @@ Public Class Student_HomePage
 
 
     Private Sub ProfileButton_Click(sender As Object, e As EventArgs) Handles ProfileButton.Click
-        OldButton.BackColor = Color.LightCoral
-        ProfileButton.BackColor = Color.LightGreen
-        NAButton.BackColor = Color.LightCoral
+        
         NAGroupBox.Hide()
         OldPanel.Hide()
         ProfilePanel.Show()
@@ -175,16 +182,14 @@ Public Class Student_HomePage
     End Sub
 
     Private Sub NAButton_Click(sender As Object, e As EventArgs) Handles NAButton.Click
-        OldButton.BackColor = Color.LightCoral
-        ProfileButton.BackColor = Color.LightCoral
-        NAButton.BackColor = Color.LightGreen
+        
         ProfilePanel.Hide()
         OldPanel.Hide()
         ProfilePasswordChangePanel.Hide()
         NAGroupBox.Show()
         NAInstructionTextBox.Text = "pdf only"
         DocumentFilePath = ""
-        NAInstructionTextBox.ForeColor = Color.Red
+        'NAInstructionTextBox.ForeColor = Color.Red
         NALeaveTypeComboBox.Items.Clear()
         NASupervisorComboBox.Items.Clear()
         'Setting leave type based upon Course
@@ -217,9 +222,7 @@ Public Class Student_HomePage
     End Sub
 
     Private Sub OldButton_Click(sender As Object, e As EventArgs) Handles OldButton.Click
-        OldButton.BackColor = Color.LightGreen
-        ProfileButton.BackColor = Color.LightCoral
-        NAButton.BackColor = Color.LightCoral
+        
         NAGroupBox.Hide()
         ProfilePanel.Hide()
         ProfilePasswordChangePanel.Hide()
@@ -407,7 +410,7 @@ Public Class Student_HomePage
         DocumentFilePath = filepath
         If DocumentFilePath <> "" Then
             NAInstructionTextBox.Text = DocumentFilePath
-            NAInstructionTextBox.ForeColor = Color.Black
+            'NAInstructionTextBox.ForeColor = Color.Black
         End If
     End Sub
 
@@ -717,10 +720,12 @@ Public Class Student_HomePage
 
     Private Sub ProfilePasswordCheckBox_CheckedChanged_1(sender As Object, e As EventArgs) Handles ProfilePasswordCheckBox.CheckedChanged
         If (ProfilePasswordCheckBox.Checked = False) Then
+            ProfilePasswordCheckBox.ForeColor = Color.White
             ProfileOldPasswordTextBox.PasswordChar = "*"
             ProfileNewPasswordTextBox.PasswordChar = "*"
             ProfileConfirmNewPasswordTextBox.PasswordChar = "*"
         Else
+            ProfilePasswordCheckBox.ForeColor = Color.FromArgb(78, 184, 206)
             ProfileOldPasswordTextBox.PasswordChar = ""
             ProfileNewPasswordTextBox.PasswordChar = ""
             ProfileConfirmNewPasswordTextBox.PasswordChar = ""

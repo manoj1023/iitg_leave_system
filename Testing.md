@@ -2,6 +2,14 @@
 
 Report and status of testing of various components is listed here
 
+## Overview  
+
+* **Login Page:** Tested and working as expected, minor tweaks may be needed (forgot password button)
+* **Student Homepage:** All services funtional, minor tweaks may be needed (inconsistent disabling of buttons)
+* **Apply Leave form (for Staff, Prof, HOD, Dean, Dir):** Fully functional
+* **Office:** currently testing
+* **Leave approval/decline portal (for Prof, HoD, Dean, DPPC):** Pending
+
 ## Login Page
 
 ### Components working fine
@@ -26,14 +34,23 @@ Working as expected for unregistered users, with registered users a message citi
 
 ## Student Page
 
-### Components with issues
+### Current Component status:
+1. Leave applications functioning properly
+1. Password change functioning properly
+1. Leave modification functioning properly
+1. Leave delete functioning properly
+1. Profile edit functioning
+1. Days of leave remaining needs to be tested
+
+
+### Components issues
 * Change password option
 
 **Problem:** When Changing password 2 times in a row, can't use the new passowrd in the 2nd attempt    
 **Steps to recreate:** Open a student profile > Edit profile > Change Password once > Try to change password once again using the new password set up in previous step  
 **Cause:** The old password is fetched when the student homepage form is loaded, it wasn't updated after changing password 
 **Fix:** The hash value stored in the variable *password* has been set to update when the password updates  
-**Status:** Fixed in commit **b79c71ea7961341c64e9f5d75742af71d952cf08**
+**Status:** Fixed
 
 
 * Adding ordinary leaves
@@ -76,3 +93,33 @@ If ans = DialogResult.Yes
 **Steps to recreate:** Student Homepage > Apply > Ordinary leave > Dates more than 5 days apart and not adjacent to other leaves   
 **Cause:** Missing message box   
 **Status:** Being worked on by siddharth  -> **FIXED** 
+
+
+* Minor Issues (can be implmented if needed else ignored):
+  * Inconsistent disabling of buttons: The buttons on sidebar are only disabled when modifying leave. Can be made consistent with rest of the options
+  * Insted of jpeg, jpg extension can be requested from profile pic, as it's the more common name of jpeg extn. and used over internet and in phones
+  * Functionality of accepting landline contact numbers (Eg. 040-2711-2711, i.e 11 digits in total, may cause issues with current number check, analysis needed)
+
+
+## Leave Apply Form
+
+### Covers: 
+1. Complete functionality of Director and Staff
+1. One Component of Prof, Dean, HoD
+
+
+### Components issues
+
+* Any date combination works
+**Problem:** Leaves show error when needed but are pushed to DB   
+**Steps to recreate:** Open leave apply form > Attempt an obviously wrong date combination > Apply   
+**Cause:** Missed cases when using Flags to test leave application   
+**Fix:** Using "Exit Sub" to stop attempting to apply whenever illegal combination is encountered    
+**Status:** Fixed   
+
+* DB is not tested for presence of duplicate leaves   
+**Problem:** Same leave can be applied any number of times   
+**Steps to recreate:** Open leave apply form > Apply a valid date combination > Apply > Attempt an overlapping date combination > Apply   
+**Cause:** TO check in database for overlapping   
+**Fix:** Add a database comparision for overlap   
+**Status:** Fixed    

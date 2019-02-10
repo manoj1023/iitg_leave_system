@@ -52,6 +52,7 @@ Public Class userDelete
                 End While
             Else
                 MessageBox.Show("Username not found")
+                con.Close()
                 Exit Sub
             End If
 

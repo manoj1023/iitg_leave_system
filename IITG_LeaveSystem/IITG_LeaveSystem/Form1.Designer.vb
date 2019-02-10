@@ -36,10 +36,14 @@ Partial Class Form1
         Me.OfficeRadio = New System.Windows.Forms.RadioButton()
         Me.ProfessorRadio = New System.Windows.Forms.RadioButton()
         Me.StudentRadio = New System.Windows.Forms.RadioButton()
-        Me.LoginButton = New System.Windows.Forms.Button()
-        Me.ForgotButton = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ForgotButton = New System.Windows.Forms.Button()
+        Me.LoginButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -106,9 +110,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.StudentRadio)
         Me.GroupBox1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(169, 268)
+        Me.GroupBox1.Location = New System.Drawing.Point(139, 268)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(486, 84)
+        Me.GroupBox1.Size = New System.Drawing.Size(516, 84)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Type"
@@ -209,31 +213,25 @@ Partial Class Form1
         Me.StudentRadio.Text = "Student"
         Me.StudentRadio.UseVisualStyleBackColor = True
         '
-        'LoginButton
+        'PictureBox3
         '
-        Me.LoginButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoginButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LoginButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.LoginButton.Location = New System.Drawing.Point(417, 377)
-        Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(238, 37)
-        Me.LoginButton.TabIndex = 6
-        Me.LoginButton.Text = "Login"
-        Me.LoginButton.UseVisualStyleBackColor = False
+        Me.PictureBox3.Image = Global.IITG_LeaveSystem.My.Resources.Resources.password
+        Me.PictureBox3.Location = New System.Drawing.Point(139, 198)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
         '
-        'ForgotButton
+        'PictureBox2
         '
-        Me.ForgotButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.ForgotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ForgotButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForgotButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ForgotButton.Location = New System.Drawing.Point(169, 377)
-        Me.ForgotButton.Name = "ForgotButton"
-        Me.ForgotButton.Size = New System.Drawing.Size(238, 37)
-        Me.ForgotButton.TabIndex = 7
-        Me.ForgotButton.Text = "Forgot Password"
-        Me.ForgotButton.UseVisualStyleBackColor = False
+        Me.PictureBox2.Image = Global.IITG_LeaveSystem.My.Resources.Resources.user_icon
+        Me.PictureBox2.Location = New System.Drawing.Point(139, 153)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
@@ -245,12 +243,45 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
+        'ForgotButton
+        '
+        Me.ForgotButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ForgotButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ForgotButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForgotButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ForgotButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.Forgot_Pass
+        Me.ForgotButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ForgotButton.Location = New System.Drawing.Point(139, 377)
+        Me.ForgotButton.Name = "ForgotButton"
+        Me.ForgotButton.Size = New System.Drawing.Size(256, 56)
+        Me.ForgotButton.TabIndex = 7
+        Me.ForgotButton.Text = "Forgot Password"
+        Me.ForgotButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ForgotButton.UseVisualStyleBackColor = False
+        '
+        'LoginButton
+        '
+        Me.LoginButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoginButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.LoginButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.login
+        Me.LoginButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LoginButton.Location = New System.Drawing.Point(401, 377)
+        Me.LoginButton.Name = "LoginButton"
+        Me.LoginButton.Size = New System.Drawing.Size(254, 56)
+        Me.LoginButton.TabIndex = 6
+        Me.LoginButton.Text = "Login"
+        Me.LoginButton.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(790, 487)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ForgotButton)
         Me.Controls.Add(Me.LoginButton)
@@ -266,6 +297,8 @@ Partial Class Form1
         Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -288,5 +321,7 @@ Partial Class Form1
     Friend WithEvents LoginButton As System.Windows.Forms.Button
     Friend WithEvents ForgotButton As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
 
 End Class

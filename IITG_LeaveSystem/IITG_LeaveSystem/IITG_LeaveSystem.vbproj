@@ -187,6 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LeaveSystemExeIcon.ico" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\Forgot-Pass.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\user-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

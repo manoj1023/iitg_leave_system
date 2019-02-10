@@ -43,4 +43,7 @@ Also when this situation occurs, the testing for 'OL' being less than 5 is breac
 **Cause:** There seems to be missing cases in the If Else chain used in Sub NAApplyButton_Click   
 **Fix:** No fix as of now   
 **Status:** Pending
-
+**Comments (Siddharth)** OL can't span for more than 5 days in one go, but total can be greater than 5. 
+How were you able to save OL with 20 days?
+kindly give the steps with exact dates.
+thanks

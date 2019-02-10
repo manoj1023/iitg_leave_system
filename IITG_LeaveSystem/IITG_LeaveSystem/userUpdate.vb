@@ -63,6 +63,10 @@ Public Class userUpdate
             Exit Sub
         End Try
         MessageBox.Show("Field Updated!!")
+        username_text.Text = ""
+        val_text.Text = ""
+        fieldBox.Text = ""
+        choice_combo.Text = ""
 
     End Sub
 

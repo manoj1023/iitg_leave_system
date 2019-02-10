@@ -64,6 +64,8 @@ Public Class userDelete
         End Try
 
         MessageBox.Show("User Deleted along with all the leave requests")
+        username_text.Text = ""
+        choice_combo.Text = ""
     End Sub
 
     Private Sub choice_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles choice_combo.SelectedIndexChanged

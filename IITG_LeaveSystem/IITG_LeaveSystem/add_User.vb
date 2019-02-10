@@ -96,6 +96,17 @@ Public Class add_User
                 'username_text.Text = (command2.CommandText)
                 command2.ExecuteNonQuery()
                 MessageBox.Show("User Added!!")
+                username_text.Text = ""
+                password_text.Text = ""
+                firstname_text.Text = ""
+                lastname_text.Text = ""
+                Email_Text.Text = ""
+                RollNumber_text.Text = ""
+                Phone_text.Text = ""
+                choice_combo.Text = ""
+                gender_combo.Text = ""
+                course_combo.Text = ""
+                dept_combo.Text = ""
             Else
                 Dim command2 As OleDbCommand = New OleDbCommand()
                 command2.Connection = con
@@ -103,6 +114,17 @@ Public Class add_User
                 'username_text.Text = (command2.CommandText)
                 command2.ExecuteNonQuery()
                 MessageBox.Show("User Added!!")
+                username_text.Text = ""
+                password_text.Text = ""
+                firstname_text.Text = ""
+                lastname_text.Text = ""
+                Email_Text.Text = ""
+                RollNumber_text.Text = ""
+                Phone_text.Text = ""
+                choice_combo.Text = ""
+                gender_combo.Text = ""
+                course_combo.Text = ""
+                dept_combo.Text = ""
             End If
             con.Close()
         Catch ex As Exception

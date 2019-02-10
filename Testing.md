@@ -42,7 +42,7 @@ Working as expected for unregistered users, with registered users a message citi
 Also when this situation occurs, the testing for 'OL' being less than 5 is breached through and even extremly long Ordinary leaves (well over 20 days) are pushed to database   
 **Cause:** There seems to be missing cases in the If Else chain used in Sub NAApplyButton_Click   
 **Fix:** No fix as of now   
-**Status:** Pending
+**Status:** Pending -> **FIXED**
 **Comments (Siddharth)** OL can't span for more than 5 days in one go, but total can be greater than 5. 
 How were you able to save OL with 20 days?
 kindly give the steps with exact dates.
@@ -75,4 +75,4 @@ If ans = DialogResult.Yes
 **Problem:** When longer than permitted Ordinary Leaves are applied, although there's no application submitted, the user gets to visual response   
 **Steps to recreate:** Student Homepage > Apply > Ordinary leave > Dates more than 5 days apart and not adjacent to other leaves   
 **Cause:** Missing message box   
-**Status:** Being worked on by siddharth   
+**Status:** Being worked on by siddharth  -> **FIXED** 

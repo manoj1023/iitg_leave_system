@@ -17,6 +17,7 @@ Public Class Rest_HomePage
 
     Private Sub Rest_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        pendingleavesdgv.DefaultCellStyle.BackColor = Color.LightCyan
         If Type = "DPPC" Then
 
             applyleavebutton.Enabled = False
@@ -119,7 +120,7 @@ Public Class Rest_HomePage
                 MsgBox(ex.Message)
             End Try
         End If
-        welcomelabel.Text = "Welcome to your homepage " & firstname & " " & lastname
+        welcomelabel.Text = "Welcome " & firstname & " " & lastname
         usernamelabel.Text = "Username: " & Username
         If Type = "Dean" Then
             departmentlabel.Hide()

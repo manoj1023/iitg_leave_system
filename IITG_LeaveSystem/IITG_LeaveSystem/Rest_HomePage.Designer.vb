@@ -45,20 +45,24 @@ Partial Class Rest_HomePage
         'welcomelabel
         '
         Me.welcomelabel.AutoSize = True
-        Me.welcomelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.welcomelabel.Location = New System.Drawing.Point(12, 9)
+        Me.welcomelabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.welcomelabel.ForeColor = System.Drawing.Color.PowderBlue
+        Me.welcomelabel.Location = New System.Drawing.Point(25, 15)
+        Me.welcomelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.welcomelabel.Name = "welcomelabel"
-        Me.welcomelabel.Size = New System.Drawing.Size(155, 20)
+        Me.welcomelabel.Size = New System.Drawing.Size(170, 24)
         Me.welcomelabel.TabIndex = 0
         Me.welcomelabel.Text = "welcome message"
         '
         'usernamelabel
         '
         Me.usernamelabel.AutoSize = True
-        Me.usernamelabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.usernamelabel.Location = New System.Drawing.Point(13, 39)
+        Me.usernamelabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.usernamelabel.ForeColor = System.Drawing.Color.PowderBlue
+        Me.usernamelabel.Location = New System.Drawing.Point(25, 58)
+        Me.usernamelabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.usernamelabel.Name = "usernamelabel"
-        Me.usernamelabel.Size = New System.Drawing.Size(76, 16)
+        Me.usernamelabel.Size = New System.Drawing.Size(99, 24)
         Me.usernamelabel.TabIndex = 1
         Me.usernamelabel.Text = "username"
         '
@@ -66,32 +70,43 @@ Partial Class Rest_HomePage
         '
         Me.pendingleavesdgv.AllowUserToAddRows = False
         Me.pendingleavesdgv.AllowUserToDeleteRows = False
+        Me.pendingleavesdgv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.pendingleavesdgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.pendingleavesdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.pendingleavesdgv.Location = New System.Drawing.Point(6, 31)
+        Me.pendingleavesdgv.GridColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.pendingleavesdgv.Location = New System.Drawing.Point(8, 38)
+        Me.pendingleavesdgv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pendingleavesdgv.MultiSelect = False
         Me.pendingleavesdgv.Name = "pendingleavesdgv"
         Me.pendingleavesdgv.ReadOnly = True
-        Me.pendingleavesdgv.Size = New System.Drawing.Size(585, 140)
+        Me.pendingleavesdgv.Size = New System.Drawing.Size(780, 172)
         Me.pendingleavesdgv.TabIndex = 2
         '
         'pendinglabel
         '
         Me.pendinglabel.AutoSize = True
-        Me.pendinglabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pendinglabel.Location = New System.Drawing.Point(3, 7)
+        Me.pendinglabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pendinglabel.ForeColor = System.Drawing.Color.White
+        Me.pendinglabel.Location = New System.Drawing.Point(4, 9)
+        Me.pendinglabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.pendinglabel.Name = "pendinglabel"
-        Me.pendinglabel.Size = New System.Drawing.Size(122, 15)
+        Me.pendinglabel.Size = New System.Drawing.Size(167, 24)
         Me.pendinglabel.TabIndex = 3
         Me.pendinglabel.Text = "Pending Leaves :-"
         '
         'loadbutton
         '
-        Me.loadbutton.Location = New System.Drawing.Point(516, 5)
+        Me.loadbutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.loadbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loadbutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadbutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.loadbutton.Location = New System.Drawing.Point(653, 4)
+        Me.loadbutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.loadbutton.Name = "loadbutton"
-        Me.loadbutton.Size = New System.Drawing.Size(75, 21)
+        Me.loadbutton.Size = New System.Drawing.Size(134, 29)
         Me.loadbutton.TabIndex = 4
         Me.loadbutton.Text = "Load"
-        Me.loadbutton.UseVisualStyleBackColor = True
+        Me.loadbutton.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -103,104 +118,139 @@ Partial Class Rest_HomePage
         Me.Panel1.Controls.Add(Me.pendinglabel)
         Me.Panel1.Controls.Add(Me.loadbutton)
         Me.Panel1.Controls.Add(Me.pendingleavesdgv)
-        Me.Panel1.Location = New System.Drawing.Point(16, 58)
+        Me.Panel1.Location = New System.Drawing.Point(17, 86)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(594, 272)
+        Me.Panel1.Size = New System.Drawing.Size(792, 335)
         Me.Panel1.TabIndex = 5
         '
         'addcommentbox
         '
-        Me.addcommentbox.Location = New System.Drawing.Point(6, 206)
+        Me.addcommentbox.BackColor = System.Drawing.Color.LightCyan
+        Me.addcommentbox.Location = New System.Drawing.Point(8, 274)
+        Me.addcommentbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.addcommentbox.Name = "addcommentbox"
-        Me.addcommentbox.Size = New System.Drawing.Size(585, 43)
+        Me.addcommentbox.Size = New System.Drawing.Size(779, 52)
         Me.addcommentbox.TabIndex = 10
         Me.addcommentbox.Text = ""
         '
         'addcommentbutton
         '
-        Me.addcommentbutton.Location = New System.Drawing.Point(333, 177)
+        Me.addcommentbutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.addcommentbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addcommentbutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addcommentbutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.addcommentbutton.Location = New System.Drawing.Point(324, 218)
+        Me.addcommentbutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.addcommentbutton.Name = "addcommentbutton"
-        Me.addcommentbutton.Size = New System.Drawing.Size(96, 23)
+        Me.addcommentbutton.Size = New System.Drawing.Size(175, 36)
         Me.addcommentbutton.TabIndex = 9
         Me.addcommentbutton.Text = "Add Comment"
-        Me.addcommentbutton.UseVisualStyleBackColor = True
+        Me.addcommentbutton.UseVisualStyleBackColor = False
         '
         'approvebutton
         '
-        Me.approvebutton.Location = New System.Drawing.Point(435, 177)
+        Me.approvebutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.approvebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.approvebutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.approvebutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.approvebutton.Location = New System.Drawing.Point(507, 218)
+        Me.approvebutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.approvebutton.Name = "approvebutton"
-        Me.approvebutton.Size = New System.Drawing.Size(75, 23)
+        Me.approvebutton.Size = New System.Drawing.Size(138, 36)
         Me.approvebutton.TabIndex = 8
         Me.approvebutton.Text = "Approve"
-        Me.approvebutton.UseVisualStyleBackColor = True
+        Me.approvebutton.UseVisualStyleBackColor = False
         '
         'denybutton
         '
-        Me.denybutton.Location = New System.Drawing.Point(516, 177)
+        Me.denybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.denybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.denybutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.denybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.denybutton.Location = New System.Drawing.Point(653, 218)
+        Me.denybutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.denybutton.Name = "denybutton"
-        Me.denybutton.Size = New System.Drawing.Size(75, 23)
+        Me.denybutton.Size = New System.Drawing.Size(135, 36)
         Me.denybutton.TabIndex = 7
         Me.denybutton.Text = "Deny"
-        Me.denybutton.UseVisualStyleBackColor = True
+        Me.denybutton.UseVisualStyleBackColor = False
         '
         'commentlabel
         '
         Me.commentlabel.AutoSize = True
-        Me.commentlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.commentlabel.Location = New System.Drawing.Point(3, 185)
+        Me.commentlabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.commentlabel.ForeColor = System.Drawing.Color.White
+        Me.commentlabel.Location = New System.Drawing.Point(8, 246)
+        Me.commentlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.commentlabel.Name = "commentlabel"
-        Me.commentlabel.Size = New System.Drawing.Size(88, 15)
+        Me.commentlabel.Size = New System.Drawing.Size(126, 24)
         Me.commentlabel.TabIndex = 0
         Me.commentlabel.Text = "Comments :-"
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.applyleavebutton)
-        Me.Panel2.Location = New System.Drawing.Point(16, 336)
+        Me.Panel2.Location = New System.Drawing.Point(17, 429)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(594, 32)
+        Me.Panel2.Size = New System.Drawing.Size(565, 47)
         Me.Panel2.TabIndex = 6
         '
         'applyleavebutton
         '
-        Me.applyleavebutton.Location = New System.Drawing.Point(452, 3)
+        Me.applyleavebutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.applyleavebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.applyleavebutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.applyleavebutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.applyleavebutton.Location = New System.Drawing.Point(324, 4)
+        Me.applyleavebutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.applyleavebutton.Name = "applyleavebutton"
-        Me.applyleavebutton.Size = New System.Drawing.Size(139, 23)
+        Me.applyleavebutton.Size = New System.Drawing.Size(237, 36)
         Me.applyleavebutton.TabIndex = 0
         Me.applyleavebutton.Text = "Apply For Leave"
-        Me.applyleavebutton.UseVisualStyleBackColor = True
+        Me.applyleavebutton.UseVisualStyleBackColor = False
         '
         'departmentlabel
         '
         Me.departmentlabel.AutoSize = True
-        Me.departmentlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.departmentlabel.Location = New System.Drawing.Point(393, 42)
+        Me.departmentlabel.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.departmentlabel.ForeColor = System.Drawing.Color.PowderBlue
+        Me.departmentlabel.Location = New System.Drawing.Point(647, 58)
+        Me.departmentlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.departmentlabel.Name = "departmentlabel"
-        Me.departmentlabel.Size = New System.Drawing.Size(112, 15)
+        Me.departmentlabel.Size = New System.Drawing.Size(157, 24)
         Me.departmentlabel.TabIndex = 1
         Me.departmentlabel.Text = "departmentlabel"
         '
         'logoutbutton
         '
-        Me.logoutbutton.Location = New System.Drawing.Point(532, 12)
+        Me.logoutbutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.logoutbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.logoutbutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.logoutbutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.logoutbutton.Location = New System.Drawing.Point(587, 433)
+        Me.logoutbutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.logoutbutton.Name = "logoutbutton"
-        Me.logoutbutton.Size = New System.Drawing.Size(75, 23)
+        Me.logoutbutton.Size = New System.Drawing.Size(218, 36)
         Me.logoutbutton.TabIndex = 1
         Me.logoutbutton.Text = "LOG OUT"
-        Me.logoutbutton.UseVisualStyleBackColor = True
+        Me.logoutbutton.UseVisualStyleBackColor = False
         '
         'Rest_HomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(622, 380)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(829, 489)
         Me.Controls.Add(Me.logoutbutton)
         Me.Controls.Add(Me.departmentlabel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.usernamelabel)
         Me.Controls.Add(Me.welcomelabel)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Rest_HomePage"
         Me.Text = "Rest_HomePage"
         CType(Me.pendingleavesdgv, System.ComponentModel.ISupportInitialize).EndInit()

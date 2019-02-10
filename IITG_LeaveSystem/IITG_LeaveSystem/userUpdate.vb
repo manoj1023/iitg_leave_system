@@ -51,6 +51,8 @@ Public Class userUpdate
                 command2.ExecuteNonQuery()
             Else
                 MessageBox.Show("Username does not exist")
+                con.Close()
+                Exit Sub
             End If
 
 
@@ -94,9 +96,39 @@ Public Class userUpdate
             fieldBox.Items.Add("Email")
         End If
 
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label1.ForeColor = Color.FromArgb(78, 184, 206)
+
     End Sub
 
     Private Sub userUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub username_text_TextChanged(sender As Object, e As EventArgs) Handles username_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label2.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub fieldBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles fieldBox.SelectedIndexChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label3.ForeColor = Color.FromArgb(78, 184, 206)
+    End Sub
+
+    Private Sub val_text_TextChanged(sender As Object, e As EventArgs) Handles val_text.TextChanged
+        Dim label = Me.Controls.OfType(Of Label)()
+        For Each lab In label
+            lab.ForeColor = Color.White
+        Next
+        Label4.ForeColor = Color.FromArgb(78, 184, 206)
     End Sub
 End Class

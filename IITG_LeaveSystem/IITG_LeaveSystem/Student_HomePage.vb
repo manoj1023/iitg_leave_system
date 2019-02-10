@@ -765,6 +765,7 @@ Public Class Student_HomePage
                     command.Dispose()
                     connection.Close()
                     'CODE
+                    password = final_password
                     MessageBox.Show("Password Updated", "Password Change")
                 End If
             End If

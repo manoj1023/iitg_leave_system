@@ -310,6 +310,7 @@ Partial Class add_User
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "add_User"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add User"
         Me.ResumeLayout(False)
         Me.PerformLayout()

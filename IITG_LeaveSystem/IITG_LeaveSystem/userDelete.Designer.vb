@@ -100,6 +100,7 @@ Partial Class userDelete
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "userDelete"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Delete User"
         Me.ResumeLayout(False)
         Me.PerformLayout()

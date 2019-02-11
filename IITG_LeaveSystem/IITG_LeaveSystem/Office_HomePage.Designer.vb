@@ -275,6 +275,7 @@ Partial Class Office_HomePage
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Office_HomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Office_HomePage"
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv2, System.ComponentModel.ISupportInitialize).EndInit()

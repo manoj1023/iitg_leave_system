@@ -162,6 +162,7 @@ Partial Class Apply_for_leave
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Apply_for_leave"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Apply For Leave"
         Me.ResumeLayout(False)
         Me.PerformLayout()

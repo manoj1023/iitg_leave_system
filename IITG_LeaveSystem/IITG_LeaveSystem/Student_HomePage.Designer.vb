@@ -236,10 +236,10 @@ Partial Class Student_HomePage
         '
         'NAGroupBox
         '
-        Me.NAGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.NAGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.NAGroupBox.Controls.Add(Me.NAInnerPanel)
         Me.NAGroupBox.Font = New System.Drawing.Font("Georgia", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAGroupBox.ForeColor = System.Drawing.Color.White
+        Me.NAGroupBox.ForeColor = System.Drawing.Color.Black
         Me.NAGroupBox.Location = New System.Drawing.Point(292, 120)
         Me.NAGroupBox.Name = "NAGroupBox"
         Me.NAGroupBox.Size = New System.Drawing.Size(882, 633)
@@ -517,7 +517,7 @@ Partial Class Student_HomePage
         '
         'OldPanel
         '
-        Me.OldPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.OldPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.OldPanel.Controls.Add(Me.OldInnerPanel)
         Me.OldPanel.Location = New System.Drawing.Point(259, 133)
         Me.OldPanel.Name = "OldPanel"
@@ -684,7 +684,7 @@ Partial Class Student_HomePage
         '
         'ProfilePasswordChangePanel
         '
-        Me.ProfilePasswordChangePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ProfilePasswordChangePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ProfilePasswordChangePanel.Controls.Add(Me.ProfilePasswordChangeGroupBox)
         Me.ProfilePasswordChangePanel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProfilePasswordChangePanel.Location = New System.Drawing.Point(402, 180)
@@ -807,7 +807,7 @@ Partial Class Student_HomePage
         '
         'ExtendOuterPanel
         '
-        Me.ExtendOuterPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ExtendOuterPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ExtendOuterPanel.Controls.Add(Me.ExtendleavePanel)
         Me.ExtendOuterPanel.Location = New System.Drawing.Point(387, 168)
         Me.ExtendOuterPanel.Name = "ExtendOuterPanel"
@@ -1218,7 +1218,7 @@ Partial Class Student_HomePage
         '
         'ProfilePanel
         '
-        Me.ProfilePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ProfilePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ProfilePanel.Controls.Add(Me.ProfileGroupBox)
         Me.ProfilePanel.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ProfilePanel.Location = New System.Drawing.Point(312, 130)
@@ -1232,14 +1232,14 @@ Partial Class Student_HomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1232, 795)
+        Me.Controls.Add(Me.NAGroupBox)
+        Me.Controls.Add(Me.ProfilePasswordChangePanel)
+        Me.Controls.Add(Me.ExtendOuterPanel)
+        Me.Controls.Add(Me.ProfilePanel)
+        Me.Controls.Add(Me.OldPanel)
         Me.Controls.Add(Me.NavigationouterPanel)
         Me.Controls.Add(Me.HeadingLabel)
         Me.Controls.Add(Me.UsernameLabel)
-        Me.Controls.Add(Me.OldPanel)
-        Me.Controls.Add(Me.ProfilePanel)
-        Me.Controls.Add(Me.ExtendOuterPanel)
-        Me.Controls.Add(Me.ProfilePasswordChangePanel)
-        Me.Controls.Add(Me.NAGroupBox)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

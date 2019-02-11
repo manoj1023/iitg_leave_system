@@ -85,11 +85,6 @@ If ans = DialogResult.Yes
 **Status:** Being worked on by siddharth  -> **FIXED** 
 
 
-* Minor concerns (can be implmented if needed else ignored):
-  * Inconsistent disabling of buttons: The buttons on sidebar are only disabled when modifying leave. Can be made consistent with rest of the options
-  * Insted of jpeg, jpg extension can be requested from profile pic, as it's the more common name of jpeg extn. and used over internet and in phones
-  * Functionality of accepting landline contact numbers (Eg. 040-2711-2711, i.e 11 digits in total, may cause issues with current number check, analysis needed)
-
 
 ## Leave Apply Form
 

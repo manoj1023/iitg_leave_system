@@ -900,6 +900,30 @@ Public Class Rest_HomePage
     End Sub
 
     Private Sub pendingleavesdgv_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles pendingleavesdgv.CellMouseDoubleClick
-
+        'MessageBox.Show("Upper")
+        Try
+            Dim selectedCellCount As Integer = pendingleavesdgv.GetCellCount(DataGridViewElementStates.Selected)
+            If selectedCellCount = 1 Then
+                Dim col As Integer = pendingleavesdgv.CurrentCell.ColumnIndex
+                Dim row As Integer = pendingleavesdgv.CurrentCell.RowIndex
+                Dim Leavid As Integer = 0
+                Dim Doc As String
+                Dim projDirectory, docPath As String
+                projDirectory = Directory.GetCurrentDirectory()
+                docPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\")
+                If col = 11 Then
+                    'MessageBox.Show(row)
+                    Leavid = pendingleavesdgv.Item(0, row).Value
+                    Doc = docPath & Leavid & ".pdf"
+                    'MessageBox.Show(Doc)
+                    If File.Exists(Doc) Then
+                        System.Diagnostics.Process.Start(Doc)
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
+
 End Class

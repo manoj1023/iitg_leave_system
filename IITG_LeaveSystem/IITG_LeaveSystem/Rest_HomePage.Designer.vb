@@ -263,7 +263,7 @@ Partial Class Rest_HomePage
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MinimizeBox = False
+        Me.MaximizeBox = False
         Me.Name = "Rest_HomePage"
         Me.Text = "Rest_HomePage"
         CType(Me.pendingleavesdgv, System.ComponentModel.ISupportInitialize).EndInit()

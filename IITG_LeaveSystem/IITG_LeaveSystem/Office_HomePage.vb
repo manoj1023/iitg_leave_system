@@ -373,4 +373,30 @@ Public Class Office_HomePage
         Label2.ForeColor = Color.FromArgb(78, 184, 206)
         Label1.ForeColor = Color.White
     End Sub
+
+    Private Sub dgv2_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgv2.CellMouseDoubleClick
+        Try
+            Dim selectedCellCount As Integer = dgv2.GetCellCount(DataGridViewElementStates.Selected)
+            If selectedCellCount = 1 Then
+                Dim col As Integer = dgv2.CurrentCell.ColumnIndex
+                Dim row As Integer = dgv2.CurrentCell.RowIndex
+                Dim Leavid As Integer = 0
+                Dim Doc As String
+                Dim projDirectory, docPath As String
+                projDirectory = Directory.GetCurrentDirectory()
+                docPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "Documents\")
+                If col = 11 Then
+                    'MessageBox.Show(row)
+                    Leavid = dgv2.Item(0, row).Value
+                    Doc = docPath & Leavid & ".pdf"
+                    'MessageBox.Show(Doc)
+                    If File.Exists(Doc) Then
+                        System.Diagnostics.Process.Start(Doc)
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class

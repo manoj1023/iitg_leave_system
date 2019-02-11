@@ -22,6 +22,7 @@ Partial Class Apply_for_leave
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Apply_for_leave))
         Me.namelabel = New System.Windows.Forms.Label()
         Me.nametextbox = New System.Windows.Forms.TextBox()
         Me.startdatelabel = New System.Windows.Forms.Label()
@@ -157,6 +158,7 @@ Partial Class Apply_for_leave
         Me.Controls.Add(Me.namelabel)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Apply_for_leave"

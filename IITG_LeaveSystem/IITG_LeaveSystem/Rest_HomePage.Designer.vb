@@ -22,6 +22,7 @@ Partial Class Rest_HomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Rest_HomePage))
         Me.welcomelabel = New System.Windows.Forms.Label()
         Me.usernamelabel = New System.Windows.Forms.Label()
         Me.pendingleavesdgv = New System.Windows.Forms.DataGridView()
@@ -30,13 +31,13 @@ Partial Class Rest_HomePage
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.addcommentbox = New System.Windows.Forms.RichTextBox()
         Me.addcommentbutton = New System.Windows.Forms.Button()
+        Me.approvebutton = New System.Windows.Forms.Button()
+        Me.denybutton = New System.Windows.Forms.Button()
         Me.commentlabel = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.applyleavebutton = New System.Windows.Forms.Button()
         Me.departmentlabel = New System.Windows.Forms.Label()
         Me.logoutbutton = New System.Windows.Forms.Button()
-        Me.approvebutton = New System.Windows.Forms.Button()
-        Me.denybutton = New System.Windows.Forms.Button()
         CType(Me.pendingleavesdgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -148,6 +149,40 @@ Partial Class Rest_HomePage
         Me.addcommentbutton.Text = "Add Comment"
         Me.addcommentbutton.UseVisualStyleBackColor = False
         '
+        'approvebutton
+        '
+        Me.approvebutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.approvebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.approvebutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.approvebutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.approvebutton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.button_round_tick_ok_icon
+        Me.approvebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.approvebutton.Location = New System.Drawing.Point(489, 229)
+        Me.approvebutton.Margin = New System.Windows.Forms.Padding(4)
+        Me.approvebutton.Name = "approvebutton"
+        Me.approvebutton.Size = New System.Drawing.Size(155, 40)
+        Me.approvebutton.TabIndex = 8
+        Me.approvebutton.Text = "Approve"
+        Me.approvebutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.approvebutton.UseVisualStyleBackColor = False
+        '
+        'denybutton
+        '
+        Me.denybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.denybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.denybutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.denybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.denybutton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.close
+        Me.denybutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.denybutton.Location = New System.Drawing.Point(653, 229)
+        Me.denybutton.Margin = New System.Windows.Forms.Padding(4)
+        Me.denybutton.Name = "denybutton"
+        Me.denybutton.Size = New System.Drawing.Size(135, 40)
+        Me.denybutton.TabIndex = 7
+        Me.denybutton.Text = "Deny"
+        Me.denybutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.denybutton.UseVisualStyleBackColor = False
+        '
         'commentlabel
         '
         Me.commentlabel.AutoSize = True
@@ -212,40 +247,6 @@ Partial Class Rest_HomePage
         Me.logoutbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.logoutbutton.UseVisualStyleBackColor = False
         '
-        'approvebutton
-        '
-        Me.approvebutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.approvebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.approvebutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.approvebutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.approvebutton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.button_round_tick_ok_icon
-        Me.approvebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.approvebutton.Location = New System.Drawing.Point(489, 229)
-        Me.approvebutton.Margin = New System.Windows.Forms.Padding(4)
-        Me.approvebutton.Name = "approvebutton"
-        Me.approvebutton.Size = New System.Drawing.Size(155, 40)
-        Me.approvebutton.TabIndex = 8
-        Me.approvebutton.Text = "Approve"
-        Me.approvebutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.approvebutton.UseVisualStyleBackColor = False
-        '
-        'denybutton
-        '
-        Me.denybutton.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.denybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.denybutton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.denybutton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.denybutton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.close
-        Me.denybutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.denybutton.Location = New System.Drawing.Point(653, 229)
-        Me.denybutton.Margin = New System.Windows.Forms.Padding(4)
-        Me.denybutton.Name = "denybutton"
-        Me.denybutton.Size = New System.Drawing.Size(135, 40)
-        Me.denybutton.TabIndex = 7
-        Me.denybutton.Text = "Deny"
-        Me.denybutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.denybutton.UseVisualStyleBackColor = False
-        '
         'Rest_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -260,6 +261,7 @@ Partial Class Rest_HomePage
         Me.Controls.Add(Me.welcomelabel)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MinimizeBox = False
         Me.Name = "Rest_HomePage"

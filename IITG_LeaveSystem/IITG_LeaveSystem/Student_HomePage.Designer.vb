@@ -26,6 +26,10 @@ Partial Class Student_HomePage
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Student_HomePage))
         Me.NavigationGroupBox = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LogOutButton = New System.Windows.Forms.Button()
+        Me.ProfileButton = New System.Windows.Forms.Button()
+        Me.OldButton = New System.Windows.Forms.Button()
+        Me.NAButton = New System.Windows.Forms.Button()
         Me.NAGroupBox = New System.Windows.Forms.GroupBox()
         Me.NAInnerPanel = New System.Windows.Forms.Panel()
         Me.NASupervisorLabel = New System.Windows.Forms.Label()
@@ -103,6 +107,7 @@ Partial Class Student_HomePage
         Me.ProfileLastNameTextBox = New System.Windows.Forms.TextBox()
         Me.ProfileFirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.ProfileUserNameTextBox = New System.Windows.Forms.TextBox()
+        Me.ProfilePictureBox = New System.Windows.Forms.PictureBox()
         Me.ProfileContactNumberLabel = New System.Windows.Forms.Label()
         Me.ProfileAddressLabel = New System.Windows.Forms.Label()
         Me.ProfileEmergencyContactNumberLabel = New System.Windows.Forms.Label()
@@ -114,11 +119,6 @@ Partial Class Student_HomePage
         Me.ProfileRollNumberLabel = New System.Windows.Forms.Label()
         Me.ProfileUserNameLabel = New System.Windows.Forms.Label()
         Me.ProfilePanel = New System.Windows.Forms.Panel()
-        Me.LogOutButton = New System.Windows.Forms.Button()
-        Me.ProfileButton = New System.Windows.Forms.Button()
-        Me.OldButton = New System.Windows.Forms.Button()
-        Me.NAButton = New System.Windows.Forms.Button()
-        Me.ProfilePictureBox = New System.Windows.Forms.PictureBox()
         Me.NavigationGroupBox.SuspendLayout()
         Me.NAGroupBox.SuspendLayout()
         Me.NAInnerPanel.SuspendLayout()
@@ -132,8 +132,8 @@ Partial Class Student_HomePage
         Me.ExtendOuterPanel.SuspendLayout()
         Me.ExtendleavePanel.SuspendLayout()
         Me.ProfileGroupBox.SuspendLayout()
-        Me.ProfilePanel.SuspendLayout()
         CType(Me.ProfilePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProfilePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'NavigationGroupBox
@@ -165,6 +165,74 @@ Partial Class Student_HomePage
         Me.Button1.Size = New System.Drawing.Size(232, 57)
         Me.Button1.TabIndex = 4
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'LogOutButton
+        '
+        Me.LogOutButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.LogOutButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogOutButton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.LogOutButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.logout
+        Me.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LogOutButton.Location = New System.Drawing.Point(0, 704)
+        Me.LogOutButton.Name = "LogOutButton"
+        Me.LogOutButton.Size = New System.Drawing.Size(232, 57)
+        Me.LogOutButton.TabIndex = 3
+        Me.LogOutButton.Text = "Log Out"
+        Me.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LogOutButton.UseVisualStyleBackColor = False
+        '
+        'ProfileButton
+        '
+        Me.ProfileButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.ProfileButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ProfileButton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProfileButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ProfileButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.profile_icon
+        Me.ProfileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ProfileButton.Location = New System.Drawing.Point(0, 346)
+        Me.ProfileButton.Name = "ProfileButton"
+        Me.ProfileButton.Size = New System.Drawing.Size(232, 65)
+        Me.ProfileButton.TabIndex = 2
+        Me.ProfileButton.Text = "Profile"
+        Me.ProfileButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ProfileButton.UseVisualStyleBackColor = False
+        '
+        'OldButton
+        '
+        Me.OldButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.OldButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.OldButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.OldButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OldButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.OldButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.old_appl
+        Me.OldButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.OldButton.Location = New System.Drawing.Point(0, 238)
+        Me.OldButton.Name = "OldButton"
+        Me.OldButton.Size = New System.Drawing.Size(232, 76)
+        Me.OldButton.TabIndex = 1
+        Me.OldButton.Text = "Old Applications"
+        Me.OldButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.OldButton.UseVisualStyleBackColor = False
+        '
+        'NAButton
+        '
+        Me.NAButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.NAButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.NAButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NAButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NAButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.NAButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.New_Application
+        Me.NAButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.NAButton.Location = New System.Drawing.Point(0, 131)
+        Me.NAButton.Name = "NAButton"
+        Me.NAButton.Size = New System.Drawing.Size(232, 77)
+        Me.NAButton.TabIndex = 0
+        Me.NAButton.Text = "New Application"
+        Me.NAButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.NAButton.UseVisualStyleBackColor = False
         '
         'NAGroupBox
         '
@@ -1028,6 +1096,16 @@ Partial Class Student_HomePage
         Me.ProfileUserNameTextBox.Size = New System.Drawing.Size(355, 30)
         Me.ProfileUserNameTextBox.TabIndex = 11
         '
+        'ProfilePictureBox
+        '
+        Me.ProfilePictureBox.BackgroundImage = CType(resources.GetObject("ProfilePictureBox.BackgroundImage"), System.Drawing.Image)
+        Me.ProfilePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ProfilePictureBox.Location = New System.Drawing.Point(631, 29)
+        Me.ProfilePictureBox.Name = "ProfilePictureBox"
+        Me.ProfilePictureBox.Size = New System.Drawing.Size(162, 181)
+        Me.ProfilePictureBox.TabIndex = 10
+        Me.ProfilePictureBox.TabStop = False
+        '
         'ProfileContactNumberLabel
         '
         Me.ProfileContactNumberLabel.AutoSize = True
@@ -1148,84 +1226,6 @@ Partial Class Student_HomePage
         Me.ProfilePanel.Size = New System.Drawing.Size(842, 575)
         Me.ProfilePanel.TabIndex = 5
         '
-        'LogOutButton
-        '
-        Me.LogOutButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.LogOutButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LogOutButton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.LogOutButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.logout
-        Me.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LogOutButton.Location = New System.Drawing.Point(0, 704)
-        Me.LogOutButton.Name = "LogOutButton"
-        Me.LogOutButton.Size = New System.Drawing.Size(232, 57)
-        Me.LogOutButton.TabIndex = 3
-        Me.LogOutButton.Text = "Log Out"
-        Me.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.LogOutButton.UseVisualStyleBackColor = False
-        '
-        'ProfileButton
-        '
-        Me.ProfileButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.ProfileButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ProfileButton.Font = New System.Drawing.Font("Georgia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProfileButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ProfileButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.profile_icon
-        Me.ProfileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ProfileButton.Location = New System.Drawing.Point(0, 346)
-        Me.ProfileButton.Name = "ProfileButton"
-        Me.ProfileButton.Size = New System.Drawing.Size(232, 65)
-        Me.ProfileButton.TabIndex = 2
-        Me.ProfileButton.Text = "Profile"
-        Me.ProfileButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ProfileButton.UseVisualStyleBackColor = False
-        '
-        'OldButton
-        '
-        Me.OldButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.OldButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.OldButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.OldButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OldButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.OldButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.old_appl
-        Me.OldButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.OldButton.Location = New System.Drawing.Point(0, 238)
-        Me.OldButton.Name = "OldButton"
-        Me.OldButton.Size = New System.Drawing.Size(232, 76)
-        Me.OldButton.TabIndex = 1
-        Me.OldButton.Text = "Old Applications"
-        Me.OldButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.OldButton.UseVisualStyleBackColor = False
-        '
-        'NAButton
-        '
-        Me.NAButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
-        Me.NAButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.NAButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NAButton.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NAButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.NAButton.Image = Global.IITG_LeaveSystem.My.Resources.Resources.New_Application
-        Me.NAButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.NAButton.Location = New System.Drawing.Point(0, 131)
-        Me.NAButton.Name = "NAButton"
-        Me.NAButton.Size = New System.Drawing.Size(232, 77)
-        Me.NAButton.TabIndex = 0
-        Me.NAButton.Text = "New Application"
-        Me.NAButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.NAButton.UseVisualStyleBackColor = False
-        '
-        'ProfilePictureBox
-        '
-        Me.ProfilePictureBox.BackgroundImage = CType(resources.GetObject("ProfilePictureBox.BackgroundImage"), System.Drawing.Image)
-        Me.ProfilePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ProfilePictureBox.Location = New System.Drawing.Point(631, 29)
-        Me.ProfilePictureBox.Name = "ProfilePictureBox"
-        Me.ProfilePictureBox.Size = New System.Drawing.Size(162, 181)
-        Me.ProfilePictureBox.TabIndex = 10
-        Me.ProfilePictureBox.TabStop = False
-        '
         'Student_HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1242,6 +1242,7 @@ Partial Class Student_HomePage
         Me.Controls.Add(Me.NAGroupBox)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Student_HomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1264,8 +1265,8 @@ Partial Class Student_HomePage
         Me.ExtendleavePanel.PerformLayout()
         Me.ProfileGroupBox.ResumeLayout(False)
         Me.ProfileGroupBox.PerformLayout()
-        Me.ProfilePanel.ResumeLayout(False)
         CType(Me.ProfilePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ProfilePanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

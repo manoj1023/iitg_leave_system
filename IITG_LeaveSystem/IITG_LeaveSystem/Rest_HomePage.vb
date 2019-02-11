@@ -898,4 +898,8 @@ Public Class Rest_HomePage
         MessageBox.Show("Leave request denied")
         loadbutton.PerformClick()
     End Sub
+
+    Private Sub pendingleavesdgv_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles pendingleavesdgv.CellMouseDoubleClick
+
+    End Sub
 End Class

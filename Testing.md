@@ -4,46 +4,36 @@ Report and status of testing of various components is listed here
 
 ## Overview  
 
-* **Login Page:** Tested and working as expected, minor tweaks may be needed (forgot password button)
-* **Student Homepage:** All services funtional, minor tweaks may be needed (inconsistent disabling of buttons)
-* **Apply Leave form (for Staff, Prof, HOD, Dean, Dir):** Fully functional
-* **Office:** currently testing
-* **Leave approval/decline portal (for Prof, HoD, Dean, DPPC):** Pending
+* **Login Page:** Tested and working as expected
+* **Student Homepage:** All services funtional
+* **Apply Leave form (for Staff, Prof, HOD, Dean, Dir):** Fully Functional
+* **Office:** Fully Functional
+* **Leave approval/decline portal (for Prof, HoD, Dean, DPPC):** Fully functional
 
+```
+For details about components and forms, refer to documentation 
+```
 ## Login Page
+This is the starting point of the application
 
-### Components working fine
-* Username textbox
-* Password textbox
-* Show password checkbox
-* User type selector radio button
-* Login button
-
-Working fine and no work needed as of now
+### Components status
+* All components tested and functional
 
 
-### Components with issues
-* Forgot Password button
 
-Working as expected for unregistered users, with registered users a message citing not availability of service is displayed. Can be changed upon discussion
-
-
-**Impact: Low**    
-**Status: Pending**    
-
+### Past issues
+None
 
 ## Student Page
 
-### Current Component status:
-1. Leave applications functioning properly
-1. Password change functioning properly
-1. Leave modification functioning properly
-1. Leave delete functioning properly
-1. Profile edit functioning
-1. Days of leave remaining needs to be tested
+Covers:    All services for student users
+
+### Components status
+* All components tested and functional
 
 
-### Components issues
+
+### Past issues
 * Change password option
 
 **Problem:** When Changing password 2 times in a row, can't use the new passowrd in the 2nd attempt    
@@ -95,7 +85,7 @@ If ans = DialogResult.Yes
 **Status:** Being worked on by siddharth  -> **FIXED** 
 
 
-* Minor Issues (can be implmented if needed else ignored):
+* Minor concerns (can be implmented if needed else ignored):
   * Inconsistent disabling of buttons: The buttons on sidebar are only disabled when modifying leave. Can be made consistent with rest of the options
   * Insted of jpeg, jpg extension can be requested from profile pic, as it's the more common name of jpeg extn. and used over internet and in phones
   * Functionality of accepting landline contact numbers (Eg. 040-2711-2711, i.e 11 digits in total, may cause issues with current number check, analysis needed)
@@ -103,12 +93,17 @@ If ans = DialogResult.Yes
 
 ## Leave Apply Form
 
-### Covers: 
+This works as:     
 1. Complete functionality of Director and Staff
 1. One Component of Prof, Dean, HoD
 
 
-### Components issues
+
+### Components status
+* All components tested and functional
+
+
+### Past issues
 
 * Any date combination works
 **Problem:** Leaves show error when needed but are pushed to DB   
@@ -128,11 +123,14 @@ If ans = DialogResult.Yes
 
 ## Office Form
 
-### Components working fine
+Covers:    
+Full functionality of Office    
 
-* 
+### Components status
+* All components tested and functional
 
-### Component issues
+
+### Past issues
 
 * Can't update user password  
 
@@ -175,3 +173,17 @@ If ans = DialogResult.Yes
 **Fix:** Editing the forms in database and remove required from lastname field in Students form    
 **Status:** Fixed
 
+
+
+
+## Rest Users Form
+Covers:    
+1. Full functionality of DPPC
+1. Part functionality of Prof, HoD and Dean
+
+### Components status
+* All components tested and functional
+
+
+### Past issues
+None

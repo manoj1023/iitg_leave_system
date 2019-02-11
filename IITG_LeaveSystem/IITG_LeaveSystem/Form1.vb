@@ -179,7 +179,7 @@ Public Class Form1
         num += SendEmail(email, "Hello! Your new password is " & newPass, "New Password for IITG Leave")
 
         If num = 0 Then
-            MsgBox("Forgot Password not currently available right now")
+            MsgBox("Service unavailable: Forgot Password not currently available")
         Else
             newPass = encrypt(newPass)
             query = "Update " & table & " Set [Password] = '" & newPass & "' Where Username = '" & username & "'; "

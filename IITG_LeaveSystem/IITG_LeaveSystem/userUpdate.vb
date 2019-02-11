@@ -33,6 +33,11 @@ Public Class userUpdate
                 Exit Sub
             End If
 
+            If (CStr(fieldBox.SelectedItem) = "Email") And Not val_text.Text.Contains("@") Then
+                MessageBox.Show("Enter a valid email")
+                Exit Sub
+            End If
+
             If (CStr(fieldBox.SelectedItem) = "OrdinaryLeaves") And IsNumeric(val_text.Text) = False Then
                 MessageBox.Show("Enter a proper value for leave")
                 Exit Sub

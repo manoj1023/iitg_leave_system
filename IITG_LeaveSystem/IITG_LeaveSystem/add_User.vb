@@ -46,6 +46,17 @@ Public Class add_User
             MessageBox.Show("Enter a valid firstname")
             Exit Sub
         End If
+        Dim y As System.Text.RegularExpressions.Regex = New System.Text.RegularExpressions.Regex("^[a-zA-Z]{1,}$")
+
+        If y.IsMatch(firstname_text.Text) = False Then
+            MessageBox.Show("Enter a valid firstname")
+            Exit Sub
+        End If
+
+        If y.IsMatch(lastname_text.Text) = False Then
+            MessageBox.Show("Enter a valid lastname")
+            Exit Sub
+        End If
 
         If password_text.Text = "" Then
             MessageBox.Show("Enter a valid password")
@@ -59,6 +70,11 @@ Public Class add_User
 
         If Email_Text.Text = "" Then
             MessageBox.Show("Enter an email")
+            Exit Sub
+        End If
+
+        If Not Email_Text.Text.Contains("@") Then
+            MessageBox.Show("Enter a valid email")
             Exit Sub
         End If
 
@@ -251,4 +267,5 @@ Public Class add_User
         Next
         Label11.ForeColor = Color.FromArgb(78, 184, 206)
     End Sub
+
 End Class

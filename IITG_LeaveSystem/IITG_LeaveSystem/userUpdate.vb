@@ -23,6 +23,36 @@ Public Class userUpdate
                 Exit Sub
             End If
 
+            If (CStr(fieldBox.SelectedItem) = "Phone") And (val_text.Text.Length <> 10) Then
+                MessageBox.Show("Enter a valid phone number")
+                Exit Sub
+            End If
+
+            If (CStr(fieldBox.SelectedItem) = "Email") And (val_text.Text = "") Then
+                MessageBox.Show("Enter an e-mail")
+                Exit Sub
+            End If
+
+            If (CStr(fieldBox.SelectedItem) = "OrdinaryLeaves") And IsNumeric(val_text.Text) = False Then
+                MessageBox.Show("Enter a proper value for leave")
+                Exit Sub
+            End If
+
+            If (CStr(fieldBox.SelectedItem) = "AcademicLeaves") And IsNumeric(val_text.Text) = False Then
+                MessageBox.Show("Enter a proper value for leave")
+                Exit Sub
+            End If
+
+            If (CStr(fieldBox.SelectedItem) = "MedicalLeaves") And IsNumeric(val_text.Text) = False Then
+                MessageBox.Show("Enter a proper value for leave")
+                Exit Sub
+            End If
+
+            If (CStr(fieldBox.SelectedItem) = "ParentalLeaves") And IsNumeric(val_text.Text) = False Then
+                MessageBox.Show("Enter a proper value for leave")
+                Exit Sub
+            End If
+
             con.Open()
 
             Dim command1 As OleDbCommand = New OleDbCommand()

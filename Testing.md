@@ -165,13 +165,13 @@ If ans = DialogResult.Yes
 **Steps to recreate:** Office home > Update user > Attempt an invalid update > confirm by loading user data on office home form    
 **Cause:** No checks on input    
 **Fix:** Add checks for all inputs   
-**Status:** Currently working on  
+**Status:** Fixed    
 
 * Student lastname zero length error   
 
 **Problem:** When attempting to make a new student user, lastname field can't be zero length exception is thrown    
 **Steps to recreate:** Office homapage > add user > Student user > Fill each field except Last Name > Apply > error along the lines of "Student.LastName cannot be a zero length string"     
-**Cause:** Unclear, as the same field query works fine while adding professor and staff     
-**Fix:** -   
+**Cause:** It may be a required value in database     
+**Fix:** Editing the forms in database    
 **Status:** Pending   
 

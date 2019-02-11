@@ -172,6 +172,6 @@ If ans = DialogResult.Yes
 **Problem:** When attempting to make a new student user, lastname field can't be zero length exception is thrown    
 **Steps to recreate:** Office homapage > add user > Student user > Fill each field except Last Name > Apply > error along the lines of "Student.LastName cannot be a zero length string"     
 **Cause:** It may be a required value in database     
-**Fix:** Editing the forms in database    
-**Status:** Pending   
+**Fix:** Editing the forms in database and remove required from lastname field in Students form    
+**Status:** Fixed
 

@@ -69,5 +69,19 @@ Work Distribution For Now
 	3. Siddharth + Mayank - Technichal Documentation 
 	4. Aniket - Redo Mayanks work
 	
-PS:- As 9th february the contribution of Mayank Chandra is 0 in the project. To make up for the same, he has been offered the role to do a thorough testing of the project and report all the bugs to be fixed.
+### 11th February, 2019
+
+The project stands completed with the UI complete as well
+
+Final Contributions of all people
+
+	1. Manan - Database Creation, Login Form + Password Encryption
+	2. Utkarsh + Ikya - Office Functionality
+	3. Siddharth - Student Home Page
+	4. Mayank + Aniket + Manan - DPPC, Professor, Dean, etc Functionality
+	5. Manan - Office Functionality Completion + UI of forms
+	6. Utkarsh + Ikya - User Documentation
+	7. Siddharth + Mayank - Technichal Documentation 
+	8. Aniket - Redo Some parts of Rest Home Page due to errors in functionality
+	9. Mayank - Complete Testing of the entire project with help in minor bug fixes from Siddharth and Manan
 

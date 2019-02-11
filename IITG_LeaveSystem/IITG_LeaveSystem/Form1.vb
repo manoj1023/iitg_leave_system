@@ -7,6 +7,7 @@ Imports System.Net.Mail
 Public Class Form1
 
     Private Sub ShowPassCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPassCheckBox.CheckedChanged
+        'If the check box is checked show the password otherwise hide it, change the colour also
         If (ShowPassCheckBox.Checked = False) Then
             ShowPassCheckBox.ForeColor = Color.White
             PasswordTextBox.PasswordChar = "*"
@@ -17,12 +18,14 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Base Load
         PasswordTextBox.PasswordChar = "*"
         StudentRadio.Select()
+        'Login Button fired on hitting enter
         Me.AcceptButton = LoginButton
         UsernameTextBox.Select()
 
-
+        'Add event handler of colour changing in all the radio buttons
         Dim radio = GroupBox1.Controls.OfType(Of RadioButton)()
         For Each radiobut In radio
             AddHandler radiobut.CheckedChanged, AddressOf changeHighlight
@@ -30,6 +33,7 @@ Public Class Form1
         StudentRadio.ForeColor = Color.FromArgb(78, 184, 206)
 
         Try
+            'Make a connection
             Dim projDirectory, databasePath As String
             projDirectory = Directory.GetCurrentDirectory()
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
@@ -38,6 +42,7 @@ Public Class Form1
             query = "Select * From Leave;"
             'MessageBox.Show(query)
 
+            'Decline all the leaves that are older than today
             con.Open()
             Dim cmd As New OleDbCommand(query, con)
             Dim reader As OleDbDataReader
@@ -79,6 +84,7 @@ Public Class Form1
             Dim query As String = ""
             Dim table As String = GroupBox1.Controls.OfType(Of RadioButton)().FirstOrDefault(Function(radioButton) radioButton.Checked).Text
 
+            'Check if a valid user
             query = "Select * From " & table & " Where Username = '" & username & "' And Password = '" & password & "'; "
             'MessageBox.Show(query)
 
@@ -92,11 +98,12 @@ Public Class Form1
             End While
             con.Close()
             If (count <> 1) Then
+                'Error Message
                 MessageBox.Show("Username or Password is incorrect!")
                 Exit Sub
             End If
 
-
+            'If a correct user then redirect to different forms
             If StudentRadio.Checked = True Then
                 Student_HomePage.Username = username
                 Student_HomePage.Show()
@@ -124,6 +131,7 @@ Public Class Form1
     End Sub
 
     Private Function encrypt(p1 As String) As String
+        'Function to find md5 hash to encrypt the password
         Dim bytHashedData As Byte()
         Dim encoder As New UTF8Encoding()
         Dim md5Hasher As New MD5CryptoServiceProvider
@@ -138,6 +146,7 @@ Public Class Form1
 
     Private Sub ForgotButton_Click(sender As Object, e As EventArgs) Handles ForgotButton.Click
 
+        'Get the email id of the user and send an email
         Dim projDirectory, databasePath As String
         projDirectory = Directory.GetCurrentDirectory()
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
@@ -174,6 +183,7 @@ Public Class Form1
         End Try
         con.Close()
 
+        'Generate a new password
         Dim newPass As String = SuggestPassword()
         Dim num As Integer = 0
         num += SendEmail(email, "Hello! Your new password is " & newPass, "New Password for IITG Leave")
@@ -199,6 +209,7 @@ Public Class Form1
     End Sub
 
     Function SendEmail(ByVal sendto As String, ByVal message As String, ByVal subject As String)
+        'Function to send mail through smtp protocol
         Try
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
@@ -209,6 +220,7 @@ Public Class Form1
             Smtp_Server.Host = "smtp.gmail.com"
 
             e_mail = New MailMessage()
+            'Hard coded sender id
             e_mail.From = New MailAddress("iitgleave@gmail.com")
             e_mail.To.Add(sendto)
             e_mail.Subject = subject
@@ -224,6 +236,7 @@ Public Class Form1
     End Function
 
     Function SuggestPassword()
+        'Function to generate a password, Taken from Password Strength Checker Group Aman
         Dim suggestedPassword As String = ""
         Dim Ch As Integer
         Dim UsableSymbols() As String
@@ -263,6 +276,7 @@ Public Class Form1
 
     Private Sub changeHighlight(sender As Object, e As EventArgs)
         'MessageBox.Show("Change")
+        'Change the colour of Radio Buttons
         Dim radio = GroupBox1.Controls.OfType(Of RadioButton)()
         For Each radiobut In radio
             radiobut.ForeColor = Color.White

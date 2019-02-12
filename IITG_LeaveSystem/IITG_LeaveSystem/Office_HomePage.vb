@@ -10,6 +10,8 @@ Public Class Office_HomePage
 
 
     Private Sub Office_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         welcomeLabel.Text = "Logged in as " & Username
         dgv2.DefaultCellStyle.BackColor = Color.LightCyan
         dgv1.DefaultCellStyle.BackColor = Color.LightCyan

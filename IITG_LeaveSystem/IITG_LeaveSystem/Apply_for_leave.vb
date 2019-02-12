@@ -18,6 +18,8 @@ Public Class Apply_for_leave
     Dim con As OleDbConnection
 
     Private Sub Apply_for_leave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         If Type = "Staff" Or Type = "Director" Then
             Button2.Text = "LOG OUT"
         Else

@@ -9,7 +9,8 @@ Public Class add_User
 
 
     Private Sub add_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
     End Sub
 
     Private Sub add_Click(sender As Object, e As EventArgs) Handles add.Click

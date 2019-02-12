@@ -16,7 +16,8 @@ Public Class Rest_HomePage
 
 
     Private Sub Rest_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         pendingleavesdgv.DefaultCellStyle.BackColor = Color.LightCyan
         If Type = "DPPC" Then
 

@@ -31,6 +31,8 @@ Public Class Student_HomePage
     Dim ExtendDocumentFilePath As String
 
     Private Sub Student_HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         Timer1.Start()                  'Timer for clock display
         ExtendOuterPanel.Hide()         'Hiding non-required panels
         Dim projDirectory, destinationPath, databasePath As String

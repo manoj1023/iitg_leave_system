@@ -144,7 +144,8 @@ Public Class userUpdate
     End Sub
 
     Private Sub userUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.AutoSize = True
+        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
     End Sub
 
     Private Sub username_text_TextChanged(sender As Object, e As EventArgs) Handles username_text.TextChanged

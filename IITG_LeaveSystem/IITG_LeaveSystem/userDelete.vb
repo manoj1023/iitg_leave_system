@@ -8,8 +8,8 @@ Public Class userDelete
     Public Property con As OleDbConnection
 
     Private Sub userDelete_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.AutoSize = True
-        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
+        'Me.AutoSize = True
+        'Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
     End Sub
 
     Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click

@@ -18,8 +18,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.AutoSize = True
-        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
+        'Me.AutoSize = True
+        'Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         'Base Load
         PasswordTextBox.PasswordChar = "*"
         StudentRadio.Select()

@@ -39,7 +39,7 @@ Public Class Form1
             Dim projDirectory, databasePath As String
             projDirectory = Directory.GetCurrentDirectory()
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
-            Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+            Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
             Dim query As String
             query = "Select * From Leave;"
             'MessageBox.Show(query)
@@ -79,7 +79,7 @@ Public Class Form1
             Dim projDirectory, databasePath As String
             projDirectory = Directory.GetCurrentDirectory()
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
-            Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+            Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
             Dim username As String = UsernameTextBox.Text
             Dim password As String = encrypt(PasswordTextBox.Text)
@@ -152,7 +152,7 @@ Public Class Form1
         Dim projDirectory, databasePath As String
         projDirectory = Directory.GetCurrentDirectory()
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
-        Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+        Dim con As OleDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
         Dim username As String = UsernameTextBox.Text
         Dim query As String = ""

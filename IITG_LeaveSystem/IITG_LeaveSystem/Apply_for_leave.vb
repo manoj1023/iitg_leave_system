@@ -32,7 +32,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -59,7 +59,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -87,7 +87,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -111,7 +111,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -170,7 +170,7 @@ Public Class Apply_for_leave
         TdestinationPath = TprojDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
         Dim lastdate As Date = enddate
         Dim connection As New OleDbConnection
-        connection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + TdatabasePath)
+        connection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
         connection.Open()
         Dim command1 As New OleDbCommand
         command1.Connection = connection
@@ -206,7 +206,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim command As New OleDbCommand
                 command.Connection = con
@@ -229,7 +229,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim command As New OleDbCommand
                 command.Connection = con
@@ -253,7 +253,7 @@ Public Class Apply_for_leave
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim command As New OleDbCommand
                 command.Connection = con
@@ -267,7 +267,7 @@ Public Class Apply_for_leave
                 MsgBox(ex.Message)
             End Try
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -287,7 +287,7 @@ Public Class Apply_for_leave
             End Try
 
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim command2 As OleDbCommand = New OleDbCommand()
                 command2.Connection = con

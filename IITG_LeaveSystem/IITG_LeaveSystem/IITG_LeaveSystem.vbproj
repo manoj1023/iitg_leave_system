@@ -92,6 +92,11 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LeaveSystemDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaveSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -171,6 +176,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="LeaveSystemDataSet.xsc">
+      <DependentUpon>LeaveSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LeaveSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LeaveSystemDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LeaveSystemDataSet.xss">
+      <DependentUpon>LeaveSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -186,6 +202,9 @@
     <None Include="Resources\LeaveSystemIcon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LeaveSystem.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LeaveSystemExeIcon.ico" />
     <None Include="Resources\old-appl.png" />
     <None Include="Resources\New Application.png" />

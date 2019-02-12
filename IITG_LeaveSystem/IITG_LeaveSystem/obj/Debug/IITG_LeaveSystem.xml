@@ -6,7 +6,187 @@ IITG_LeaveSystem
 </name>
 </assembly>
 <members>
-<member name="P:IITG_LeaveSystem.My.Resources.Resources.ResourceManager">
+<member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DeanDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DirectorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DPPCDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.HODDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.LeaveDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.OfficeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.ProfessorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StaffDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StudentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DeanRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DirectorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DPPCRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.HODRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.LeaveRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.OfficeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.ProfessorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StaffRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StudentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DeanRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DirectorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.DPPCRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.HODRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.LeaveRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.OfficeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.ProfessorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StaffRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet.StudentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.DeanTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.DirectorTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.DPPCTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.HODTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.LeaveTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.OfficeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.ProfessorTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.StaffTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.StudentTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(IITG_LeaveSystem.LeaveSystemDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(IITG_LeaveSystem.LeaveSystemDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(IITG_LeaveSystem.LeaveSystemDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.UpdateAll(IITG_LeaveSystem.LeaveSystemDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:IITG_LeaveSystem.LeaveSystemDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:IITG_LeaveSystem.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

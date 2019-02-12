@@ -29,7 +29,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -50,7 +50,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -78,7 +78,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -102,7 +102,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -137,7 +137,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
                 con.Open()
                 Dim query As String
@@ -162,7 +162,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
                 con.Open()
                 Dim query As String
@@ -187,7 +187,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
                 con.Open()
                 Dim query As String
@@ -212,7 +212,7 @@ Public Class Rest_HomePage
             databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")
             destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
 
                 con.Open()
                 Dim query As String
@@ -273,7 +273,7 @@ Public Class Rest_HomePage
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")
         Try
             'MsgBox("Came Here")
-            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+            con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
             con.Open()
             Dim query As String
             Dim command As New OleDbCommand
@@ -341,7 +341,7 @@ Public Class Rest_HomePage
 
             If typeofleave = "ML" Then
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim query As String
                     Dim command As New OleDbCommand
@@ -361,7 +361,7 @@ Public Class Rest_HomePage
                 End Try
 
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
@@ -374,7 +374,7 @@ Public Class Rest_HomePage
             End If
             If typeofleave = "OL" Then
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim query As String
                     Dim command As New OleDbCommand
@@ -394,7 +394,7 @@ Public Class Rest_HomePage
                 End Try
 
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
@@ -407,7 +407,7 @@ Public Class Rest_HomePage
             End If
             If typeofleave = "AL" Then
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim query As String
                     Dim command As New OleDbCommand
@@ -427,7 +427,7 @@ Public Class Rest_HomePage
                 End Try
 
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
@@ -440,7 +440,7 @@ Public Class Rest_HomePage
             End If
             If typeofleave = "PL" Then
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim query As String
                     Dim command As New OleDbCommand
@@ -460,7 +460,7 @@ Public Class Rest_HomePage
                 End Try
 
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
@@ -480,7 +480,7 @@ Public Class Rest_HomePage
             Dim hodusername As String
 
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -529,7 +529,7 @@ Public Class Rest_HomePage
             If leaveapplicanttype = "MTech" Or leaveapplicanttype = "PhD" Then
                 If typeofleave = "ML" Then
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim query As String
                         Dim command As New OleDbCommand
@@ -549,7 +549,7 @@ Public Class Rest_HomePage
                     End Try
 
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim command2 As OleDbCommand = New OleDbCommand()
                         command2.Connection = con
@@ -562,7 +562,7 @@ Public Class Rest_HomePage
                 End If
                 If typeofleave = "OL" Then
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim query As String
                         Dim command As New OleDbCommand
@@ -582,7 +582,7 @@ Public Class Rest_HomePage
                     End Try
 
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim command2 As OleDbCommand = New OleDbCommand()
                         command2.Connection = con
@@ -595,7 +595,7 @@ Public Class Rest_HomePage
                 End If
                 If typeofleave = "AL" Then
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim query As String
                         Dim command As New OleDbCommand
@@ -615,7 +615,7 @@ Public Class Rest_HomePage
                     End Try
 
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim command2 As OleDbCommand = New OleDbCommand()
                         command2.Connection = con
@@ -628,7 +628,7 @@ Public Class Rest_HomePage
                 End If
                 If typeofleave = "PL" Then
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim query As String
                         Dim command As New OleDbCommand
@@ -648,7 +648,7 @@ Public Class Rest_HomePage
                     End Try
 
                     Try
-                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                        con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                         con.Open()
                         Dim command2 As OleDbCommand = New OleDbCommand()
                         command2.Connection = con
@@ -661,7 +661,7 @@ Public Class Rest_HomePage
                 End If
             Else
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim query As String
                     Dim command As New OleDbCommand
@@ -681,7 +681,7 @@ Public Class Rest_HomePage
                 End Try
 
                 Try
-                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                    con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                     con.Open()
                     Dim command2 As OleDbCommand = New OleDbCommand()
                     command2.Connection = con
@@ -710,7 +710,7 @@ Public Class Rest_HomePage
                 MsgBox(ex.Message)
             End Try
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim query As String
                 Dim command As New OleDbCommand
@@ -730,7 +730,7 @@ Public Class Rest_HomePage
             End Try
 
             Try
-                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)
+                con = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")
                 con.Open()
                 Dim command2 As OleDbCommand = New OleDbCommand()
                 command2.Connection = con

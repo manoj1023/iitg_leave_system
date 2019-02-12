@@ -41,7 +41,7 @@ Public Class Student_HomePage
         databasePath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "LeaveSystem.accdb")    'Path to MS Access database file stored in S/W folder
         destinationPath = projDirectory.Replace("IITG_LeaveSystem\IITG_LeaveSystem\bin\Debug", "shp_bi\images.jpeg")    'Path to background image folder
         Try
-            connection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + databasePath)   'Initialising connection to database
+            connection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\LeaveSystem.accdb")   'Initialising connection to database
             connection.Open()   'Opening Connection to Database
             Dim query As String
             Dim command As New OleDbCommand

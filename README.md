@@ -1,2 +1,2 @@
 # IITG-Leave System
-Windows Application to applying for leaves for MTech, PhD students and staff.
+Windows Application which process requests for leaves for MTech, PhD students and staff.
